@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-23T15:19:26.333Z" agent="5.0 (Windows)" version="20.6.0" etag="tTCtMZ48WUs0_oz8tAuJ" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-23T15:22:07.671Z" agent="5.0 (Windows)" version="20.6.0" etag="YdNlkTHo5aDg2w1uK22H" type="github">
   <diagram id="BXRtGHbMrKm54WQv6c_G" name="Page-1">
-    <mxGraphModel dx="1038" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1153" dy="639" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -56,7 +56,7 @@
         <mxCell id="t7ZpOgtnZrypAFFjjD7j-34" value="Éditer les tickets" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="t7ZpOgtnZrypAFFjjD7j-21">
           <mxGeometry x="190" y="45" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="t7ZpOgtnZrypAFFjjD7j-24" value="Billets" style="swimlane;" vertex="1" parent="t7ZpOgtnZrypAFFjjD7j-17">
+        <mxCell id="t7ZpOgtnZrypAFFjjD7j-24" value="BDD" style="swimlane;" vertex="1" parent="t7ZpOgtnZrypAFFjjD7j-17">
           <mxGeometry x="50" y="380" width="620" height="280" as="geometry" />
         </mxCell>
         <mxCell id="t7ZpOgtnZrypAFFjjD7j-35" value="Éditer la BDD" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="t7ZpOgtnZrypAFFjjD7j-24">
@@ -89,7 +89,7 @@
             <mxPoint x="200" y="180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="t7ZpOgtnZrypAFFjjD7j-29" value="Details" style="swimlane;" vertex="1" parent="t7ZpOgtnZrypAFFjjD7j-17">
+        <mxCell id="t7ZpOgtnZrypAFFjjD7j-29" value="Messagerie" style="swimlane;startSize=23;" vertex="1" parent="t7ZpOgtnZrypAFFjjD7j-17">
           <mxGeometry x="50" y="690" width="620" height="740" as="geometry" />
         </mxCell>
         <mxCell id="t7ZpOgtnZrypAFFjjD7j-39" value="Modérer tout les messages" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="t7ZpOgtnZrypAFFjjD7j-29">
