@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-11-24T13:17:48.305Z" agent="5.0 (Windows)" etag="XPQrgFkynWE3PxKOmxsE" version="20.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-24T15:21:08.453Z" agent="5.0 (Windows)" etag="bibtn8HWqUO5jnWVkaET" version="20.6.0" type="github">
   <diagram id="ntwZN9jLrbFkZiTQ13Ez" name="Page-1">
     <mxGraphModel dx="2747" dy="605" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -372,8 +372,8 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-20" y="45" />
-              <mxPoint x="-20" y="340" />
-              <mxPoint x="160" y="340" />
+              <mxPoint x="-20" y="320" />
+              <mxPoint x="160" y="320" />
               <mxPoint x="160" y="-20" />
               <mxPoint x="70" y="-20" />
             </Array>
@@ -381,7 +381,7 @@
         </mxCell>
         <mxCell id="u7hhSnUpqo7W0qD7Zvtp-65" value="Discuter" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="u7hhSnUpqo7W0qD7Zvtp-64" vertex="1" connectable="0">
           <mxGeometry x="-0.4208" y="-2" relative="1" as="geometry">
-            <mxPoint x="92" y="39" as="offset" />
+            <mxPoint x="102" y="28" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="u7hhSnUpqo7W0qD7Zvtp-13" value="&lt;b&gt;&lt;u&gt;ID&lt;/u&gt;&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="u7hhSnUpqo7W0qD7Zvtp-12" vertex="1">
