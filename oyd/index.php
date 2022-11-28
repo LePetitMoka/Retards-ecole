@@ -44,17 +44,15 @@
 	<footer>
 		<div class="container">
 			<div class="contacts">
-				<div class="phone-mail">
-					<div class="phone">
-						<img src="./img/icons colorées/telephone.png" width="60" height="60">
-						<p>+33(0)144018670</p>
-					</div>
-					<div class="mail">
-						<a href="mailto:contact@ecoleiris.fr">
-							<img src="./img/icons colorées/email.png" width="60" height="60">
-							<p>contact@ecoleiris.fr</p>
-						</a>
-					</div>
+				<div class="phone">
+					<img src="./img/icons colorées/telephone.png" width="60" height="60">
+					<p>+33(0)144018670</p>
+				</div>
+				<div class="mail">
+					<a href="mailto:contact@ecoleiris.fr">
+						<img src="./img/icons colorées/email.png" width="60" height="60">
+						<p>contact@ecoleiris.fr</p>
+					</a>
 				</div>
 				<div class="link">
 					<a href="https://ecoleiris.fr/" target="_blank">

@@ -12,7 +12,7 @@
     width: 20%;
     opacity: 100%;
     overflow: hidden;
-    height: calc(100vh - 354.4px);
+    height: calc(100vh - 245.5px);
     transition: all 0.4s ease-out;
   }
 

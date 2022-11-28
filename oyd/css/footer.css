@@ -6,7 +6,12 @@ footer {
 }
 
 footer p {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
+}
+
+footer img {
+  width: 50px;
+  height: 50px;
 }
 
 footer .container {
@@ -15,24 +20,30 @@ footer .container {
   align-items: center;
 }
 
-footer .container .phone-mail {
+footer .container .contacts {
+  width: 70%;
   display: flex;
+  margin-top: 12px;
   align-items: center;
   justify-content: space-between;
 }
 
-footer .container .phone, footer .container .mail {
-  width: 50%;
+footer .container .contacts div{
+  width: 33%;
 }
 
-footer .container .link {
-  width: 100%; 
-}
-
-footer .container a, footer .container .phone-mail .phone {
+footer .container a {
   display: flex;
   align-items: center;
   margin: 10px 0;
+  justify-content: center;
+}
+
+footer .container .phone {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  justify-content: center;
 }
 
 footer a {
