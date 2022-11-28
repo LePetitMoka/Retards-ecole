@@ -1,0 +1,42 @@
+/* footer */
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  font-size: 1.2rem;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .container .phone-mail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .container .phone, footer .container .mail {
+  width: 50%;
+}
+
+footer .container .link {
+  width: 100%; 
+}
+
+footer .container a, footer .container .phone-mail .phone {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+footer a {
+  color: white;
+}
+
+/* fin footer */

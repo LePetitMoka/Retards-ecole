@@ -1,0 +1,44 @@
+/* vertical Navbar */
+
+  .vertical-navbar {
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 84px;
+    right: 110%;
+    width: 20%;
+    opacity: 100%;
+    overflow: hidden;
+    height: calc(100vh - 354.4px);
+    transition: all 0.4s ease-out;
+  }
+
+/* .vertical-navbar {
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 464px;
+  left: 0;
+  text-align: center;
+} */
+
+.vertical-navbar a {
+  font-size: 1.4rem;
+  color: #F9B104;
+}
+
+.vertical-navbar ul {
+  padding: 0;
+  margin-top: 40px;
+}
+
+.vertical-navbar ul li {
+  margin: 15px 0;
+}
+
+/* fin vertical Navbar */

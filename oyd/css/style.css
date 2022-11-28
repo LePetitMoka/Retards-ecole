@@ -1,0 +1,27 @@
+/* Test */
+
+/* * {
+  border: 2px solid red;
+} */
+
+/* fin Test */
+
+/* General */
+
+body {
+  margin: 0;
+}
+
+.unstyled-list {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  margin: 5px 10px;
+}
+
+/* fin General */

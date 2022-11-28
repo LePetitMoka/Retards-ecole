@@ -1,0 +1,18 @@
+/* header */
+
+header {
+  box-shadow: 5px 0 4px black;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+header .container .buttons {
+  display: flex;
+}
+
+/* fin header */
