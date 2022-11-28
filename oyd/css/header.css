@@ -1,7 +1,10 @@
 /* header */
 
 header {
-  box-shadow: 5px 0 4px black;
+  background-color: white;
+  box-shadow: 0 0 5px grey;
+  top: 0;
+  position: sticky;
 }
 
 header .container {

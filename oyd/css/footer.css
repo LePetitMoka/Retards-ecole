@@ -3,6 +3,9 @@
 footer {
   background-color: black;
   color: white;
+  display: block;
+  position: relative;
+  margin-top: auto;
 }
 
 footer p {
@@ -26,6 +29,10 @@ footer .container .contacts {
   margin-top: 12px;
   align-items: center;
   justify-content: space-between;
+}
+
+.diff-font {
+  font-size: 1.2rem;
 }
 
 footer .container .contacts div{

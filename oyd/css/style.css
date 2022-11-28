@@ -10,10 +10,12 @@
 
 body {
   margin: 0;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .unstyled-list {
   list-style: none;
+  padding: none;
 }
 
 a {

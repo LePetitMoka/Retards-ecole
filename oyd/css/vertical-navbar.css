@@ -1,31 +1,20 @@
 /* vertical Navbar */
 
-  .vertical-navbar {
-    background-color: #1e1e1e;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    top: 84px;
-    right: 110%;
-    width: 20%;
-    opacity: 100%;
-    overflow: hidden;
-    height: calc(100vh - 245.5px);
-    transition: all 0.4s ease-out;
-  }
-
-/* .vertical-navbar {
+.vertical-navbar {
   background-color: #1e1e1e;
   display: flex;
+  position: fixed;
+  z-index: 1;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 20%;
-  height: 464px;
-  left: 0;
   text-align: center;
-} */
+  top: 114px;
+  opacity: 100%;
+  overflow: hidden;
+  height: 0%;
+  transition: all 0.4s ease-out;
+}
 
 .vertical-navbar a {
   font-size: 1.4rem;
@@ -34,7 +23,8 @@
 
 .vertical-navbar ul {
   padding: 0;
-  margin-top: 40px;
+  margin-top: 10px;
+  margin: 0 15px;
 }
 
 .vertical-navbar ul li {
@@ -42,3 +32,60 @@
 }
 
 /* fin vertical Navbar */
+
+/* burger */
+
+.burger {
+  background: none;
+  border: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  padding-bottom: 1rem;
+  margin-left: 25px;
+  position: relative;
+}
+
+.burger .bar {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background: #F9B104;
+  position: absolute;
+}
+
+.burger .bar::before, .burger .bar::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 5px;
+  background: #F9B104;
+  transition: all 0.2s ease-in-out;
+}
+
+.burger .bar::before {
+  transform: translateY(-15px);
+}
+
+.burger .bar::after {
+  transform: translateY(15px);
+}
+
+.show-vnav {
+  height: auto;
+}
+
+.burgerAnim .bar {
+  width: 0;
+}
+
+.burgerAnim .bar::before {
+  transform: rotate(45deg);
+}
+
+.burgerAnim .bar::after {
+  transform: rotate(-45deg);
+}
+
+/* fin burger */
