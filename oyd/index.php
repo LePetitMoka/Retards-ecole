@@ -50,7 +50,7 @@
 						$page = $_GET['page'];
 						switch ($page) {
 							case 0:
-								require_once("./vues/tableau_de_bord/tdb-admin.php");
+								require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
 								break;
 							// case 1:
 							// 	require_once("./vues/tableau_de_bord/tdb-admin.php");
@@ -66,7 +66,7 @@
 							// 	break;
 							
 							default:
-								require_once("./vues/tableau_de_bord/tdb-admin.php");
+								require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
 								break;
 						}
 					}
@@ -79,7 +79,7 @@
 				// 	break;
 				
 				default:
-					require_once("./vues/tableau_de_bord/tdb-admin.php");
+					require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
 					break;
 			}
 		}
