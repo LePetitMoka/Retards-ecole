@@ -1,1 +1,1 @@
-ok
+<h2>Nouveau messages</h2>
