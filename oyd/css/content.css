@@ -30,9 +30,9 @@
 }
 
 .submenu-list li {
-  width: 25%;
   align-items: center;
   text-align: center;
+  margin: 0 15px;
 }
 
 .subnavbar .search-bar {
