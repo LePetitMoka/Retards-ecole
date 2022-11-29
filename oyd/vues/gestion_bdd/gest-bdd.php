@@ -17,10 +17,13 @@
         $subPage = $_GET['subPage'];
         switch ($subPage) {
           case 0:
-            require_once("./vues/tableau_de_bord/admin/tdb-admin-InfoTrafic.php");
+            require_once("./vues/gestion_bdd/gest-bdd-etudiants.php");
             break;
           case 1:
-            require_once("./vues/tableau_de_bord/admin/tdb-admin-Tickets.php");
+            require_once("./vues/gestion_bdd/gest-bdd-profs.php");
+            break;
+          case 2:
+            require_once("./vues/gestion_bdd/gest-bdd-classes.php");
             break;
           
           default:

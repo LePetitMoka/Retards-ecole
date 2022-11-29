@@ -46,13 +46,13 @@
 			$user = $_GET['user'];
 			$page = $_GET['page'];
 			switch ($user) {
-				case 'amdin':
+				case 'admin':
 					switch ($page) {
 						case 0:
 							require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
 							break;
 						case 1:
-							require_once("./vues/gest-bdd.php");
+							require_once("./vues/gestion_bdd/gest-bdd.php");
 							break;
 						// case 2:
 						// 	require_once("./vues/tableau_de_bord/tdb-admin.php");
