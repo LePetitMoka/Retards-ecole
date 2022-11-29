@@ -1,0 +1,1964 @@
+null	ID_Line	Name_Line	TransportMode
+null	C00135	6	bus
+null	C00050	23	bus
+null	C00048	40	bus
+null	C00094	15	bus
+null	C00150	15	bus
+null	C00269	10	bus
+null	C00282	51	bus
+null	C00198	16	bus
+null	C00274	20	bus
+null	C00196	14	bus
+null	C00304	11	bus
+null	C00317	H	bus
+null	C00312	7	bus
+null	C00319	201	bus
+null	C00394	95-07	bus
+null	C00446	30-13	bus
+null	C00462	30-36	bus
+null	C00544	439	bus
+null	C00552	1	bus
+null	C00553	2	bus
+null	C00554	3	bus
+null	C00557	6	bus
+null	C00582	C	bus
+null	C00602	X	bus
+null	C00627	23	bus
+null	C00632	34	bus
+null	C00656	8	bus
+null	C00667	DM06 A	bus
+null	C00668	DM06 B	bus
+null	C00682	DM20	bus
+null	C00747	L	bus
+null	C00764	35	bus
+null	C00701	10	bus
+null	C00699	8	bus
+null	C00771	44	bus
+null	C00778	49	bus
+null	C00871	33	bus
+null	C00877	C	bus
+null	C00880	L	bus
+null	C00967	68-09	bus
+null	C00987	7002	bus
+null	C00955	H	bus
+null	C01435	A	bus
+null	C01495	2271	bus
+null	C01519	PROBUS D	bus
+null	C01524	420	bus
+null	C01528	415	bus
+null	C01483	28	bus
+null	C01484	29	bus
+null	C01530	417	bus
+null	C01561	9	bus
+null	C01577	605	bus
+null	C01585	617	bus
+null	C00683	DM21 A	bus
+null	C01612	X	bus
+null	C01606	M	bus
+null	C01655	16	bus
+null	C01618	403	bus
+null	C01619	404	bus
+null	C01627	414	bus
+null	C01628	415	bus
+null	C01751	O2	bus
+null	C01812	206B	bus
+null	C01793	458	bus
+null	C01950	2272	bus
+null	C01700	264	bus
+null	C01702	262	bus
+null	C02005	30-03	bus
+null	C02300	469	bus
+null	C02389	30-21 Est	bus
+null	C02265	T'bus 1	bus
+null	C02166	12ZI	bus
+null	C02423	M	bus
+null	C02425	O	bus
+null	C02443	38	bus
+null	C02450	42	bus
+null	C01533	444	bus
+null	C01653	S3	bus
+null	C01815	32ZA	bus
+null	C02239	460	bus
+null	C01868	40	bus
+null	C01873	51	bus
+null	C00664	DM3A	bus
+null	C00299	10	bus
+null	C01796	2B	bus
+null	C01607	N	bus
+null	C01035	74	bus
+null	C00730	7	bus
+null	C02248	Express A14 Bonnières	bus
+null	C00642	2	bus
+null	C00644	26	bus
+null	C00108	44	bus
+null	C00109	45	bus
+null	C00737	19	bus
+null	C02222	29	bus
+null	C00324	1	bus
+null	C02476	TAD divergent - CC Brie Nangissienne	bus
+null	C00680	17	bus
+null	C00948	63	bus
+null	C00248	704	bus
+null	C02243	25	bus
+null	C00753	Express A14 Les Mureaux	bus
+null	C01980	21	bus
+null	C01977	322	bus
+null	C01978	323	bus
+null	C00758	89	bus
+null	C01033	75	bus
+null	C00067	2	bus
+null	C02096	02D	bus
+null	C02015	35	bus
+null	C02448	403	bus
+null	C02511	Q	bus
+null	C00267	6	bus
+null	C01562	EXPRESS 91-01	bus
+null	C02016	47	bus
+null	C02066	316	bus
+null	C02067	317	bus
+null	C02068	318	bus
+null	C01936	13	bus
+null	C02088	34B	bus
+null	C02090	28B	bus
+null	C02482	177	bus
+null	C02091	28C	bus
+null	C00184	E	bus
+null	C02286	14	bus
+null	C00211	33	bus
+null	C01600	C	bus
+null	C02110	37RPI	bus
+null	C00311	503 Scolaire	bus
+null	C02118	09C	bus
+null	C02500	T	bus
+null	C02155	15	bus
+null	C02154	41B	bus
+null	C00705	101	bus
+null	C02197	17B	bus
+null	C02168	14.1	bus
+null	C02196	29M	bus
+null	C02488	Navette autonome Vincennes	bus
+null	C02141	29	bus
+null	C02232	Ms	bus
+null	C02240	500	bus
+null	C02225	5 S	bus
+null	C02489	Soirée Meaux Nord	bus
+null	C02252	Ks	bus
+null	C01831	B	bus
+null	C00465	30-39	bus
+null	C01832	C	bus
+null	C00303	18	bus
+null	C02030	Soirée Louvres	bus
+null	C02314	263	bus
+null	C02406	Caméléon T3a	bus
+null	C02302	ChavilBus Nord	bus
+null	C01492	40	bus
+null	C01752	S17	bus
+null	C00323	202	bus
+null	C02509	Soirée Quincy sous Sénart	bus
+null	C00709	106	bus
+null	C01871	50	bus
+null	C01089	48	bus
+null	C00141	95-24	bus
+null	C00046	60	bus
+null	C00064	Express 67	bus
+null	C00287	Express 4	bus
+null	C01512	16	bus
+null	C01513	46-1	bus
+null	C01673	DM21 S	bus
+null	C00689	DM151	bus
+null	C02261	Soirée Vigneux	bus
+null	C00798	Express 46	bus
+null	C00472	95-03B	bus
+null	C01553	95-11	bus
+null	C01337	L'AUDONIENNE	bus
+null	C01062	Express 01	bus
+null	C02304	Chavilbus Unique	bus
+null	C02230	Fs	bus
+null	C01556	95-43	bus
+null	C02440	P	bus
+null	C01371	1	metro
+null	C01724	10	bus
+null	C01823	Fileo Saint-Pathus (sur réservation)	bus
+null	C02201	EXPRESS 91-11	bus
+null	C01463	203	bus
+null	C01634	N130	bus
+null	C00528	39-103	bus
+null	C02446	17S	bus
+null	C01671	Filéo Roissy Sud - Villepinte (sur réservation)	bus
+null	C02444	28	bus
+null	C01961	8B	bus
+null	C02467	TàD Coeur Essonne 2	bus
+null	C01970	13C	bus
+null	C01785	95-06	bus
+null	C00893	S2	bus
+null	C01464	2	bus
+null	C00957	G	bus
+null	C02383	TàD 6	bus
+null	C02376	TER Normandie Bus	bus
+null	C00927	40	bus
+null	C01985	40	bus
+null	C00940	54B	bus
+null	C00949	K	bus
+null	C02100	R1-R2-R3	bus
+null	C00025	309	bus
+null	C02364	Corbeil - Melun	bus
+null	C02291	TàD 43	bus
+null	C00934	49	bus
+null	C00039	116 (ex 35)	bus
+null	C00034	C	bus
+null	C00070	5	bus
+null	C00648	33	bus
+null	C00073	8	bus
+null	C00101	224	bus
+null	C02138	4s	bus
+null	C02159	21	bus
+null	C02136	7	bus
+null	C00069	4	bus
+null	C00125	171	bus
+null	C00157	R5	bus
+null	C00167	61	bus
+null	C02390	7002 Scolaire	bus
+null	C00187	23	bus
+null	C00146	9AB	bus
+null	C00163	01	bus
+null	C00219	R48	bus
+null	C00201	19	bus
+null	C00194	12	bus
+null	C00213	39	bus
+null	C00231	R4	bus
+null	C00250	707	bus
+null	C00254	711	bus
+null	C00164	03	bus
+null	C00246	702	bus
+null	C00327	54	bus
+null	C00166	05	bus
+null	C00309	501 Scolaire	bus
+null	C00325	12	bus
+null	C00173	18	bus
+null	C02124	10	bus
+null	C00365	LM1	bus
+null	C00371	14	bus
+null	C00373	19	bus
+null	C00403	10	bus
+null	C00401	5	bus
+null	C00506	39-28 B	bus
+null	C01432	Filéo Goussainville (sur réservation)	bus
+null	C00467	30-43	bus
+null	C00444	30-11	bus
+null	C00488	39-02	bus
+null	C00509	39-28 E	bus
+null	C00515	39-30 B	bus
+null	C00517	39-30 D	bus
+null	C00524	39-36	bus
+null	C00546	7	bus
+null	C00532	Express 307	bus
+null	C00548	12	bus
+null	C00619	07	bus
+null	C00623	15	bus
+null	C00638	24	bus
+null	C00676	DM12	bus
+null	C00673	DM10S	bus
+null	C00738	20	bus
+null	C01725	17	bus
+null	C00615	35	bus
+null	C00763	34	bus
+null	C00598	Quincy Bus	bus
+null	C02401	34S3	bus
+null	C00792	45	bus
+null	C00739	21	bus
+null	C00766	38	bus
+null	C01879	02	bus
+null	C00785	60	bus
+null	C00795	2	bus
+null	C01691	110 (ex 39-40 B)	bus
+null	C00799	209	bus
+null	C00842	05	bus
+null	C00845	11	bus
+null	C00852	37	bus
+null	C00853	41	bus
+null	C00818	211	bus
+null	C00861	53	bus
+null	C00826	13A	bus
+null	C00920	31	bus
+null	C00921	31S	bus
+null	C00969	68.14	bus
+null	C01002	184-001	bus
+null	C00971	68.100	bus
+null	C01014	284-002	bus
+null	C01015	284-003	bus
+null	C01040	10	bus
+null	C01058	39	bus
+null	C01004	184-004	bus
+null	C02393	284-005	bus
+null	C01138	109	bus
+null	C01157	128	bus
+null	C01168	143	bus
+null	C01176	152	bus
+null	C01177	153	bus
+null	C01185	163	bus
+null	C01186	164	bus
+null	C01207	186	bus
+null	C01211	190	bus
+null	C01212	191	bus
+null	C01216	196	bus
+null	C01228	214	bus
+null	C01229	215	bus
+null	C01231	217	bus
+null	C01247	256	bus
+null	C01264	289	bus
+null	C01265	290	bus
+null	C01273	302	bus
+null	C01274	303	bus
+null	C01276	306	bus
+null	C01282	319	bus
+null	C01289	330	bus
+null	C01302	355	bus
+null	C01316	390	bus
+null	C01317	391	bus
+null	C02131	6	bus
+null	C01394	N51	bus
+null	C00620	12	bus
+null	C01411	N41	bus
+null	C01419	N13	bus
+null	C01420	N12	bus
+null	C00545	440	bus
+null	C00014	10	bus
+null	C01538	464	bus
+null	C01388	ORLYVAL	rail
+null	C01383	13	metro
+null	C01390	T2	tram
+null	C01437	C	bus
+null	C01438	Ea	bus
+null	C01440	Eb	bus
+null	C01442	F	bus
+null	C01467	BRAY 9	bus
+null	C01468	BRAY 3	bus
+null	C01451	19	bus
+null	C01098	62	bus
+null	C01508	12	bus
+null	C00944	59	bus
+null	C01103	67	bus
+null	C00814	S15	bus
+null	C02234	N	bus
+null	C01107	72	bus
+null	C01690	109 (ex 39-40 A)	bus
+null	C01684	T5	tram
+null	C01716	13B	bus
+null	C00019	23	bus
+null	C01111	76	bus
+null	C01721	39-07	bus
+null	C01707	S5	bus
+null	C00891	G	bus
+null	C01766	116	bus
+null	C01737	H	rail
+null	C01764	221	bus
+null	C01116	84	bus
+null	C01777	12	bus
+null	C02206	95-48	bus
+null	C01840	U	bus
+null	C01813	753	bus
+null	C01826	1	bus
+null	C01837	J	bus
+null	C01844	K	bus
+null	C01847	L	bus
+null	C01828	3	bus
+null	C01856	TER Centre - Val de Loire Bus	bus
+null	C01127	96	bus
+null	C01130	101	bus
+null	C01131	102	bus
+null	C01135	106	bus
+null	C01783	7	bus
+null	C01187	165	bus
+null	C00915	M	bus
+null	C02101	R1A	bus
+null	C02103	R2	bus
+null	C01221	206	bus
+null	C01253	270	bus
+null	C02279	23	bus
+null	C01283	320	bus
+null	C00011	5	bus
+null	C01342	TRANSPORT URBAIN BONDYNOIS	bus
+null	C01359	V3	bus
+null	C01361	V2	bus
+null	C01362	V5	bus
+null	C01324	467	bus
+null	C01408	N63	bus
+null	C01485	459	bus
+null	C02205	PC	bus
+null	C01900	Le P'tit Bus du Pré	bus
+null	C01695	247	bus
+null	C02081	559C	bus
+null	C00295	4	bus
+null	C01640	N142	bus
+null	C01647	N154	bus
+null	C00458	30-31 Scolaire	bus
+null	C00885	M	bus
+null	C00051	45	bus
+null	C01698	22	bus
+null	C00242	R107	bus
+null	C00162	R3 Sud	bus
+null	C00087	2	bus
+null	C00088	3	bus
+null	C00089	4	bus
+null	C00264	95-01	bus
+null	C00204	23	bus
+null	C00339	1	bus
+null	C00315	14	bus
+null	C00343	6	bus
+null	C00344	7	bus
+null	C00350	14	bus
+null	C00298	9	bus
+null	C00346	9	bus
+null	C00355	B	bus
+null	C00386	302	bus
+null	C00437	30-05	bus
+null	C00425	41	bus
+null	C00389	313	bus
+null	C00577	F	bus
+null	C00581	B	bus
+null	C00484	3801	bus
+null	C00541	454	bus
+null	C00538	451	bus
+null	C00630	29	bus
+null	C00636	44	bus
+null	C00592	I	bus
+null	C00600	E1	bus
+null	C00456	30-29 Scolaire	bus
+null	C00666	DM5	bus
+null	C00681	DM19	bus
+null	C00685	DM22	bus
+null	C00696	5	bus
+null	C00769	42	bus
+null	C00708	104	bus
+null	C00695	4	bus
+null	C00781	56	bus
+null	C00782	57	bus
+null	C00834	4	bus
+null	C00862	21	bus
+null	C00897	O	bus
+null	C00902	C	bus
+null	C00898	J	bus
+null	C00900	F	bus
+null	C00954	A	bus
+null	C00953	B	bus
+null	C00964	68.05 A	bus
+null	C00972	68.05 B	bus
+null	C01476	6	bus
+null	C01439	G	bus
+null	C01496	2276	bus
+null	C01518	PROBUS C	bus
+null	C01523	402	bus
+null	C01480	17A	bus
+null	C01541	467	bus
+null	C01580	610	bus
+null	C01584	616	bus
+null	C01592	640	bus
+null	C01594	642	bus
+null	C01621	406	bus
+null	C01622	407	bus
+null	C01623	408	bus
+null	C01630	419	bus
+null	C01658	15	bus
+null	C00665	DM04	bus
+null	C01677	430	bus
+null	C01876	30-46	bus
+null	C01701	261	bus
+null	C02144	T	bus
+null	C02021	208	bus
+null	C02422	TàD Eaubonne Domont	bus
+null	C02257	95-29	bus
+null	C02427	22	bus
+null	C02430	82	bus
+null	C01546	Magical Shuttle Orly	bus
+null	C00879	D	bus
+null	C01576	604	bus
+null	C01816	R114	bus
+null	C01869	44	bus
+null	C02217	424	bus
+null	C01429	Filéo Othis (sur réservation)	bus
+null	C01773	55	bus
+null	C00733	15	bus
+null	C01789	95-33	bus
+null	C00640	3	bus
+null	C00133	3	bus
+null	C00744	52	bus
+null	C00760	91	bus
+null	C01626	413	bus
+null	C00271	14	bus
+null	C01261	ORLYBUS	bus
+null	C00645	30	bus
+null	C00121	43	bus
+null	C00748	81	bus
+null	C01428	40	bus
+null	C00527	113 (ex 39-39 A)	bus
+null	C00646	31	bus
+null	C01903	H	bus
+null	C01905	I	bus
+null	C02516	SRL Le Vésinet	bus
+null	C02470	913.17A	bus
+null	C01566	EXPRESS 91-05	bus
+null	C01976	321	bus
+null	C02022	227	bus
+null	C02000	259	bus
+null	C02344	T13	tram
+null	C00608	95-10	bus
+null	C00947	Express 62	bus
+null	C02033	49	bus
+null	C01996	4B	bus
+null	C02023	228	bus
+null	C02019	T11	bus
+null	C02040	CitéVal Cormeilles-en-Parisis	bus
+null	C02069	03A	bus
+null	C02059	27	bus
+null	C02072	12A	bus
+null	C02480	41	bus
+null	C02499	Z	bus
+null	C01699	23	bus
+null	C02087	34A	bus
+null	C01244	252	bus
+null	C02074	12C	bus
+null	C02109	37C	bus
+null	C02121	30A	bus
+null	C02122	30C	bus
+null	C02094	02B	bus
+null	C02148	S1	bus
+null	C00393	95-05	bus
+null	C02501	U	bus
+null	C02186	63	bus
+null	C02188	62C	bus
+null	C02233	Os	bus
+null	C01729	E	rail
+null	C00223	Express 93	bus
+null	C02244	45	bus
+null	C02255	Soirée Survilliers - Fosses	bus
+null	C02246	71	bus
+null	C00360	F	bus
+null	C02298	27	bus
+null	C01500	Express 50	bus
+null	C02508	Soirée Boussy Saint Antoine	bus
+null	C02061	32	bus
+null	C02260	Soirée Draveil	bus
+null	C00571	42	bus
+null	C02399	DM9S	bus
+null	C02062	EX100 Chelles	bus
+null	C02373	TER Hauts-de-France Bus	bus
+null	C01726	PROBUS Scolaire	bus
+null	C02434	6-3	bus
+null	C00263	Express 100	bus
+null	C00550	21	bus
+null	C01711	DM11E	bus
+null	C01952	39	bus
+null	C00754	Express A14 Verneuil	bus
+null	C01954	59	bus
+null	C00839	54	bus
+null	C01472	Express 95-18	bus
+null	C01571	EXPRESS 91-10	bus
+null	C01549	702	bus
+null	C00911	14	bus
+null	C01820	02E	bus
+null	C01563	91-02	bus
+null	C02410	Caméléon T7	bus
+null	C01557	95-44	bus
+null	C00773	47	bus
+null	C00930	46	bus
+null	C01960	7D	bus
+null	C01753	S5	bus
+null	C00495	11	bus
+null	C01784	N1	bus
+null	C01969	13B	bus
+null	C00335	C	bus
+null	C00919	23	bus
+null	C02365	Coulommiers - La Ferté Gaucher Centre	bus
+null	C02369	TER Centre - Val de Loire Bus	bus
+null	C00928	41	bus
+null	C01983	35	bus
+null	C01984	38	bus
+null	C01986	41	bus
+null	C00789	41	bus
+null	C02363	Corbeil - La Ferté Alais	bus
+null	C01747	TER Grand-Est	rail
+null	C02375	TER Normandie	rail
+null	C02032	18C	bus
+null	C02027	260	bus
+null	C00027	Express 16	bus
+null	C00698	7	bus
+null	C00028	501	bus
+null	C00009	3	bus
+null	C00012	7	bus
+null	C02432	1-2	bus
+null	C02092	643	bus
+null	C00436	30-04 Scolaire	bus
+null	C00102	225	bus
+null	C02137	4	bus
+null	C00093	114	bus
+null	C00153	18s	bus
+null	C00148	9D	bus
+null	C00015	11	bus
+null	C00142	95-25	bus
+null	C00030	E	bus
+null	C00205	30B	bus
+null	C00239	R104	bus
+null	C00262	777	bus
+null	C00261	Vitavil	bus
+null	C00245	701	bus
+null	C00238	R113	bus
+null	C00241	R106	bus
+null	C00235	R110	bus
+null	C00234	R7	bus
+null	C00252	709	bus
+null	C00255	714	bus
+null	C00165	04	bus
+null	C00172	15	bus
+null	C00181	30	bus
+null	C00363	LP1	bus
+null	C00378	17	bus
+null	C00380	24-06	bus
+null	C00388	303	bus
+null	C01431	Filéo Sarcelles (sur réservation)	bus
+null	C00455	30-28 Scolaire	bus
+null	C00453	30-25 Scolaire	bus
+null	C00494	39-07 A	bus
+null	C00478	95-26 Scolaire	bus
+null	C00500	39-17	bus
+null	C00504	39-27	bus
+null	C00562	N1	bus
+null	C00485	38-02	bus
+null	C00653	502	bus
+null	C00649	35	bus
+null	C00660	19	bus
+null	C00675	DM11A	bus
+null	C00679	DM16	bus
+null	C00669	DM7S	bus
+null	C00678	DM17 A	bus
+null	C02466	TàD Coeur Essonne 1	bus
+null	C00609	22	bus
+null	C00480	CitéVal Nord Herblay	bus
+null	C02464	Soirée Domont	bus
+null	C02400	34S2	bus
+null	C00794	4	bus
+null	C00796	3	bus
+null	C00797	112	bus
+null	C00783	58	bus
+null	C02398	DM5S	bus
+null	C01072	20	bus
+null	C00791	44	bus
+null	C02273	S12	bus
+null	C01693	112 (ex 39-40 D)	bus
+null	C00817	202	bus
+null	C00820	7A	bus
+null	C00822	9A	bus
+null	C00866	26	bus
+null	C00923	33	bus
+null	C01077	27	bus
+null	C00986	7001 Scolaire	bus
+null	C00906	8B	bus
+null	C00965	68.06	bus
+null	C01045	24	bus
+null	C01043	14	bus
+null	C01052	32	bus
+null	C01080	30	bus
+null	C01479	14	bus
+null	C01122	91	bus
+null	C01139	110	bus
+null	C01145	116	bus
+null	C01146	117	bus
+null	C01158	129	bus
+null	C01167	141	bus
+null	C01172	147	bus
+null	C01174	150	bus
+null	C01182	159	bus
+null	C01188	166	bus
+null	C01189	167	bus
+null	C01190	169	bus
+null	C01196	175	bus
+null	C01205	184	bus
+null	C01215	195	bus
+null	C01222	207	bus
+null	C01225	211	bus
+null	C01226	212	bus
+null	C01260	281	bus
+null	C01262	285	bus
+null	C01270	297	bus
+null	C01084	39	bus
+null	C01272	301	bus
+null	C01292	340	bus
+null	C01295	346	bus
+null	C01304	360	bus
+null	C01305	361	bus
+null	C01307	367	bus
+null	C01312	379	bus
+null	C01313	385	bus
+null	C01319	394	bus
+null	C01322	399	bus
+null	C01395	N44	bus
+null	C01403	N62	bus
+null	C02307	21s	bus
+null	C01407	N22	bus
+null	C01412	N35	bus
+null	C01417	N15	bus
+null	C01680	35	bus
+null	C01808	254	bus
+null	C01531	418	bus
+null	C01535	461	bus
+null	C00543	456	bus
+null	C01587	619	bus
+null	C01589	623	bus
+null	C00587	G1-G2	bus
+null	C01090	52	bus
+null	C01375	5	metro
+null	C01427	5	bus
+null	C01095	58	bus
+null	C01444	208	bus
+null	C01473	2	bus
+null	C01443	Emplet	bus
+null	C01459	211	bus
+null	C01504	6-1	bus
+null	C01506	8	bus
+null	C01490	503	bus
+null	C01100	64	bus
+null	C01494	SAMOIS	bus
+null	C01550	703	bus
+null	C01105	69	bus
+null	C01651	S1	bus
+null	C01109	74	bus
+null	C01678	C	bus
+null	C01434	Filéo Roissy Sud - Tremblay (sur réservation)	bus
+null	C01719	39-07 C	bus
+null	C00020	121	bus
+null	C01713	46	bus
+null	C01745	TER Bourgogne - Franche-Comté	rail
+null	C01689	114 (ex 39-39 B)	bus
+null	C02266	T'bus 2	bus
+null	C01776	9	bus
+null	C01739	J	rail
+null	C01792	N2	bus
+null	C01842	H	bus
+null	C01829	4	bus
+null	C00021	201	bus
+null	C01859	TER Normandie Bus	bus
+null	C01864	TER Hauts-de-France Bus	bus
+null	C01870	45	bus
+null	C01884	611	bus
+null	C01858	TER Centre - Val-de-Loire Bus	bus
+null	C00952	73	bus
+null	C01132	103	bus
+null	C01143	114	bus
+null	C01156	127	bus
+null	C01175	151	bus
+null	C01206	185	bus
+null	C01201	180	bus
+null	C01422	N153	bus
+null	C01210	189	bus
+null	C01217	197	bus
+null	C01218	199	bus
+null	C01242	250	bus
+null	C01254	272	bus
+null	C01308	368	bus
+null	C01321	396	bus
+null	C01347	V4	bus
+null	C01353	SUBB	bus
+null	C01360	CHOISYBUS	bus
+null	C01332	La Traverse Batignolles-Bichat	bus
+null	C01365	TUVIM	bus
+null	C01392	N24	bus
+null	C01809	380	bus
+null	C02251	77	bus
+null	C02437	209	bus
+null	C01637	N150	bus
+null	C01641	N152	bus
+null	C01643	N135	bus
+null	C01644	N143	bus
+null	C00884	N	bus
+null	C00887	K	bus
+null	C02142	L	bus
+null	C01681	3	bus
+null	C02146	S4	bus
+null	C00042	33	bus
+null	C00004	483	bus
+null	C00092	205	bus
+null	C00086	1	bus
+null	C00085	8	bus
+null	C00090	107	bus
+null	C00079	19	bus
+null	C00075	14	bus
+null	C00068	3	bus
+null	C00154	21	bus
+null	C00182	A	bus
+null	C00183	B	bus
+null	C00268	2	bus
+null	C00281	50	bus
+null	C00297	8	bus
+null	C00216	45	bus
+null	C00265	95-02	bus
+null	C00330	A	bus
+null	C00341	3	bus
+null	C00337	G	bus
+null	C00357	C	bus
+null	C00358	D	bus
+null	C00390	304	bus
+null	C00575	J2	bus
+null	C00477	95-21	bus
+null	C00540	453	bus
+null	C00591	M	bus
+null	C00610	23	bus
+null	C00631	32	bus
+null	C00635	43	bus
+null	C00586	F4	bus
+null	C00662	DM02 A	bus
+null	C00663	DM02 B	bus
+null	C00684	DM21 B	bus
+null	C00704	13	bus
+null	C00697	6	bus
+null	C00693	2	bus
+null	C00692	1	bus
+null	C00774	48	bus
+null	C00801	I	bus
+null	C00793	1	bus
+null	C00843	03	bus
+null	C00850	34	bus
+null	C00854	42	bus
+null	C00859	Tzen1	bus
+null	C00878	Cd	bus
+null	C00881	E	bus
+null	C00982	3	bus
+null	C01579	609	bus
+null	C01475	05	bus
+null	C01497	2274	bus
+null	C01498	2273	bus
+null	C01516	PROBUS A	bus
+null	C01527	414	bus
+null	C02415	95-51	bus
+null	C01583	615	bus
+null	C01660	B	bus
+null	C01601	D	bus
+null	C01620	405	bus
+null	C01595	644	bus
+null	C01656	17	bus
+null	C01811	206A	bus
+null	C01779	171	bus
+null	C01878	30-07	bus
+null	C02020	207	bus
+null	C01805	34	bus
+null	C02035	A	bus
+null	C02419	105B	bus
+null	C02036	B	bus
+null	C02426	21	bus
+null	C01545	Magical Shuttle CDG	bus
+null	C02449	41	bus
+null	C02456	9	bus
+null	C01413	N01	bus
+null	C01414	N02	bus
+null	C00901	4	bus
+null	C01288	325	bus
+null	C01555	95-42	bus
+null	C00740	22	bus
+null	C02161	71	bus
+null	C02249	Express A14 Mantes	bus
+null	C00752	110	bus
+null	C01979	R	bus
+null	C00275	21	bus
+null	C00270	11	bus
+null	C00116	32	bus
+null	C01672	416	bus
+null	C01602	E	bus
+null	C01692	111 (ex 39-40 C)	bus
+null	C01799	260	bus
+null	C01368	Le Petit Fontenaisien	bus
+null	C00117	33	bus
+null	C00931	47	bus
+null	C00757	88B	bus
+null	C00447	30-14	bus
+null	C00674	DM11G	bus
+null	C02095	02C	bus
+null	C02366	Longueville - Provins	bus
+null	C02278	20	bus
+null	C02458	27	bus
+null	C00144	8	bus
+null	C02026	231	bus
+null	C00226	R117	bus
+null	C02462	17	bus
+null	C02368	TER Centre - Val de Loire	rail
+null	C02007	168	bus
+null	C02104	R3	bus
+null	C02469	T13	bus
+null	C02372	TER Hauts-de-France	rail
+null	C02484	RD14	bus
+null	C02494	Bus de substitution du métro 14	bus
+null	C02495	TàD 205	bus
+null	C02070	03B	bus
+null	C02496	TàD 201/202	bus
+null	C02071	03C	bus
+null	C00310	502 Scolaire	bus
+null	C02078	31B	bus
+null	C00370	13	bus
+null	C02125	35B	bus
+null	C02127	35C	bus
+null	C02111	41	bus
+null	C02117	09B	bus
+null	C02191	62A	bus
+null	C02195	29B	bus
+null	C02194	61A	bus
+null	C01743	B	rail
+null	C02237	Es	bus
+null	C02231	Ls	bus
+null	C02185	62	bus
+null	C02506	Soirée Yerres Sud	bus
+null	C02503	TàD 78	bus
+null	C02371	TER Normandie Bus	bus
+null	C02296	68-13A	bus
+null	C02297	68-13B	bus
+null	C02264	20	bus
+null	C02267	T'bus 3	bus
+null	C02507	Soirée Brunoy Sud	bus
+null	C02491	Soir Saint-Germain-en-Laye	bus
+null	C02382	S2	bus
+null	C01648	N133	bus
+null	C00408	11	bus
+null	C02165	11.5	bus
+null	C00244	R109	bus
+null	C00942	56S	bus
+null	C02361	57	bus
+null	C00422	V	bus
+null	C02216	423	bus
+null	C00951	70	bus
+null	C02295	TàD 52	bus
+null	C02397	DM50	bus
+null	C01501	1-1	bus
+null	C02436	46-3	bus
+null	C00815	34	bus
+null	C01759	749	bus
+null	C01503	5	bus
+null	C00563	CDG VAL	rail
+null	C02024	229	bus
+null	C01957	16	bus
+null	C01569	EXPRESS 91-08	bus
+null	C01378	8	metro
+null	C01712	Filéo Survilliers (sur réservation)	bus
+null	C01958	7B	bus
+null	C02504	Soirée Crosne	bus
+null	C01679	T3b	tram
+null	C01389	T1	tram
+null	C01686	L	bus
+null	C00454	30-27	bus
+null	C01959	7C	bus
+null	C01430	Filéo Roissy Sud - Villeparisis Mitry-Mory(sur réservation)	bus
+null	C01230	216	bus
+null	C01448	210	bus
+null	C00941	56	bus
+null	C02184	54	bus
+null	C01271	299	bus
+null	C00038	32	bus
+null	C00756	90	bus
+null	C01963	9C	bus
+null	C01965	11B	bus
+null	C02414	95-49	bus
+null	C00937	52	bus
+null	C00107	5	bus
+null	C01559	95-46	bus
+null	C00913	18	bus
+null	C02277	14	bus
+null	C01299	351	bus
+null	C02183	53	bus
+null	C01266	291	bus
+null	C02145	S3	bus
+null	C00026	409	bus
+null	C01988	48	bus
+null	C02403	DM152S	bus
+null	C01990	55	bus
+null	C01991	61	bus
+null	C01992	17	bus
+null	C01994	21S	bus
+null	C00700	9	bus
+null	C00710	107	bus
+null	C01937	1	bus
+null	C02288	193	bus
+null	C00010	4	bus
+null	C02219	52	bus
+null	C00082	10-01	bus
+null	C00104	226	bus
+null	C00074	1	bus
+null	C02139	8s	bus
+null	C00078	16	bus
+null	C02431	332	bus
+null	C02169	6	bus
+null	C00119	41	bus
+null	C00126	172	bus
+null	C00113	17	bus
+null	C00137	511	bus
+null	C00130	313	bus
+null	C02170	9	bus
+null	C00170	10	bus
+null	C00147	9B	bus
+null	C00024	209	bus
+null	C00218	47	bus
+null	C01802	16	bus
+null	C00017	18	bus
+null	C00203	22	bus
+null	C00209	32	bus
+null	C00217	46	bus
+null	C00200	18	bus
+null	C00210	32A	bus
+null	C00240	R105	bus
+null	C00237	R112	bus
+null	C00236	R111	bus
+null	C00249	705	bus
+null	C00276	23	bus
+null	C00060	13	bus
+null	C00279	27	bus
+null	C00322	203	bus
+null	C00382	24-10	bus
+null	C01093	56	bus
+null	C00364	501	bus
+null	C00489	39-003	bus
+null	C00409	12	bus
+null	C00410	14	bus
+null	C00400	95-17	bus
+null	C00481	CitéVal Sud Herblay	bus
+null	C00463	30-37	bus
+null	C00507	39-28 C	bus
+null	C00459	30-32 Scolaire	bus
+null	C00490	10	bus
+null	C00464	30-38	bus
+null	C00516	39-30 C	bus
+null	C00518	39-303	bus
+null	C00496	39-10	bus
+null	C00498	39-13	bus
+null	C00525	117 (ex 39.37 A)	bus
+null	C00514	39-29-4	bus
+null	C01396	N42	bus
+null	C00561	103	bus
+null	C00529	39-203	bus
+null	C00624	17	bus
+null	C00604	E	bus
+null	C00625	21	bus
+null	C00139	95-22	bus
+null	C00243	R108	bus
+null	C00658	17	bus
+null	C00633	37	bus
+null	C02280	S16	bus
+null	C00762	30	bus
+null	C02465	Soirée Écouen Ézanville	bus
+null	C00912	L	bus
+null	C02284	S8	bus
+null	C02411	Caméléon T8	bus
+null	C00751	109	bus
+null	C00768	40	bus
+null	C02153	S2	bus
+null	C00770	43	bus
+null	C00787	5	bus
+null	C00790	42	bus
+null	C00786	9	bus
+null	C00788	6	bus
+null	C00840	01	bus
+null	C00841	02	bus
+null	C01076	26	bus
+null	C00860	64	bus
+null	C00831	18A	bus
+null	C00890	S4	bus
+null	C00922	32	bus
+null	C01074	22	bus
+null	C00989	7005	bus
+null	C00973	306.04	bus
+null	C01995	4A	bus
+null	C00966	68.08	bus
+null	C00979	913.10	bus
+null	C01013	284-001	bus
+null	C01060	41A	bus
+null	C01003	184-003	bus
+null	C01006	184-006	bus
+null	C01008	184-008	bus
+null	C01012	184-014	bus
+null	C01079	29	bus
+null	C01119	87	bus
+null	C01120	88	bus
+null	C01121	89	bus
+null	C01123	92	bus
+null	C01821	486	bus
+null	C01137	108	bus
+null	C01147	118	bus
+null	C01148	119	bus
+null	C01150	121	bus
+null	C01160	132	bus
+null	C01161	133	bus
+null	C01164	138	bus
+null	C01171	146	bus
+null	C01192	171	bus
+null	C01193	172	bus
+null	C01198	177	bus
+null	C01202	181	bus
+null	C01203	182	bus
+null	C01209	188	bus
+null	C01223	208A	bus
+null	C01224	210	bus
+null	C01237	238	bus
+null	C01240	244	bus
+null	C01245	253	bus
+null	C01281	318	bus
+null	C01287	323	bus
+null	C01306	366	bus
+null	C01311	378	bus
+null	C01314	388	bus
+null	C01320	395	bus
+null	C01323	421	bus
+null	C01393	N52	bus
+null	C01401	N21	bus
+null	C01404	N32	bus
+null	C01085	42	bus
+null	C01406	N43	bus
+null	C01410	N71	bus
+null	C01418	N14	bus
+null	C01710	487	bus
+null	C01756	337	bus
+null	C01807	N66	bus
+null	C02254	40	bus
+null	C01537	463	bus
+null	C01674	A2	bus
+null	C01384	14	metro
+null	C00588	G2	bus
+null	C01426	2	bus
+null	C01092	54	bus
+null	C01387	7B	metro
+null	C01445	204	bus
+null	C01447	206	bus
+null	C01102	66	bus
+null	C01510	14	bus
+null	C01521	401	bus
+null	C01544	Magical Shuttle Selected	bus
+null	C01106	70	bus
+null	C01604	Z	bus
+null	C00106	2	bus
+null	C01683	T4	bus
+null	C00943	57	bus
+null	C01703	S1	bus
+null	C01720	39-07 D	bus
+null	C01114	82	bus
+null	C02394	Navette Bel Air - La Forêt	bus
+null	C01706	S4	bus
+null	C01704	S2	bus
+null	C01717	8	bus
+null	C01775	S6	bus
+null	C01748	TER Normandie	rail
+null	C01115	83	bus
+null	C01801	3A	bus
+null	C01742	A	rail
+null	C00892	S1	bus
+null	C01117	85	bus
+null	C01118	86	bus
+null	C01846	J	bus
+null	C01848	R	bus
+null	C01852	D	bus
+null	C01857	TER Centre - Val-de-Loire	rail
+null	C01862	TER Hauts-de-France Bus	bus
+null	C01134	105	bus
+null	C00908	10	bus
+null	C01126	95	bus
+null	C00938	53	bus
+null	C01133	104	bus
+null	C00950	65	bus
+null	C00140	95-23	bus
+null	C01152	123	bus
+null	C01163	137	bus
+null	C01165	139	bus
+null	C01208	187	bus
+null	C01243	251	bus
+null	C01220	203	bus
+null	C01251	268	bus
+null	C01279	312	bus
+null	C01286	322	bus
+null	C01329	La Traverse de Charonne	bus
+null	C01330	La Traverse Bièvre Montsouris	bus
+null	C01326	485	bus
+null	C01327	488	bus
+null	C01370	L'Hirondelle	bus
+null	C01363	V7	bus
+null	C01369	595	bus
+null	C01819	208S	bus
+null	C01633	N132	bus
+null	C00296	5	bus
+null	C01639	N141	bus
+null	C01646	N145	bus
+null	C00547	10	bus
+null	C00445	30-12	bus
+null	C00460	30-33 Scolaire	bus
+null	C01534	460	bus
+null	C00032	D	bus
+null	C00043	24	bus
+null	C00003	Licorne	bus
+null	C00001	482	bus
+null	C00161	R3 Nord	bus
+null	C00052	22	bus
+null	C00084	7	bus
+null	C00160	R1	bus
+null	C00221	71	bus
+null	C00305	33 SoisyBus	bus
+null	C00306	34	bus
+null	C00302	13	bus
+null	C00321	103	bus
+null	C00351	Inter-Vals	bus
+null	C00348	12	bus
+null	C00347	11	bus
+null	C00308	6	bus
+null	C00345	8	bus
+null	C00354	A	bus
+null	C00466	30-42	bus
+null	C00356	BM	bus
+null	C00391	314	bus
+null	C00574	J1	bus
+null	C00579	D	bus
+null	C00503	12	bus
+null	C00555	4	bus
+null	C00556	5	bus
+null	C00594	O1	bus
+null	C00603	2	bus
+null	C00607	95-09	bus
+null	C00647	32	bus
+null	C00621	13	bus
+null	C00634	42	bus
+null	C00659	18	bus
+null	C00612	24	bus
+null	C00616	36	bus
+null	C00601	E2	bus
+null	C00670	DM08	bus
+null	C00702	11	bus
+null	C00703	12	bus
+null	C00868	32	bus
+null	C00767	39	bus
+null	C00694	3	bus
+null	C00837	51	bus
+null	C00846	12	bus
+null	C00875	A	bus
+null	C00882	F	bus
+null	C00983	5	bus
+null	C00903	06	bus
+null	C00976	2	bus
+null	C00985	7001	bus
+null	C00963	68.02	bus
+null	C00962	68.01	bus
+null	C00958	D	bus
+null	C00899	Js	bus
+null	C01517	PROBUS B	bus
+null	C01520	PROBUS E	bus
+null	C01482	27	bus
+null	C01540	466	bus
+null	C01539	465	bus
+null	C01542	468	bus
+null	C01578	607	bus
+null	C01581	613	bus
+null	C01605	K	bus
+null	C01663	109	bus
+null	C01625	412	bus
+null	C01624	409	bus
+null	C01631	453	bus
+null	C01669	31	bus
+null	C01755	D	bus
+null	C01875	30-48	bus
+null	C01866	24	bus
+null	C01872	43	bus
+null	C01772	30	bus
+null	C01867	20	bus
+null	C01685	A1	bus
+null	C01714	300	bus
+null	C02294	NANGIBUS	bus
+null	C02316	6	bus
+null	C02418	105A	bus
+null	C02049	30-21 Ouest	bus
+null	C02355	18	bus
+null	C02221	209	bus
+null	C02428	71	bus
+null	C02098	02F	bus
+null	C01034	73	bus
+null	C00736	18	bus
+null	C00307	37	bus
+null	C01798	2C	bus
+null	C01036	72	bus
+null	C00283	52	bus
+null	C00755	88A	bus
+null	C00641	1	bus
+null	C00129	312	bus
+null	C01300	ROISSYBUS	bus
+null	C01615	510	bus
+null	C01629	418	bus
+null	C00749	82	bus
+null	C00735	17	bus
+null	C01568	91-07	bus
+null	C00098	331	bus
+null	C02515	SRL Houilles	bus
+null	C01688	118 (ex 39-37 B)	bus
+null	C00707	103	bus
+null	C02479	Extrême Soirée	bus
+null	C02439	K	bus
+null	C01993	48	bus
+null	C00359	E	bus
+null	C01953	49	bus
+null	C02097	02E	bus
+null	C02459	382	bus
+null	C02367	Conflans Ste Honorine - Mantes	bus
+null	C02187	61B	bus
+null	C02370	TER Normandie	rail
+null	C02463	27	bus
+null	C02387	232	bus
+null	C02481	2	bus
+null	C00115	21	bus
+null	C02086	55	bus
+null	C02079	31C	bus
+null	C02073	12B	bus
+null	C02108	37B	bus
+null	C02112	42	bus
+null	C02116	09A	bus
+null	C02486	Soirée Bouray	bus
+null	C00214	43	bus
+null	C02317	T9	tram
+null	C02396	DM151S	bus
+null	C02167	12.1	bus
+null	C02487	N138	bus
+null	C02226	04	bus
+null	C02214	40	bus
+null	C00655	Express 100 Les Mureaux St Quentin	bus
+null	C02455	20	bus
+null	C01854	TER Grand-Est Bus	bus
+null	C02311	200	bus
+null	C02490	Soirée Meaux Sud	bus
+null	C01740	L	rail
+null	C00385	301	bus
+null	C02065	68.01S	bus
+null	C00549	Brie Bus	bus
+null	C02301	526	bus
+null	C00876	B	bus
+null	C01377	7	metro
+null	C02351	51	bus
+null	C02360	56	bus
+null	C00332	E	bus
+null	C02408	Caméléon T5	bus
+null	C01267	292	bus
+null	C01511	15	bus
+null	C00399	95-16	bus
+null	C01709	30-47	bus
+null	C00637	Express 18	bus
+null	C00652	80	bus
+null	C00006	480	bus
+null	C00451	30-22	bus
+null	C00471	95-03A	bus
+null	C02006	30-49	bus
+null	C00836	50	bus
+null	C01567	EXPRESS 91-06	bus
+null	C01063	Express 17	bus
+null	C01499	Express 47	bus
+null	C01505	Express 07	bus
+null	C02229	Qs	bus
+null	C02435	46-2	bus
+null	C00960	Express 67	bus
+null	C00392	305	bus
+null	C02451	43S	bus
+null	C01727	C	rail
+null	C02461	DM3B	bus
+null	C00062	Express 60	bus
+null	C02204	Express 27	bus
+null	C02442	Bus de substitution du RER A	bus
+null	C01774	T7	tram
+null	C01233	221	bus
+null	C02472	913.17B	bus
+null	C01675	EX100 Persan	bus
+null	C01554	95-41	bus
+null	C01964	9D	bus
+null	C01298	350	bus
+null	C01895	TàD Saint-Fargeau	bus
+null	C01967	11D	bus
+null	C01614	G	bus
+null	C01974	18B	bus
+null	C01981	22	bus
+null	C00334	K	bus
+null	C00761	88C	bus
+null	C00277	24	bus
+null	C02151	S5	bus
+null	C02152	P	bus
+null	C02207	71	bus
+null	C01989	51	bus
+null	C00639	Express 19	bus
+null	C02008	353	bus
+null	C02031	12	bus
+null	C02102	R1B	bus
+null	C02175	TG	bus
+null	C00029	502	bus
+null	C02133	9	bus
+null	C00100	223	bus
+null	C02135	7s	bus
+null	C00076	S15	bus
+null	C00112	14	bus
+null	C00110	12	bus
+null	C02202	111	bus
+null	C02172	BL	bus
+null	C02173	CSP	bus
+null	C02258	40	bus
+null	C00176	22	bus
+null	C00143	Express 1	bus
+null	C00145	9A	bus
+null	C00206	30D	bus
+null	C00031	A	bus
+null	C00199	17	bus
+null	C00220	50	bus
+null	C00207	R8	bus
+null	C00228	R1	bus
+null	C00253	710	bus
+null	C00256	715	bus
+null	C00257	751	bus
+null	C00033	B	bus
+null	C00054	2	bus
+null	C00063	65	bus
+null	C00103	1025	bus
+null	C00168	08	bus
+null	C02293	S10	bus
+null	C00174	19	bus
+null	C00175	20	bus
+null	C00178	25	bus
+null	C00366	LM2	bus
+null	C00367	LM3	bus
+null	C01227	213	bus
+null	C00411	15	bus
+null	C00414	Q	bus
+null	C00413	17	bus
+null	C00423	P	bus
+null	C00461	30-34 Scolaire	bus
+null	C00508	39-28 D	bus
+null	C00510	39-28 F	bus
+null	C00519	39-31	bus
+null	C00523	39-35 B	bus
+null	C00424	M	bus
+null	C00513	39-29-3	bus
+null	C00535	448	bus
+null	C00560	102	bus
+null	C00573	K	bus
+null	C00613	24 sco	bus
+null	C00605	G	bus
+null	C00486	38-03	bus
+null	C00622	04	bus
+null	C00606	C	bus
+null	C00643	22	bus
+null	C00576	H	bus
+null	C00617	37	bus
+null	C02281	P	bus
+null	C00959	I	bus
+null	C00765	36	bus
+null	C01073	21	bus
+null	C00828	207	bus
+null	C00813	43	bus
+null	C00844	04	bus
+null	C00856	35	bus
+null	C00819	3	bus
+null	C00867	23	bus
+null	C00824	11A	bus
+null	C00830	17A	bus
+null	C00832	1	bus
+null	C02272	S11	bus
+null	C00007	282	bus
+null	C00905	8A	bus
+null	C00925	34S1	bus
+null	C00926	35	bus
+null	C00914	19	bus
+null	C00916	21	bus
+null	C00977	913.07	bus
+null	C00984	913.50	bus
+null	C01011	184-013	bus
+null	C01016	284-004	bus
+null	C01017	284-006	bus
+null	C01048	27	bus
+null	C01851	C	bus
+null	C01078	28	bus
+null	C01005	184-005	bus
+null	C01477	11	bus
+null	C01140	111	bus
+null	C01149	120	bus
+null	C01154	125	bus
+null	C01155	126	bus
+null	C01166	140	bus
+null	C01169	144	bus
+null	C01082	32	bus
+null	C01184	162	bus
+null	C01195	174	bus
+null	C01197	176	bus
+null	C01199	178	bus
+null	C01200	179	bus
+null	C01204	183	bus
+null	C01083	38	bus
+null	C01232	220	bus
+null	C01235	235	bus
+null	C01236	237	bus
+null	C01238	239	bus
+null	C01258	278	bus
+null	C01268	294	bus
+null	C01275	304	bus
+null	C01280	317	bus
+null	C01294	341	bus
+null	C01309	370	bus
+null	C01310	372	bus
+null	C01315	389	bus
+null	C01318	393	bus
+null	C01328	492	bus
+null	C01349	564	bus
+null	C01350	565	bus
+null	C01399	N33	bus
+null	C01402	N61	bus
+null	C01415	N11	bus
+null	C01590	627	bus
+null	C01591	637	bus
+null	C01088	47	bus
+null	C00597	U	bus
+null	C01385	FUNICULAIRE	funicular
+null	C01374	4	metro
+null	C01379	9	metro
+null	C01380	10	metro
+null	C01382	12	metro
+null	C01094	57	bus
+null	C01441	I	bus
+null	C01453	4B	bus
+null	C01469	204	bus
+null	C01461	201	bus
+null	C01457	4BD	bus
+null	C01450	203	bus
+null	C01502	3	bus
+null	C01493	38	bus
+null	C01099	63	bus
+null	C01548	701	bus
+null	C01657	18	bus
+null	C01613	F	bus
+null	C01603	I	bus
+null	C01654	S4	bus
+null	C01108	73	bus
+null	C01110	75	bus
+null	C01664	3	bus
+null	C01708	104	bus
+null	C01715	13A	bus
+null	C01112	80	bus
+null	C01746	TER Hauts-de-France	rail
+null	C01741	U	rail
+null	C01765	222	bus
+null	C01794	T6	tram
+null	C01786	95-12	bus
+null	C01788	95-32	bus
+null	C02287	115	bus
+null	C01790	95-34	bus
+null	C00895	J	bus
+null	C01845	N	bus
+null	C00288	87	bus
+null	C01853	E	bus
+null	C01855	TER Bourgogne - Franche-Comté Bus	bus
+null	C01142	113	bus
+null	C01151	122	bus
+null	C01159	131	bus
+null	C01181	158	bus
+null	C01183	160	bus
+null	C01214	194	bus
+null	C00599	E	bus
+null	C02282	T	bus
+null	C01303	356	bus
+null	C01285	321	bus
+null	C01357	ClamiBus	bus
+null	C01331	TILLBUS	bus
+null	C01345	559A	bus
+null	C01352	TIM	bus
+null	C01354	TUC	bus
+null	C01356	RIVER PLAZA	bus
+null	C01333	La Traverse Ney - Flandre	bus
+null	C00128	311	bus
+null	C01481	426	bus
+null	C01780	La Navette de Thiais	bus
+null	C01839	Le Bus du port	bus
+null	C01635	N151	bus
+null	C00487	3804	bus
+null	C01642	N134	bus
+null	C01645	N144	bus
+null	C00158	R2 Nord	bus
+null	C00066	20	bus
+null	C00294	2	bus
+null	C01874	FA	bus
+null	C02085	33	bus
+null	C02218	459	bus
+null	C01687	31	bus
+null	C00111	13	bus
+null	C00072	7	bus
+null	C00083	101	bus
+null	C00134	4	bus
+null	C00132	2	bus
+null	C00049	42	bus
+null	C00105	330	bus
+null	C00149	10	bus
+null	C00156	R4	bus
+null	C00215	44	bus
+null	C00278	25	bus
+null	C00292	1	bus
+null	C00285	54	bus
+null	C00189	1	bus
+null	C00272	16	bus
+null	C00286	98	bus
+null	C00233	R6	bus
+null	C00340	2	bus
+null	C00336	M	bus
+null	C00369	12	bus
+null	C00442	30-09	bus
+null	C00443	30-10	bus
+null	C00418	8	bus
+null	C00448	30-18	bus
+null	C00387	312	bus
+null	C00521	39-34	bus
+null	C00536	449	bus
+null	C00537	450	bus
+null	C00473	95-19	bus
+null	C00539	452	bus
+null	C00542	455	bus
+null	C00497	39-12	bus
+null	C00580	A	bus
+null	C00584	N	bus
+null	C00611	25	bus
+null	C00530	263	bus
+null	C00629	26	bus
+null	C00677	DM13	bus
+null	C00772	45	bus
+null	C00835	5	bus
+null	C00833	2	bus
+null	C00847	13	bus
+null	C00855	43	bus
+null	C00863	22	bus
+null	C00869	CPSF	bus
+null	C00883	Fd	bus
+null	C00975	1	bus
+null	C01423	1	bus
+null	C01436	B	bus
+null	C01574	602	bus
+null	C01588	620	bus
+null	C01586	618	bus
+null	C01659	A	bus
+null	C01617	402	bus
+null	C01616	401	bus
+null	C01676	431	bus
+null	C01804	15	bus
+null	C01763	102	bus
+null	C02236	E	bus
+null	C02171	AQ	bus
+null	C02057	6	bus
+null	C02149	B	bus
+null	C01934	105	bus
+null	C02386	V	bus
+null	C02164	34	bus
+null	C02424	N	bus
+null	C02429	81	bus
+null	C02441	18	bus
+null	C02275	S14	bus
+null	C00197	15	bus
+null	C01532	419	bus
+null	C01575	603	bus
+null	C02192	62B	bus
+null	C02162	76	bus
+null	C01558	95-45	bus
+null	C01787	95-31	bus
+null	C02412	95-15	bus
+null	C00650	37	bus
+null	C00114	19	bus
+null	C00725	1	bus
+null	C00118	34	bus
+null	C01797	2A	bus
+null	C00654	12	bus
+null	C02525	Bus de substitution de l'ORLYVAL	bus
+null	C01956	420	bus
+null	C00120	42	bus
+null	C00731	9	bus
+null	C00961	Express 69	bus
+null	C01340	AS AUTOBUS SURESNOIS	bus
+null	C02290	114	bus
+null	C00626	22	bus
+null	C02474	Soirée Etampes	bus
+null	C01928	La Navette de Garches	bus
+null	C01904	L	bus
+null	C00974	306.12	bus
+null	C02517	CitéVal Ermont	bus
+null	C00342	4	bus
+null	C01462	202	bus
+null	C01975	320	bus
+null	C02478	115 (ex 22 scolaire)	bus
+null	C01836	G	bus
+null	C02497	E	bus
+null	C02452	44S	bus
+null	C02453	45S	bus
+null	C02060	Filéo Roissy Sud - Villeparisis et Mitry (sur réservation)	bus
+null	C02493	TàD Courtaboeuf	bus
+null	C02025	230	bus
+null	C02498	Y	bus
+null	C00551	23	bus
+null	C00727	5	bus
+null	C02039	DM20 S	bus
+null	C02056	4E	bus
+null	C02041	CitéVal Franconville	bus
+null	C02150	F	bus
+null	C02080	559B	bus
+null	C02076	76	bus
+null	C02077	31A	bus
+null	C02089	28A	bus
+null	C00377	RD	bus
+null	C02220	Soirée Mennecy	bus
+null	C02123	BALADOBUS	bus
+null	C00672	DM10A	bus
+null	C02485	TàD 31	bus
+null	C02107	37A	bus
+null	C02093	02A	bus
+null	C02120	30B	bus
+null	C02126	35A	bus
+null	C02128	35D	bus
+null	C01822	17	bus
+null	C00151	Express 16	bus
+null	C02174	JV	bus
+null	C00671	DM9	bus
+null	C00376	16	bus
+null	C02160	32S	bus
+null	C01491	37	bus
+null	C02513	Soir Versailles-Chantiers	bus
+null	C00706	102	bus
+null	C02179	Navette Paris-Beauvais	bus
+null	C02193	63	bus
+null	C02502	V	bus
+null	C02224	S9	bus
+null	C02274	S13	bus
+null	C00661	Express 20	bus
+null	C02271	325	bus
+null	C02270	324	bus
+null	C02505	Soirée Yerres Nord	bus
+null	C02276	V	bus
+null	C02313	1	bus
+null	C00224	Gbus	bus
+null	C00040	108 (ex 36)	bus
+null	C01999	T11 Express	tram
+null	C02407	Caméléon T3b	bus
+null	C00479	Navette de Bouffemont	bus
+null	C02345	61B	bus
+null	C01257	276	bus
+null	C02130	3s	bus
+null	C02129	3	bus
+null	C01391	T3a	tram
+null	C01433	Filéo Villiers-le-Bel (sur réservation)	bus
+null	C00917	22	bus
+null	C00273	9	bus
+null	C02433	1-3	bus
+null	C00316	J	bus
+null	C02262	Soirée Montgeron	bus
+null	C00426	Express 78	bus
+null	C00452	30-23	bus
+null	C00476	95-20	bus
+null	C01722	2	bus
+null	C02283	S7	bus
+null	C01947	8	bus
+null	C00838	55	bus
+null	C01564	91-03	bus
+null	C02303	ChavilBus Sud	bus
+null	C01552	95-04	bus
+null	C01565	EXPRESS 91-04	bus
+null	C01509	13	bus
+null	C01955	79	bus
+null	C01806	CITALIEN	bus
+null	C01372	2	metro
+null	C01570	EXPRESS 91-09	bus
+null	C01843	T4	tram
+null	C01951	12	bus
+null	C01728	D	rail
+null	C02395	DM154	bus
+null	C02269	Express A14 Chambourcy	bus
+null	C01902	F	bus
+null	C01636	N131	bus
+null	C01736	N	rail
+null	C00171	11	bus
+null	C01543	475	bus
+null	C01838	39-38	bus
+null	C02385	Bus de substitution du RER B	bus
+null	C01962	9B	bus
+null	C02413	95-50	bus
+null	C01966	11C	bus
+null	C02473	913.17C	bus
+null	C01971	14B	bus
+null	C01973	17B	bus
+null	C00894	S3	bus
+null	C00379	Express 191-100	bus
+null	C00909	11	bus
+null	C01982	31	bus
+null	C01886	P	bus
+null	C02318	8ASc	bus
+null	C00935	50	bus
+null	C01987	45	bus
+null	C00728	4	bus
+null	C02147	S7	bus
+null	C00946	61	bus
+null	C02235	Ns	bus
+null	C02405	Caméléon T2	bus
+null	C00061	501	bus
+null	C00280	28	bus
+null	C02132	9s	bus
+null	C00097	319	bus
+null	C02156	09	bus
+null	C00122	71	bus
+null	C00124	170	bus
+null	C00138	512	bus
+null	C00136	5	bus
+null	C00016	14	bus
+null	C00208	31	bus
+null	C00212	38	bus
+null	C00191	11	bus
+null	C00202	21	bus
+null	C00225	116	bus
+null	C00230	R3	bus
+null	C00229	R2	bus
+null	C00247	703	bus
+null	C00232	R5	bus
+null	C00259	755	bus
+null	C00251	708	bus
+null	C00260	756	bus
+null	C00057	9	bus
+null	C00328	55	bus
+null	C02468	TàD Coeur Essonne 5	bus
+null	C00177	24	bus
+null	C00179	26	bus
+null	C00180	29	bus
+null	C00395	95-08	bus
+null	C00374	LP2	bus
+null	C00372	18	bus
+null	C00188	89	bus
+null	C00402	7	bus
+null	C00415	19	bus
+null	C00416	20	bus
+null	C00505	39-28 A	bus
+null	C00420	111	bus
+null	C00421	B	bus
+null	C00520	13	bus
+null	C00522	39-35 A	bus
+null	C00502	39-18	bus
+null	C00511	39-29-1	bus
+null	C00512	39-29-2	bus
+null	C00531	39-30 A	bus
+null	C00533	39-403	bus
+null	C00628	25	bus
+null	C00482	36-15	bus
+null	C00691	DM153	bus
+null	C00734	16	bus
+null	C00687	DM11C	bus
+null	C00688	DM26	bus
+null	C00741	26	bus
+null	C00784	59	bus
+null	C00301	12	bus
+null	C00803	06	bus
+null	C00851	36	bus
+null	C00821	8A	bus
+null	C00823	10	bus
+null	C00827	14A	bus
+null	C00886	S6	bus
+null	C00910	12	bus
+null	C00924	34	bus
+null	C00907	8C	bus
+null	C00990	7006	bus
+null	C01075	24	bus
+null	C00929	42	bus
+null	C00970	68-16	bus
+null	C00978	913.08	bus
+null	C01047	26	bus
+null	C01044	20	bus
+null	C01057	38	bus
+null	C01053	33	bus
+null	C01049	29A	bus
+null	C01059	40	bus
+null	C01071	TVM	bus
+null	C01097	61	bus
+null	C01081	31	bus
+null	C01144	115	bus
+null	C01153	124	bus
+null	C01170	145	bus
+null	C00018	21	bus
+null	C01173	148	bus
+null	C01180	157	bus
+null	C01191	170	bus
+null	C01213	192	bus
+null	C01239	241	bus
+null	C01241	249	bus
+null	C01246	255	bus
+null	C01256	275	bus
+null	C01263	286	bus
+null	C01277	308	bus
+null	C01278	310	bus
+null	C01297	349	bus
+null	C01334	520	bus
+null	C01341	545	bus
+null	C01397	N23	bus
+null	C01398	N34	bus
+null	C01400	N31	bus
+null	C02289	113	bus
+null	C01086	43	bus
+null	C01405	N45	bus
+null	C01409	N53	bus
+null	C01416	N16	bus
+null	C01488	471	bus
+null	C01087	46	bus
+null	C01668	457	bus
+null	C01373	3	metro
+null	C01376	6	metro
+null	C01381	11	metro
+null	C01386	3B	metro
+null	C00651	39	bus
+null	C01446	205	bus
+null	C01096	60	bus
+null	C01456	1	bus
+null	C01452	4A	bus
+null	C01471	BRAY 11	bus
+null	C01454	4C	bus
+null	C01478	12	bus
+null	C01455	4D	bus
+null	C01526	422	bus
+null	C01489	06	bus
+null	C01507	11	bus
+null	C01522	441	bus
+null	C01104	68	bus
+null	C00590	S	bus
+null	C01560	95-47	bus
+null	C01670	Filéo Roissy Sud - Sevran et Aulnay	bus
+null	C01662	F	bus
+null	C01718	39-07 B	bus
+null	C01705	S3	bus
+null	C01735	DIM	bus
+null	C01744	TER Centre - Val de Loire	rail
+null	C01730	P	rail
+null	C01731	R	rail
+null	C00945	60	bus
+null	C01791	95-35	bus
+null	C02209	S9	bus
+null	C01738	K	rail
+null	C01795	T8	tram
+null	C01841	P	bus
+null	C01827	2	bus
+null	C01830	A	bus
+null	C01824	D	bus
+null	C01849	A	bus
+null	C01850	B	bus
+null	C01863	TER Hauts-de-France	rail
+null	C01124	93	bus
+null	C01125	94	bus
+null	C01141	112	bus
+null	C00939	54	bus
+null	C01136	107	bus
+null	C01949	A	bus
+null	C01194	173	bus
+null	C01234	234	bus
+null	C01219	201	bus
+null	C01248	258	bus
+null	C01249	261	bus
+null	C01252	269	bus
+null	C01250	262	bus
+null	C01255	274	bus
+null	C01335	LA NAVETTE	bus
+null	C01338	EOLIEN	bus
+null	C01351	566	bus
+null	C01367	V6	bus
+null	C01421	N122	bus
+null	C01696	248	bus
+null	C01818	208B	bus
+null	C02082	559D	bus
+null	C02245	59	bus
+null	C02457	Ligne Bleue	bus
+null	C01638	N140	bus
+null	C00864	25	bus
+null	C00865	24	bus
+null	C00159	R2 Sud	bus
+null	C01810	108	bus
+null	C01757	La Traverse Brancion-Commerce	bus
+null	C01046	25	bus
+null	C01697	21	bus
