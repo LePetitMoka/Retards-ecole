@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-11-29T14:34:16.888Z" agent="5.0 (Macintosh)" etag="J-_p9wEw6LrtFp-51a6W" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-29T15:05:00.590Z" agent="5.0 (Macintosh)" etag="ejc9lTRCy2w5erTaI0Ra" version="20.4.0" type="github">
   <diagram id="ntwZN9jLrbFkZiTQ13Ez" name="Page-1">
     <mxGraphModel dx="2951" dy="2072" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -783,7 +783,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aZVgKQXxo3GAIQlFuhNd-93" value="&lt;h1&gt;MLDR&lt;/h1&gt;&lt;p&gt;Admin (&lt;b&gt;&lt;u&gt;IdAd&lt;/u&gt;&lt;/b&gt;, nom, prénom, adresse, telephone, email, diplome, signature, IdCon)&lt;/p&gt;&lt;p&gt;Professeur (&lt;u&gt;&lt;b&gt;IdPf&lt;/b&gt;&lt;/u&gt;, nom, prenom, email, telephone, diplome, IdCon, Mdp)&lt;/p&gt;&lt;div&gt;Transports (&lt;u&gt;&lt;b&gt;IdTp&lt;/b&gt;&lt;/u&gt;, nom, type)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Classe (&lt;u&gt;&lt;b&gt;IdC&lt;/b&gt;&lt;/u&gt;&lt;b&gt;&lt;u&gt;l&lt;/u&gt;&lt;/b&gt;, nom, NbEtudiants, email)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Étudiant (&lt;u&gt;&lt;b&gt;IdE&lt;/b&gt;,&lt;b&gt;#IdCl&lt;/b&gt;&lt;/u&gt; nom, prenom, email, telephone, adresse, IdCon, mdp)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Station (&lt;u&gt;&lt;b&gt;IdSt&lt;/b&gt;&lt;/u&gt;, nom, &lt;b&gt;#IdTp&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Perturbation (&lt;u&gt;&lt;b&gt;IdPt&lt;/b&gt;&lt;/u&gt;, raison, dateDeb, dateFin, heureDeb, heureFin, JourDeb, JourFin, &lt;b&gt;#IdTp&lt;/b&gt;)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Trajet (&lt;u&gt;&lt;b&gt;IdTJ&lt;/b&gt;,&lt;b&gt;#IdE&lt;/b&gt;&lt;/u&gt; dureeTotale)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Cours (&lt;u&gt;&lt;b&gt;#IdCl,#IdP&lt;/b&gt;&lt;/u&gt;, Date, HeureDeb, HeureFin, Duree, Matiere, Salle)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Avoir (&lt;u&gt;&lt;b&gt;#IdTp,#IdTj&lt;/b&gt;&lt;/u&gt;)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Billet (&lt;u&gt;&lt;b&gt;#IdAd, #IdE&lt;/b&gt;&lt;/u&gt;, Date, DureeRetard, Heure, URLSignature)&lt;/div&gt;" style="text;html=1;strokeColor=default;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;strokeWidth=2;" parent="u7hhSnUpqo7W0qD7Zvtp-3" vertex="1">
+        <mxCell id="aZVgKQXxo3GAIQlFuhNd-93" value="&lt;h1&gt;MLDR&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;User (&lt;u&gt;&lt;b&gt;IdU&lt;/b&gt;&lt;/u&gt;,email,mdp,role)&lt;br&gt;&lt;/div&gt;&lt;p&gt;Admin (&lt;b&gt;&lt;u&gt;IdAd&lt;/u&gt;&lt;/b&gt;, nom, prénom, adresse, telephone, email, diplome, signature, IdCon, &lt;b&gt;#IdU&lt;/b&gt;)&lt;/p&gt;&lt;p&gt;Professeur (&lt;u&gt;&lt;b&gt;IdPf&lt;/b&gt;&lt;/u&gt;, nom, prenom, telephone, diplome, IdCon, &lt;b&gt;#IdU&lt;/b&gt;)&lt;/p&gt;&lt;div&gt;Transports (&lt;u&gt;&lt;b&gt;IdTp&lt;/b&gt;&lt;/u&gt;, nom, type)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Classe (&lt;u&gt;&lt;b&gt;IdC&lt;/b&gt;&lt;/u&gt;&lt;b&gt;&lt;u&gt;l&lt;/u&gt;&lt;/b&gt;, nom, NbEtudiants, email)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Étudiant (&lt;u&gt;&lt;b&gt;IdE&lt;/b&gt;,&lt;b&gt;#IdCl&lt;/b&gt;&lt;/u&gt; nom, prenom, telephone, adresse, IdCon, &lt;b&gt;#IdU&lt;/b&gt;)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Station (&lt;u&gt;&lt;b&gt;IdSt&lt;/b&gt;&lt;/u&gt;, nom, &lt;b&gt;#IdTp&lt;/b&gt;)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Perturbation (&lt;u&gt;&lt;b&gt;IdPt&lt;/b&gt;&lt;/u&gt;, raison, dateDeb, dateFin, heureDeb, heureFin, JourDeb, JourFin, &lt;b&gt;#IdTp&lt;/b&gt;)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Trajet (&lt;u&gt;&lt;b&gt;IdTJ&lt;/b&gt;,&lt;b&gt;#IdE&lt;/b&gt;&lt;/u&gt; dureeTotale)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Cours (&lt;u&gt;&lt;b&gt;#IdCl,#IdP&lt;/b&gt;&lt;/u&gt;, Date, HeureDeb, HeureFin, Duree, Matiere, Salle)&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Avoir (&lt;u&gt;&lt;b&gt;#IdTp,#IdTj&lt;/b&gt;&lt;/u&gt;)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Billet (&lt;u&gt;&lt;b&gt;#IdAd, #IdE&lt;/b&gt;&lt;/u&gt;, Date, DureeRetard, Heure, URLSignature)&lt;/div&gt;" style="text;html=1;strokeColor=default;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;strokeWidth=2;" parent="u7hhSnUpqo7W0qD7Zvtp-3" vertex="1">
           <mxGeometry x="1140" y="1310" width="570" height="440" as="geometry" />
         </mxCell>
         <mxCell id="80Ay_-JoKYpEI_YeU6IU-1" value="avoir" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="u7hhSnUpqo7W0qD7Zvtp-3">
@@ -842,7 +842,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="80Ay_-JoKYpEI_YeU6IU-21" value="USER" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="u7hhSnUpqo7W0qD7Zvtp-3">
-          <mxGeometry x="1480" y="480" width="140" height="120" as="geometry" />
+          <mxGeometry x="1480" y="480" width="140" height="150" as="geometry" />
         </mxCell>
         <mxCell id="80Ay_-JoKYpEI_YeU6IU-22" value="&lt;b&gt;&lt;u&gt;IdU&lt;/u&gt;&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="80Ay_-JoKYpEI_YeU6IU-21">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
@@ -852,6 +852,9 @@
         </mxCell>
         <mxCell id="80Ay_-JoKYpEI_YeU6IU-28" value="mdp" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="80Ay_-JoKYpEI_YeU6IU-21">
           <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="80Ay_-JoKYpEI_YeU6IU-47" value="&lt;div&gt;role&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="80Ay_-JoKYpEI_YeU6IU-21">
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="80Ay_-JoKYpEI_YeU6IU-43" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="u7hhSnUpqo7W0qD7Zvtp-3" target="80Ay_-JoKYpEI_YeU6IU-41" source="80Ay_-JoKYpEI_YeU6IU-21">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -870,7 +873,7 @@
             <mxPoint x="1005" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="80Ay_-JoKYpEI_YeU6IU-46" value="1,N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="80Ay_-JoKYpEI_YeU6IU-45">
+        <mxCell id="80Ay_-JoKYpEI_YeU6IU-46" value="1,1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="80Ay_-JoKYpEI_YeU6IU-45">
           <mxGeometry x="-0.4667" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -898,7 +901,7 @@
             <mxPoint x="1080" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="80Ay_-JoKYpEI_YeU6IU-40" value="1,N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="80Ay_-JoKYpEI_YeU6IU-39">
+        <mxCell id="80Ay_-JoKYpEI_YeU6IU-40" value="1,1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="80Ay_-JoKYpEI_YeU6IU-39">
           <mxGeometry x="-0.4667" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -926,7 +929,7 @@
             <mxPoint x="1070" y="670" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="80Ay_-JoKYpEI_YeU6IU-34" value="1,N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="80Ay_-JoKYpEI_YeU6IU-33">
+        <mxCell id="80Ay_-JoKYpEI_YeU6IU-34" value="1,1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="80Ay_-JoKYpEI_YeU6IU-33">
           <mxGeometry x="-0.4667" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
