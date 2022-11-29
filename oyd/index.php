@@ -54,9 +54,9 @@
 						case 1:
 							require_once("./vues/gestion_bdd/gest-bdd.php");
 							break;
-						// case 2:
-						// 	require_once("./vues/tableau_de_bord/tdb-admin.php");
-						// 	break;
+						case 2:
+							require_once("./vues/message/msg-admin.php");
+							break;
 						// case 3:
 						// 	require_once("./vues/tableau_de_bord/tdb-admin.php");
 						// 	break;
