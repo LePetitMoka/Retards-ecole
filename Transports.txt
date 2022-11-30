@@ -1,4 +1,3 @@
-null	ID_Line	Name_Line	TransportMode	OperatorName	Picto
 null	C00135	6	bus	Keolis Seine et Oise Est	
 null	C00050	23	bus	Keolis Vélizy Vallée de la Bièvre	
 null	C00048	40	bus	Keolis Vélizy Vallée de la Bièvre	

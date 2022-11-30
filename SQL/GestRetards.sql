@@ -3,29 +3,7 @@ create database GestRetards;
 use GestRetards;
 
 
-create table Administrateur (
-    IdAd varchar (6) not null,
-    nom varchar(25) not null,
-    prenom varchar (25) not null,
-    email varchar (40) not null,
-    diplome varchar (25) not null,
-    signatureAd varchar (25) not null,
-    idCon varchar (25) not null,
-    mdp varchar (25) not null,
-    constraint pk_Administrateur primary key (IdAd)
-);
 
-create table Professeur(
-    IdPf varchar (6) not null,
-    nom varchar (25) not null,
-    prenom varchar (25) not null,
-    email varchar (25) not null,
-    telephone varchar (10) not null,
-    diplome varchar (25) not null,
-    idCon varchar (25) not null,
-    mdp varchar (25) not null,
-    constraint pk_Professeur primary key (IdPf)
-);
 
 create table Transport (
     IdTp varchar (6) not null ,
@@ -44,18 +22,28 @@ create table Classe (
     constraint pk_Classe primary key (IdCl)
 );
 
-create table Etudiant (
+create table HistoEtudiant(
+    IdHE varchar (6) not null,
     IdE varchar (6) not null,
-    nom varchar (25) not null,
-    prenom varchar (25) not null,
-    email varchar (25) not null,
-    telephone varchar (10) not null,
-    adresse varchar (40) not null,
-    IdCon varchar (25),
-    mdp varchar (25) not null,
-    IdCl varchar (6),
-    constraint pk_Etudiant primary key (IdE,IdCl),
-    constraint fk_Classe foreign key (IdCl) references Classe(IdCl)
+    mdp varchar(50),
+    primary key(IdHE),
+    foreign key(IdE) references Etudiant(IdE)
+);
+
+create table HistoProf(
+    IdHPf varchar (6) not null,
+    IdPf varchar (6) not null,
+    mdp varchar(50),
+    primary key(IdHPf),
+    foreign key(IdPf) references Professeur(IdPf)
+);
+
+create table HistoAdmin(
+    IdHAd varchar (6) not null,
+    IdAd varchar (6) not null,
+    mdp varchar(50),
+    primary key(IdHAd),
+    foreign key(IdAd) references Administrateur(IdAd)
 );
 
 create table Station(
