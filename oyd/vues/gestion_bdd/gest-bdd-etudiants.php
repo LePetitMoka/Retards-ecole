@@ -1,9 +1,35 @@
 <section class="gest-etudiants">
   <div class="container">
-    <div class="search-bar">
-      <input type="text" name="filtre">
-      <input type="submit" name="Filtrer" value="Filtrer" class="sub-buton">
+    <ul class="minibar unstyled-list">
+      <li class="sub-buton">
+        <a href="index.php?user=admin&page=1&subPage=0&action=show_etudiants">Liste des étudiants</a>
+      </li>
+      <li class="sub-buton">
+        <a href="index.php?user=admin&page=1&subPage=0&action=insert_etudiant">Ajouter un etudiant</a>
+      </li>
+      <li>
+        <input type="text" name="filtre">
+        <input type="submit" name="Filtrer" value="Filtrer" class="sub-buton">
+      </li>
+    </ul>
+    <div class="result">
+      <?php
+        if(isset($_GET['action'])){
+          $action = $_GET['action'];
+          switch ($action) {
+            case 'show_etudiants':
+              require_once("./vues/show/show_etudiants.php");
+              break;
+            case 'insert_etudiant':
+              require_once("./vues/insert/insert_etudiant.php");
+              break;
+
+            default :
+              require_once("./vues/show/show_etudiants.php");
+              break;
+          }
+        }
+      ?>
     </div>
-    <h2>Liste des étudiants</h2>
   </div>
 </section>

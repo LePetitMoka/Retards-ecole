@@ -99,7 +99,7 @@
 				<div class="link">
 					<a href="https://ecoleiris.fr/" target="_blank">
 						<img src="./img/icons colorées/lien.png" width="60" height="60">
-						<p class="diff-font">https://ecoleiris.fr/</p>
+						<p class="diff-font">Site de l'école</p>
 					</a>
 				</div>
 			</div>

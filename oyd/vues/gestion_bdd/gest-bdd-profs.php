@@ -1,9 +1,35 @@
 <section class="gest-profs">
   <div class="container">
-    <div class="search-bar">
-      <input type="text" name="filtre">
-      <input type="submit" name="Filtrer" value="Filtrer" class="sub-buton">
+    <ul class="minibar unstyled-list">
+      <li class="sub-buton">
+        <a href="index.php?user=admin&page=1&subPage=1&action=show_professeurs">Liste des professeurs</a>
+      </li>
+      <li class="sub-buton">
+        <a href="index.php?user=admin&page=1&subPage=1&action=insert_professeur">Ajouter un professeur</a>
+      </li>
+      <li>
+        <input type="text" name="filtre">
+        <input type="submit" name="Filtrer" value="Filtrer" class="sub-buton">
+      </li>
+    </ul>
+    <div class="result">
+      <?php
+        if(isset($_GET['action'])){
+          $action = $_GET['action'];
+          switch ($action) {
+            case 'show_professeurs':
+              require_once("./vues/show/show_professeurs.php");
+              break;
+            case 'insert_professeur':
+              require_once("./vues/insert/insert_professeur.php");
+              break;
+
+            default :
+              require_once("./vues/show/show_professeurs.php");
+              break;
+          }
+        }
+      ?>
     </div>
-    <h2>Liste des professeurs</h2>
   </div>
 </section>

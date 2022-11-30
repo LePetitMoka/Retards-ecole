@@ -98,7 +98,13 @@ form {
 }
 
 form input { 
-  margin: 10px 15px;
+  margin: 0 15px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  margin-bottom: 10px;
+  resize: none;
 }
 
 /* fin contenu */
