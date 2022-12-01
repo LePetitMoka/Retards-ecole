@@ -28,7 +28,7 @@ create table Administrateur (
 
 create table Transport (
     IdTp varchar (6) not null,
-    nom varchar (25) not null,
+    nom varchar (30) not null,
     type varchar (15) not null,
     transporteur varchar (25) not null,
     pictogramme varchar (50),
@@ -162,5 +162,8 @@ create table Billet(
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Transports.txt' into table Transport (IdTp,nom,type,transporteur,pictogramme);
 
+LOAD DATA LOCAL INFILE 
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Stations.txt' into table Station (IdSt,nom,transporteur,ville,IdTp);
 
- -- changer chemin sur windows --
+
+ -- changer chemin sur windows et mettre des double slash --
