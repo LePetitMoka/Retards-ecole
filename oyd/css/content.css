@@ -2,6 +2,12 @@
 
 .content {
   background-color: #fff;
+  /* position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 133.6px; */
+  min-height: calc(100vh - 300.16px);
+  max-width: 100vh;
   color: black;
   padding: 0 100px;
   height: calc(100vh - 247.6);

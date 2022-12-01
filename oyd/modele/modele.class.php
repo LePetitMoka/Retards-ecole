@@ -1,6 +1,6 @@
 <?php
   class Modele {
-    private $unPDO;
+    private $unPDO, $table;
 
     public function __construct ($server, $user, $password, $bdd){
       $this->unPDO = null;
@@ -13,6 +13,26 @@
 				echo "Impossible de se connecter au serveur<br/>";
 				echo $exp -> getMessage();
       }
+    }
+
+    public function getTable(){
+      return $this->table;
+    }
+
+    public function setTable($uneTable){
+      $this->table = $uneTable;
+    }
+
+    public function select_all (){
+			if($this->unPDO != null){
+				$requete = "select * from ".$this->table.";";
+				$select = $this->unPDO -> prepare ($requete);
+				$select -> execute();
+				$lesDonnees = $select -> fetchAll();
+				return $lesDonnees;
+			}else{
+				return null;
+			}
     }
   }
 ?>

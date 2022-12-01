@@ -49,13 +49,13 @@
 	<section class="content">
 	<?php
 		if(isset($_GET['user'])){
-			$user = $_GET['user'];
+			$role = $_GET['user'];
 			$page = $_GET['page'];
 		} else {
-			$user = 'admin';
+			$role = 'admin';
 			$page = 0;
 		}
-		switch ($user) {
+		switch ($role) {
 			case 'admin':
 				switch ($page) {
 					case 0:
