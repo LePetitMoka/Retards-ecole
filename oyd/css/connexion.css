@@ -1,0 +1,51 @@
+.role-choice {
+  background-color: black;
+  color: 	#F9B104;
+  text-align: center;
+}
+
+.role-choice .container form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.role-choice .container form input {
+  display: none;
+  cursor: pointer;
+}
+
+.role-admin {
+  background-color: #E7334C;
+  font-size: 2.6rem;
+  height: 100%;
+  width: 33%;
+  cursor: pointer;
+}
+
+.role-prof {
+  background-color: #1F54A2;
+  font-size: 2.6rem;
+  height: 100%;
+  width: 33%;
+  cursor: pointer;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.role-etudiant {
+  background-color: #01DE77;
+  font-size: 2.6rem;
+  height: 100%;
+  width: 33%;
+  cursor: pointer;
+}
+
+.role-choice img {
+  width: 80%;
+  height: auto;
+  cursor: pointer;
+}

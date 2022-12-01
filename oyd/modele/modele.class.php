@@ -15,18 +15,30 @@
       }
     }
 
-    public function getTable(){
+    public function getTable (){
       return $this->table;
     }
 
-    public function setTable($uneTable){
+    public function setTable ($uneTable){
       $this->table = $uneTable;
+    }
+
+    public function autentification ($id, $mdp){
+      if($this->unPDO != null){
+        $requete = "select * from ".$this->table.";";
+        $select -> $this->unPDO -> prepare($requete);
+        $select -> execute();
+        $user = $select -> fetch();
+        return $user;
+      } else {
+        return null;
+      }
     }
 
     public function select_all (){
 			if($this->unPDO != null){
 				$requete = "select * from ".$this->table.";";
-				$select = $this->unPDO -> prepare ($requete);
+				$select = $this->unPDO -> prepare($requete);
 				$select -> execute();
 				$lesDonnees = $select -> fetchAll();
 				return $lesDonnees;

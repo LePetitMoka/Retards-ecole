@@ -13,6 +13,7 @@ body {
   margin: 0;
   font-family: 'Work Sans', sans-serif;
   font-size: 15px;
+  height: 100vh;
 }
 
 .unstyled-list {

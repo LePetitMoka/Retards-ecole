@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	require_once("./controleur/bdd_config.php");
 	require_once("./controleur/controleur.class.php");
 
@@ -15,107 +17,52 @@
 	<link rel="stylesheet" href="./css/footer.css">
 	<link rel="stylesheet" href="./css/vertical-navbar.css">
 	<link rel="stylesheet" href="./css/content.css">
+	<link rel="stylesheet" href="./css/connexion.css">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,500,600,700&amp;display=swap" rel="stylesheet">
 	<script src="./js/script.js" defer></script>
 	<title>GREI</title>
 </head>
 <body>
-	<header>
-		<div class="container">
-			<div class="burger-bar">
-				<button class="burger" id="burger"><span class="bar"></span></button>
-			</div>
-			<div class="buttons">
-				<div class="user_icon">
-					<a href="">
-						<img src="./img/icons colorées/admin.png" width="60" height="60">
-					</a>
-				</div>
-				<div class="Deconnection">
-					<a href="">
-						<img src="./img/icons colorées/deconnexion.png" width="60" height="60">
-					</a>
-				</div>
-			</div>
-		</div>
-	</header>
-	<section class="vertical-navbar">
-		<div class="container">
-			<ul class="menu unstyled-list">
-				<?php require_once("./vues/navbar/nav-admin.php"); ?>
-			</ul>
-		</div>
-	</section>
-	<section class="content">
 	<?php
-		if(isset($_GET['user'])){
-			$role = $_GET['user'];
-			$page = $_GET['page'];
-		} else {
-			$role = 'admin';
-			$page = 0;
+		$user = null;
+		if(!isset($_SESSION['role'])){
+			// require_once("./vues/connexion/connexion.php");
+			echo '
+				<section class="role-choice">
+					<div class="container">
+						<form method="post">
+							<div class="role-admin">
+								<label for="admin">
+									<img src="./img/icons colorées/administrateur.png">
+									<p>Administrateur</p>
+								</label>
+								<input type="submit" name="role" value="admin" id="admin">
+							</div>
+							<div class="role-prof">
+								<label for="prof">
+									<img src="./img/icons colorées/professeur.png">
+									<p>Professeur</p>
+								</label>
+								<input type="submit" name="role" value="prof" id="prof">
+							</div>
+							<div class="role-etudiant">
+								<label for="etudiant">
+									<img src="./img/icons colorées/etudiant.png">
+									<p>Etudiant</p>
+								</label>
+								<input type="submit" name="role" value="etudiant" id="etudiant">
+							</div>
+						</form>
+					</div>
+				</section>
+			';
+			if(isset($_POST['role'])){
+				$_SESSION['role'] = $_POST['role'];
+			}
 		}
-		switch ($role) {
-			case 'admin':
-				switch ($page) {
-					case 0:
-						require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
-						break;
-					case 1:
-						require_once("./vues/gestion_bdd/gest-bdd.php");
-						break;
-					case 2:
-						require_once("./vues/message/msg-admin.php");
-						break;
-					case 3:
-						require_once("./vues/compte/compte-admin.php");
-						break;
-					// case 4:
-					// 	require_once("./vues/tableau_de_bord/tdb-admin.php");
-					// 	break;
-						
-					default:
-						require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
-						break;
-				}				
-				break;
-			// case 'prof':
-			// 	# code...
-			// 	break;
-			// case 'etudiant':
-			// 	# code...
-			// 	break;
-			
-			default:
-				require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
-				break;
+		if(isset($_SESSION['role'])) {
+			require_once("./sub-index.php");
 		}
 	?>
-	</section>
-	<footer>
-		<div class="container">
-			<div class="contacts">
-				<div class="phone">
-					<img src="./img/icons colorées/telephone.png" width="60" height="60">
-					<p class="diff-font">+33(0)144018670</p>
-				</div>
-				<div class="mail">
-					<a href="mailto:contact@ecoleiris.fr">
-						<img src="./img/icons colorées/email.png" width="60" height="60">
-						<p class="diff-font">contact@ecoleiris.fr</p>
-					</a>
-				</div>
-				<div class="link">
-					<a href="https://ecoleiris.fr/" target="_blank">
-						<img src="./img/icons colorées/lien.png" width="60" height="60">
-						<p class="diff-font">Site de l'école</p>
-					</a>
-				</div>
-			</div>
-			<div class="copyrights">
-				<p>Copyright © <?php echo date("Y"); ?> GREI IRIS. All Rights Reserved.<p>
-			</div>
-		</div>
-	</footer>
 </body>
 </html>

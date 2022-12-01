@@ -11,6 +11,11 @@
       $this->unModele -> setTable($uneTable);
     }
 
+    public function autentification($id, $mdp){
+      $user = $this->unModele -> autentification($id, $mdp);
+      return $user;
+    }
+
     public function select_all (){
       $lesDonnees = $this->unModele -> select_all();
       return $lesDonnees;
