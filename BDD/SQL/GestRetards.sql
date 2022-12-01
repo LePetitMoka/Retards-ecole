@@ -50,13 +50,12 @@ create table Matiere(
 );
 
 create table Station(
-    IdSt int (6) not null,
-    nom varchar (25) not null,
+    IdSt varchar (6) not null,
+    nom varchar (30) not null,
     transporteur varchar (25) not null,
     ville varchar (25) not null,
     IdTp varchar (6) not null,
-    constraint pk_Station primary key (IdSt),
-    constraint fk_Transport foreign key (IdTp) references Transport(IdTp)
+    constraint pk_Station primary key (IdSt)
 );
 
 create table Etudiant (
@@ -146,6 +145,14 @@ create table Enseigner(
     constraint pk_Enseigner primary key (IdM,IdPf),
     constraint fk_Professeur3 foreign key (IdPf) references Professeur(IdPf),
     constraint fk_Matiere foreign key (IdM) references Matiere(IdM)
+);
+
+create table Desservir(
+    IdTp varchar (6) not null,
+    IdSt varchar (6) not null,
+    constraint pk_Desservir primary key (IdTp,IdSt),
+    constraint fk_Station foreign key (IdSt) references Station(IdSt),
+    constraint fk_Transport foreign key (IdTp) references Transport(IdTp)
 );
 
 create table Billet(
