@@ -6,6 +6,7 @@
   padding: 0 100px;
   height: calc(100vh - 247.6);
   align-content: center;
+  margin-bottom: 25px;
 }
 
 .content h1 {
@@ -63,6 +64,10 @@ ul {
   margin: 0 15px;
 }
 
+/* .selected {
+  border: 7px solid #ffffff42;
+} */
+
 .sub-buton {
   background-color: #1e1e1e;
   color: #fff;
@@ -94,12 +99,17 @@ ul {
 }
 
 form {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
-form input { 
+form input {
   margin: 0 15px;
   margin-bottom: 10px;
+}
+
+table {
+  margin-bottom: 15px;
+  border-collapse: collapse;
 }
 
 textarea {

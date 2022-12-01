@@ -16,18 +16,20 @@
       <?php
         if(isset($_GET['action'])){
           $action = $_GET['action'];
-          switch ($action) {
-            case 'show_classes':
-              require_once("./vues/show/show_classes.php");
-              break;
-            case 'insert_classe':
-              require_once("./vues/insert/insert_classe.php");
-              break;
+        } else {
+          $action = 'show_classes';
+        }
+        switch ($action) {
+          case 'show_classes':
+            require_once("./vues/show/show_classes.php");
+            break;
+          case 'insert_classe':
+            require_once("./vues/insert/insert_classe.php");
+            break;
 
-            default :
-              require_once("./vues/show/show_classe.php");
-              break;
-          }
+          default :
+            require_once("index.php?user=admin&page=1&subPage=2&action=show_classes");
+            break;
         }
       ?>
     </div>

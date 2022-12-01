@@ -15,21 +15,23 @@
     <?php
       if(isset($_GET['subPage'])){
         $subPage = $_GET['subPage'];
-        switch ($subPage) {
-          case 0:
-            require_once("./vues/gestion_bdd/gest-bdd-etudiants.php");
-            break;
-          case 1:
-            require_once("./vues/gestion_bdd/gest-bdd-profs.php");
-            break;
-          case 2:
-            require_once("./vues/gestion_bdd/gest-bdd-classes.php");
-            break;
-          
-          default:
-          require_once("index.php?user=admin&page=1");
-            break;
-        }
+      } else {
+        $subPage = 0;
+      }
+      switch ($subPage) {
+        case 0:
+          require_once("./vues/gestion_bdd/gest-bdd-etudiants.php");
+          break;
+        case 1:
+          require_once("./vues/gestion_bdd/gest-bdd-profs.php");
+          break;
+        case 2:
+          require_once("./vues/gestion_bdd/gest-bdd-classes.php");
+          break;
+        
+        default:
+        require_once("index.php?user=admin&page=1&subPage=0");
+          break;
       }
     ?>
   </div>

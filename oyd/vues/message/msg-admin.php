@@ -15,21 +15,23 @@
     <?php
       if(isset($_GET['subPage'])){
         $subPage = $_GET['subPage'];
-        switch ($subPage) {
-          case 0:
-            require_once("./vues/show/show_messages.php");
-            break;
-          case 1:
-            require_once("./vues/insert/insert_message.php");
-            break;
-          case 2:
-            require_once("./vues/insert/insert_canal.php");
-            break;
-          
-          default:
-          require_once("index.php?user=admin&page=2");
-            break;
-        }
+      } else {
+        $subPage = 0;
+      }
+      switch ($subPage) {
+        case 0:
+          require_once("./vues/show/show_messages.php");
+          break;
+        case 1:
+          require_once("./vues/insert/insert_message.php");
+          break;
+        case 2:
+          require_once("./vues/insert/insert_canal.php");
+          break;
+        
+        default:
+        require_once("index.php?user=admin&page=2");
+          break;
       }
     ?>
   </div>
