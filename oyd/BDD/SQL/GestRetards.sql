@@ -158,7 +158,7 @@ create table Billet(
 );
 
 LOAD DATA LOCAL INFILE 
- 'C:\wamp64\www\Retards-ecole\oyd\BDD\Sources\Transports.txt' into table Transport (IdTp,nom,type,transporteur,pictogramme);
+ "C:\\wamp64\\www\\Retards-ecole\\oyd\\BDD\\Sources\\Transports.txt" into table Transport (IdTp,nom,type,transporteur,pictogramme);
 
 
  -- changer chemin sur windows --

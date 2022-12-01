@@ -1,6 +1,6 @@
 <?php
-	require_once("controleur/bdd_config.php");
-	require_once("controleur/controleur.class.php");
+	require_once("./controleur/bdd_config.php");
+	require_once("./controleur/controleur.class.php");
 
 	$unControleur = new Controleur($server, $user, $password, $bdd);
 ?>
