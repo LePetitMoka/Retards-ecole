@@ -52,6 +52,8 @@ create table Matiere(
 create table Station(
     IdSt int (6) not null,
     nom varchar (25) not null,
+    transporteur varchar (25) not null,
+    ville varchar (25) not null,
     IdTp varchar (6) not null,
     constraint pk_Station primary key (IdSt),
     constraint fk_Transport foreign key (IdTp) references Transport(IdTp)
