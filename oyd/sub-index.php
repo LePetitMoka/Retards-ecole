@@ -5,16 +5,31 @@
     </div>
     <div class="buttons">
       <div class="user_icon">
-        <a href="">
+        <a href="index.php?page=3">
           <img src="./img/icons colorées/parametres.png" width="60" height="60">
         </a>
       </div>
       <div class="Deconnection">
-        <a href="">
+        <a href="index.php?page=4">
           <img src="./img/icons colorées/deconnexion.png" width="60" height="60">
         </a>
       </div>
     </div>
+      <?php
+        // if(isset($_Get['page'])){
+        //   switch ($_Get['page']){
+        //     case 3:
+        //       require_once("./vues/compte/compte-admin.php");
+        //       break;
+        //     case 4:
+        //       session_destroy();
+        //       unset($_SESSION['role']);
+        //       require_once("./index.php");
+        //       header("location:index.php");
+        //       break;
+        //   }
+        // }
+      ?>
   </div>
 </header>
 <section class="vertical-navbar">
