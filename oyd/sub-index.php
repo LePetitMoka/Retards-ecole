@@ -23,7 +23,7 @@
         if(isset($_GET['page'])){
           switch ($_GET['page']){
             case 3:
-              require_once("./vues/compte/compte-admin.php");
+              $_GET['user'] = "admin";
               break;
             case 4:
               session_destroy();
