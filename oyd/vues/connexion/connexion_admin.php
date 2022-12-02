@@ -36,7 +36,6 @@
       $_SESSION['id'] = $user['IdAd'];
       $_SESSION['nom'] = $user['nom'];
       $_SESSION['prenom'] = $user['prenom'];
-      $_SESSION['role'] = $user['role'];
       $_SESSION['email'] = $user['email'];
       $_SESSION['telephone'] = $user['telephone'];
       $_SESSION['mdp'] = $user['mdp'];

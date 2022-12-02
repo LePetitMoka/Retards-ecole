@@ -16,19 +16,23 @@
       </div>
     </div>
       <?php
-        // if(isset($_Get['page'])){
-        //   switch ($_Get['page']){
-        //     case 3:
-        //       require_once("./vues/compte/compte-admin.php");
-        //       break;
-        //     case 4:
-        //       session_destroy();
-        //       unset($_SESSION['role']);
-        //       require_once("./index.php");
-        //       header("location:index.php");
-        //       break;
-        //   }
-        // }
+        if(isset($_GET['user'])){
+          $role = $_GET['user'];
+          $page = $_GET['page'];
+        }
+        if(isset($_GET['page'])){
+          switch ($_GET['page']){
+            case 3:
+              require_once("./vues/compte/compte-admin.php");
+              break;
+            case 4:
+              session_destroy();
+              unset($_SESSION['role']);
+              require_once("./index.php");
+              header("location:index.php");
+              break;
+          }
+        }
       ?>
   </div>
 </header>
@@ -41,51 +45,51 @@
 </section>
 <section class="content">
 <?php
-  // if(isset($_GET['user'])){
-  //   $role = $_GET['user'];
-  //   $page = $_GET['page'];
-  // } else {
-  //   $role = 'admin';
-  //   $page = 0;
-  // }
-
-  switch ($_SESSION['role']) {
-    case 'administrateur':
-      switch ($page) {
-        case 0:
-          require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
-          break;
-        case 1:
-          require_once("./vues/gestion_bdd/gest-bdd.php");
-          break;
-        case 2:
-          require_once("./vues/message/msg-admin.php");
-          break;
-        case 3:
-          require_once("./vues/compte/compte-admin.php");
-          break;
-        case 4:
-          session_destroy();
-        	unset($_SESSION['role']);
-          require_once("./index.php");
-          header("location:index.php");
-        	break;
-          
-        default:
-          require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
-          break;
-      }				
-      break;
-    // case 'prof':
-    // 	# code...
-    // 	break;
-    // case 'etudiant':
-    // 	# code...
-    // 	break;
+  if(isset($_GET['user'])){
+    $role = $_GET['user'];
+    $page = $_GET['page'];
     
-    default:
-      require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
-      break;
+    switch ($_SESSION['role']) {
+      case 'administrateur':
+        switch ($page) {
+          case 0:
+            require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
+            break;
+          case 1:
+            require_once("./vues/gestion_bdd/gest-bdd.php");
+            break;
+          case 2:
+            require_once("./vues/message/msg-admin.php");
+            break;
+          case 3:
+            require_once("./vues/compte/compte-admin.php");
+            break;
+          case 4:
+            session_destroy();
+            unset($_SESSION['role']);
+            // require_once("./index.php");
+            header("location:index.php");
+            break;
+            
+          default:
+            header("location:index.php");
+            break;
+        }				
+        break;
+      // case 'prof':
+      // 	# code...
+      // 	break;
+      // case 'etudiant':
+      // 	# code...
+      // 	break;
+      
+      default:
+        require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
+        break;
+    }
+  } else {
+    $class = '"welcome"';
+    echo "<p class=".$class.">Bienvenue ".$_SESSION['nom']." ".$_SESSION['prenom']."</p>";
   }
 ?>
 </section>
