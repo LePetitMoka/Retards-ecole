@@ -53,8 +53,7 @@ create table Station(
     IdSt varchar (6) not null,
     nom varchar (30) not null,
     transporteur varchar (25) not null,
-    ville varchar (25) not null,
-    IdTp varchar (6) not null,
+    ville varchar(25) not null,
     constraint pk_Station primary key (IdSt)
 );
 
@@ -151,8 +150,8 @@ create table Desservir(
     IdTp varchar (6) not null,
     IdSt varchar (6) not null,
     constraint pk_Desservir primary key (IdTp,IdSt),
-    constraint fk_Station foreign key (IdSt) references Station(IdSt),
-    constraint fk_Transport foreign key (IdTp) references Transport(IdTp)
+    constraint fk_Transport foreign key (IdTp) references Transport(IdTp),
+    constraint fk_Station foreign key (IdSt) references Station(IdSt)
 );
 
 create table Billet(
@@ -170,7 +169,10 @@ LOAD DATA LOCAL INFILE
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Transports.txt' into table Transport (IdTp,nom,type,transporteur,pictogramme);
 
 LOAD DATA LOCAL INFILE 
- '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Stations.txt' into table Station (IdSt,nom,transporteur,ville,IdTp);
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Stations.txt' into table Station (IdSt,nom,transporteur,ville);
+
+LOAD DATA LOCAL INFILE 
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Desservir.txt' into table Desservir (IdTp,IdSt);
 
 
  -- changer chemin sur windows et mettre des double slash --
