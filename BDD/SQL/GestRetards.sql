@@ -172,7 +172,8 @@ LOAD DATA LOCAL INFILE
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Stations.txt' into table Station (IdSt,nom,transporteur,ville);
 
 LOAD DATA LOCAL INFILE 
- '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Desservir.txt' into table Desservir (IdTp,IdSt);
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Desservir.txt' into table Desservir(IdTp,IdSt);
+
 
 
  -- changer chemin sur windows et mettre des double slash --
