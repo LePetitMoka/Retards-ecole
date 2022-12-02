@@ -25,7 +25,7 @@
 <body>
 	<?php
 		if(!isset($_SESSION['id'])){
-			if($_SESSION['role'] != null){
+			if(isset($_SESSION['role'])){
 				switch ($_SESSION['role']) {
 					case 'administrateur':
 						require_once("./vues/connexion/connexion_admin.php");
