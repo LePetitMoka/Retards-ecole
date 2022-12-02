@@ -24,43 +24,28 @@
 </head>
 <body>
 	<?php
-		$user = null;
-		if(!isset($_SESSION['role'])){
-			// require_once("./vues/connexion/connexion.php");
-			echo '
-				<section class="role-choice">
-					<div class="container">
-						<form method="post">
-							<div class="role-admin">
-								<label for="admin">
-									<img src="./img/icons colorées/administrateur.png">
-									<p>Administrateur</p>
-								</label>
-								<input type="submit" name="role" value="admin" id="admin">
-							</div>
-							<div class="role-prof">
-								<label for="prof">
-									<img src="./img/icons colorées/professeur.png">
-									<p>Professeur</p>
-								</label>
-								<input type="submit" name="role" value="prof" id="prof">
-							</div>
-							<div class="role-etudiant">
-								<label for="etudiant">
-									<img src="./img/icons colorées/etudiant.png">
-									<p>Etudiant</p>
-								</label>
-								<input type="submit" name="role" value="etudiant" id="etudiant">
-							</div>
-						</form>
-					</div>
-				</section>
-			';
-			if(isset($_POST['role'])){
-				$_SESSION['role'] = $_POST['role'];
+		if(!isset($_SESSION['id'])){
+			if($_SESSION['role'] != null){
+				switch ($_SESSION['role']) {
+					case 'administrateur':
+						require_once("./vues/connexion/connexion_admin.php");
+						break;
+					// case 'professeur':
+					//   require_once("./connexion_prof.php");
+					//   break;
+					// case 'etudiant':
+					//   require_once("./connexion_etudiant.php");
+					//   break;
+					
+					default:
+						header("location:index.php");
+						break;
+				}
+			} else {
+				require_once("./vues/connexion/connexion.php");
 			}
 		}
-		if(isset($_SESSION['role'])) {
+		if(isset($_SESSION['id'])) {
 			require_once("./sub-index.php");
 		}
 	?>

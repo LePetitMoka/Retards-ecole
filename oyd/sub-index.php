@@ -6,7 +6,7 @@
     <div class="buttons">
       <div class="user_icon">
         <a href="">
-          <img src="./img/icons colorées/admin.png" width="60" height="60">
+          <img src="./img/icons colorées/parametres.png" width="60" height="60">
         </a>
       </div>
       <div class="Deconnection">

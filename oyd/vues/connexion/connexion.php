@@ -26,22 +26,8 @@
   </div>
   <?php
     if(isset($_POST['role'])){
-      $role = $_POST['role'];
-      switch ($role) {
-        case 'administrateur':
-          require_once("./connexion_admin.php");
-          break;
-        // case 'professeur':
-        //   require_once("./connexion_prof.php");
-        //   break;
-        // case 'etudiant':
-        //   require_once("./connexion_etudiant.php");
-        //   break;
-        
-        default:
-          require_once("./connexion_admin.php");
-          break;
-      }
+      $_SESSION['role'] = $_POST['role'];
+      header("location:index.php");
     }
   ?>
 </section>

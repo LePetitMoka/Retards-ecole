@@ -16,6 +16,10 @@ body {
   height: 100vh;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
 .unstyled-list {
   list-style: none;
   padding: none;

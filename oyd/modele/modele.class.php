@@ -25,9 +25,10 @@
 
     public function autentification ($id, $mdp){
       if($this->unPDO != null){
-        $requete = "select * from ".$this->table.";";
-        $select -> $this->unPDO -> prepare($requete);
-        $select -> execute();
+        $requete = "select * from ".$this->table." where email=:id and mdp=:mdp;";
+        $donnees = array(":id" => $id, ":mdp" => $mdp);
+        $select = $this->unPDO -> prepare($requete);
+        $select -> execute($donnees);
         $user = $select -> fetch();
         return $user;
       } else {
