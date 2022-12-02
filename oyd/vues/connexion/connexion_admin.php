@@ -19,6 +19,7 @@
       </td>
     </tr>
   </table>
+  <input type="submit" value="Annuler" name="Annuler" class="buton">
   <input type="submit" value="Connexion" name="Connexion" class="buton">
 </form>
 <?php
@@ -29,7 +30,8 @@
     $unControleur -> setTable($_SESSION['role']);
     $user = $unControleur -> autentification($id, $mdp);
     if($user == null){
-      echo "<br/>Vérifiez vos Identifiants<br/>";
+      echo "<br/>Assurez vous d'étre ".$_SESSION['role'];
+      echo "<br/>ou vérifiez vos Identifiants<br/>";
     } else {
       $_SESSION['id'] = $user['IdAd'];
       $_SESSION['nom'] = $user['nom'];
@@ -41,6 +43,10 @@
       $_SESSION['adresse'] = $user['adresse'];
       header("location:index.php");
     }
+  }
+  if(isset($_POST['Annuler'])){
+    unset($_SESSION['role']);
+    header("location:index.php");
   }
 ?>
 </center>

@@ -38,6 +38,7 @@
 					//   break;
 					
 					default:
+						unset($_SESSION['role']);
 						header("location:index.php");
 						break;
 				}

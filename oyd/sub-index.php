@@ -26,15 +26,16 @@
 </section>
 <section class="content">
 <?php
-  if(isset($_GET['user'])){
-    $role = $_GET['user'];
-    $page = $_GET['page'];
-  } else {
-    $role = 'admin';
-    $page = 0;
-  }
-  switch ($role) {
-    case 'admin':
+  // if(isset($_GET['user'])){
+  //   $role = $_GET['user'];
+  //   $page = $_GET['page'];
+  // } else {
+  //   $role = 'admin';
+  //   $page = 0;
+  // }
+
+  switch ($_SESSION['role']) {
+    case 'administrateur':
       switch ($page) {
         case 0:
           require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
