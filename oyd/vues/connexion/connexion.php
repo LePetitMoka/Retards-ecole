@@ -6,21 +6,21 @@
           <img src="./img/icons colorées/administrateur.png">
           <p>Administrateur</p>
         </label>
-        <input type="submit" name="role" value="administrateur" id="admin">
+        <input type="submit" name="role" value="administrateur" id="admin" class="invisible">
       </div>
       <div class="role-prof">
         <label for="prof">
           <img src="./img/icons colorées/professeur.png">
           <p>Professeur</p>
         </label>
-        <input type="submit" name="role" value="professeur" id="prof">
+        <input type="submit" name="role" value="professeur" id="prof" class="invisible">
       </div>
       <div class="role-etudiant">
         <label for="etudiant">
           <img src="./img/icons colorées/etudiant.png">
           <p>Etudiant</p>
         </label>
-        <input type="submit" name="role" value="etudiant" id="etudiant">
+        <input type="submit" name="role" value="etudiant" id="etudiant" class="invisible">
       </div>
     </form>
   </div>

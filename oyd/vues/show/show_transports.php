@@ -4,24 +4,59 @@
 
   $lesTransports = $unControleur -> select_all();
 
-  echo "<center>";
-  echo "<table border='1'>";
-  echo "<thead>";
-  echo "<th>ID</th>";
-  echo "<th>Ligne</th>";
-  echo "<th>Type</th>";
-  echo "<th>Trnasporteur</th>";
-  echo "<th>Logo</th>";
-  echo "</thead>";
-  foreach ($lesTransports as $unTransport) {
-    echo "<tr>";
-    echo "<td>".$unTransport['IdTp']."</td>";
-    echo "<td>".$unTransport['nom']."</td>";
-    echo "<td>".$unTransport['type']."</td>";
-    echo "<td>".$unTransport['transporteur']."</td>";
-    echo "<td>".$unTransport['pictogramme']."</td>";
-    echo "</tr>";
+  // 1963
+  $btnClasse = '"sub-buton"';
+  $inpClasse = '"invisible"';
+  $totEl = count($lesTransports);
+  $nbEp = 10;
+  $totpg = floor($totEl/$nbEp);
+  if ($totEl%$nbEp > 0){
+    $totpg ++;
   }
-  echo "</table>";
-  echo "</center>";
+  if(isset($pg)){
+    echo "<center>";
+    for($i=(($pg-1)*$nbEp); $i<=($pg*$nbEp-1); $i++){
+      $unTransport = $lesTransports[$i];
+      echo $unTransport['IdTp']." ";
+      echo $unTransport['nom']." ";
+      echo $unTransport['type']."<br/>";
+    }
+    echo "<form>";
+    echo "<label for='pre' class=".$btnClasse.">Precedente</label>";
+    echo "<input type='submit' name='pre' value='pre' id='pre' class=".$inpClasse.">";
+    echo "<label for='sui' class=".$btnClasse.">suivant</label>";
+    echo "<input type='submit' name='sui' value='sui' id='sui' class=".$inpClasse.">";
+    echo "</form>";
+    echo "</center>";
+    if(isset($_POST['pre'])){
+      $pg = $pg-1;
+      header("Refresh:1");
+    } elseif (isset($_POST['sui'])){
+      $pg = $pg+1;
+      header("Refresh:1");
+    }
+  } else {
+    $pg = 1;
+    echo "<center>";
+    for($i=(($pg-1)*$nbEp); $i<=($pg*$nbEp-1); $i++){
+      $unTransport = $lesTransports[$i];
+      echo $unTransport['IdTp']." ";
+      echo $unTransport['nom']." ";
+      echo $unTransport['type']."<br/>";
+    }
+    echo "<form>";
+    echo "<label for='pre' class=".$btnClasse.">Precedente</label>";
+    echo "<input type='submit' name='pre' value='pre' id='pre' class=".$inpClasse.">";
+    echo "<label for='sui' class=".$btnClasse.">suivant</a>";
+    echo "<input type='submit' name='sui' value='sui' id='sui' class=".$inpClasse.">";
+    echo "</form>";
+    echo "</center>";
+    if(isset($_POST['pre'])){
+      $pg = $pg-1;
+      header("Refresh:1");
+    } elseif (isset($_POST['sui'])){
+      $pg = $pg+1;
+      header("Refresh:1");
+    }
+  }
 ?>
