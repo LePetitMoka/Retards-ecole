@@ -6,12 +6,12 @@
     <div class="buttons">
       <div class="user_icon">
         <a href="index.php?page=3">
-          <img src="./img/icons colorées/parametres.png" width="60" height="60">
+          <img src="./img/icons_colorees/parametres.png" width="60" height="60">
         </a>
       </div>
       <div class="Deconnection">
         <a href="index.php?page=4">
-          <img src="./img/icons colorées/deconnexion.png" width="60" height="60">
+          <img src="./img/icons_colorees/deconnexion.png" width="60" height="60">
         </a>
       </div>
     </div>
@@ -97,18 +97,18 @@
   <div class="container">
     <div class="contacts">
       <div class="phone">
-        <img src="./img/icons colorées/telephone.png" width="60" height="60">
+        <img src="./img/icons_colorees/telephone.png" width="60" height="60">
         <p class="diff-font">+33(0)144018670</p>
       </div>
       <div class="mail">
         <a href="mailto:contact@ecoleiris.fr">
-          <img src="./img/icons colorées/email.png" width="60" height="60">
+          <img src="./img/icons_colorees/email.png" width="60" height="60">
           <p class="diff-font">contact@ecoleiris.fr</p>
         </a>
       </div>
       <div class="link">
         <a href="https://ecoleiris.fr/" target="_blank">
-          <img src="./img/icons colorées/lien.png" width="60" height="60">
+          <img src="./img/icons_colorees/lien.png" width="60" height="60">
           <p class="diff-font">Site de l'école</p>
         </a>
       </div>
