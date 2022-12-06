@@ -13,15 +13,15 @@
   if ($totEl%$nbEp > 0){
     $totpg ++;
   }
-  if(isset($pg)){
+  if(isset($_SESSION['pg'])){
     echo "<center>";
-    for($i=(($pg-1)*$nbEp); $i<=($pg*$nbEp-1); $i++){
+    for($i=(($_SESSION['pg']-1)*$nbEp); $i<=($_SESSION['pg']*$nbEp-1); $i++){
       $unTransport = $lesTransports[$i];
       echo $unTransport['IdTp']." ";
       echo $unTransport['nom']." ";
       echo $unTransport['type']."<br/>";
     }
-    echo "<form>";
+    echo "<form method='post'>";
     echo "<label for='pre' class=".$btnClasse.">Precedente</label>";
     echo "<input type='submit' name='pre' value='pre' id='pre' class=".$inpClasse.">";
     echo "<label for='sui' class=".$btnClasse.">suivant</label>";
@@ -29,22 +29,22 @@
     echo "</form>";
     echo "</center>";
     if(isset($_POST['pre'])){
-      $pg = $pg-1;
-      header("Refresh:1");
+      $_SESSION['pg'] = $_SESSION['pg']-1;
+      // require_once("./vues/tableau_de_bord/admin/tdb-admin-InfoTrafic.php");
     } elseif (isset($_POST['sui'])){
-      $pg = $pg+1;
-      header("Refresh:1");
+      $_SESSION['pg'] = $_SESSION['pg']+1;
+      // require_once("./vues/tableau_de_bord/admin/tdb-admin-InfoTrafic.php");
     }
   } else {
-    $pg = 1;
+    $_SESSION['pg'] = 1;
     echo "<center>";
-    for($i=(($pg-1)*$nbEp); $i<=($pg*$nbEp-1); $i++){
+    for($i=(($_SESSION['pg']-1)*$nbEp); $i<=($_SESSION['pg']*$nbEp-1); $i++){
       $unTransport = $lesTransports[$i];
       echo $unTransport['IdTp']." ";
       echo $unTransport['nom']." ";
       echo $unTransport['type']."<br/>";
     }
-    echo "<form>";
+    echo "<form method='post'>";
     echo "<label for='pre' class=".$btnClasse.">Precedente</label>";
     echo "<input type='submit' name='pre' value='pre' id='pre' class=".$inpClasse.">";
     echo "<label for='sui' class=".$btnClasse.">suivant</a>";
@@ -52,11 +52,11 @@
     echo "</form>";
     echo "</center>";
     if(isset($_POST['pre'])){
-      $pg = $pg-1;
-      header("Refresh:1");
+      $_SESSION['pg'] = $_SESSION['pg']-1;
+      // require_once("./vues/tableau_de_bord/admin/tdb-admin-InfoTrafic.php");
     } elseif (isset($_POST['sui'])){
-      $pg = $pg+1;
-      header("Refresh:1");
+      $_SESSION['pg'] = $_SESSION['pg']+1;
+      // require_once("./vues/tableau_de_bord/admin/tdb-admin-InfoTrafic.php");
     }
   }
 ?>
