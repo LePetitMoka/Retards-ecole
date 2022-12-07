@@ -23,6 +23,10 @@
       $this->table = $uneTable;
     }
 
+    public function resetPage(){
+      $_SESSION['pg'] = 1;
+    }
+
     public function autentification ($id, $mdp){
       if($this->unPDO != null){
         $requete = "select * from ".$this->table." where email=:id and mdp=:mdp;";

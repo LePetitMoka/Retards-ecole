@@ -11,6 +11,10 @@
       $this->unModele -> setTable($uneTable);
     }
 
+    public function resetPage(){
+      $this->unModele -> resetPage();
+    }
+
     public function autentification($id, $mdp){
       $user = $this->unModele -> autentification($id, $mdp);
       return $user;
