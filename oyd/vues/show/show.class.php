@@ -42,7 +42,6 @@
         $a = ($_SESSION['pg']-1)*$this->nbEp;
         $b = $_SESSION['pg']*$this->nbEp-1;
         $this->showLoop($a, $b);
-        echo "1";
       } elseif($_SESSION['pg'] == $this->totpg){
         $b = $this->totEl-1;
         if($b > 0){
@@ -54,12 +53,10 @@
           $a = $b;
         }
         $this->showLoop($a, $b);
-        echo "2";
       } elseif($_SESSION['pg']<1){
         $_SESSION['pg'] = 1;
         $a = ($_SESSION['pg']-1)*$this->nbEp;
         $b = $_SESSION['pg']*$this->nbEp-1;
-        echo "3";
       } elseif($_SESSION['pg']>$this->totpg){
         $_SESSION['pg'] = $this->totpg;
         $b = $this->totEl-1;
@@ -72,7 +69,6 @@
           $a = $b;
         }
         $this->showLoop($a, $b);
-        echo "4";
       }
     }
 
@@ -113,7 +109,6 @@
           echo "<label for='pre' class=".$this->btnClass.">Precedent</label>";
           echo "<input type='submit' name='pre' value='pre' id='pre' class=".$this->inpClass.">";
         }
-        echo "<p>page ".$_SESSION['pg']." tot:".$this->totpg."</p>";
         if($_SESSION['pg']<$this->totpg){
           echo "<label for='sui' class=".$this->btnClass.">suivant</label>";
           echo "<input type='submit' name='sui' value='sui' id='sui' class=".$this->inpClass.">";
