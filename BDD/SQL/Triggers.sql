@@ -59,3 +59,57 @@ delimiter ;
 --delimiter ;
 -- UPDT/INS ETUDIANT --
 
+-- CLASSE --
+
+drop trigger if exists insMAJnbEtudiants;
+delimiter //
+create trigger insMAJnbEtudiants
+after insert on Etudiant
+for each row
+begin
+update Classe
+    set nbEtudiant = (select count(IdE) from Etudiant e, Classe c where IdCl.c = IdCl.e and IdCl.c = IdCl)
+    where IdCl = new.IdCl;
+end //
+delimiter ;
+
+
+drop trigger if exists updMAJnbEtudiants;
+delimiter //
+create trigger udpMAJnbEtudiants
+after update on Etudiant
+for each row
+begin
+if new.IdCl != old.IdCl
+    then
+        update Classe set nbEtudiants = nbEtudiant + 1 where IdCl = new.IdCl;
+        update Classe set nbEtudiants = nbEtudiant - 1 where IdCl = old.IdCl;
+end if;
+end //
+delimiter ; -- COPIE
+
+drop trigger if exists updMAJnbEtudiants;
+delimiter //
+create trigger udpMAJnbEtudiants
+after update on Etudiant
+for each row
+begin
+if new.IdCl != old.IdCl
+    then
+        update Classe set nbEtudiant = (select count(IdE) from Etudiant e, Classe c where IdCl.c = IdCl.e and IdCl.c = IdCl)
+        where IdCl = new.IdCl;
+end if;
+end //
+delimiter ;
+
+
+drop trigger if exists delMAJnbEtudiants;
+delimiter //
+create trigger delMAJnbEtudiants
+after delete on Etudiant
+for each row
+begin
+    update Classe set nbEtudiant = (select count(IdE) from Etudiant e, Classe c where IdCl.c = IdCl.e and IdCl.c = IdCl)
+    where IdCl = old.IdCl;
+end //
+delimiter ;
