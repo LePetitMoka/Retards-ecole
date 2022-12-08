@@ -106,11 +106,9 @@
         echo "</form>";
         if(isset($_POST['pre'])){
           $_SESSION['pg'] = $_SESSION['pg']-1;
-          header("refresh");
           // require_once("./vues/tableau_de_bord/admin/tdb-admin-InfoTrafic.php");
         } elseif (isset($_POST['sui'])){
           $_SESSION['pg'] = $_SESSION['pg']+1;
-          header("refresh");
           // require_once("./vues/tableau_de_bord/admin/tdb-admin-InfoTrafic.php");
         }
         echo "<p>page ".$_SESSION['pg']."/".$this->totpg."</p>";
