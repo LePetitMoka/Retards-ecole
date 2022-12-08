@@ -102,7 +102,7 @@
       </div>
       <div class="mail">
         <a href="mailto:contact@ecoleiris.fr">
-          <img src="./img/icons_colorees/email.png" width="60" height="60">
+          <img src="./img/icons_colorees/poster.png" width="60" height="60">
           <p class="diff-font">contact@ecoleiris.fr</p>
         </a>
       </div>

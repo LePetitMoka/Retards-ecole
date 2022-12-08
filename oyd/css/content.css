@@ -163,4 +163,46 @@ textarea {
   color: #F9B104;
 }
 
+.show-div {
+  background-color: white;
+  color: black;
+  max-width: 700px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  align-items: left;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.show-div table {
+  width: 100%;
+  margin: 0;
+  margin: 10px;
+}
+
+.show-div-title {
+  background-color: #1e1e1e;
+  color: #F9B104;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 0;
+  width: 100%;
+}
+
+.edt-btn {
+  background-color: #008DC3;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.del-btn {
+  background-color: #E7334C;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 /* fin contenu */
