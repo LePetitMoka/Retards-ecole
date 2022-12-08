@@ -51,5 +51,23 @@
 				return null;
 			}
     }
+
+    public function select_filter($filtre, $lesAttributs){
+      if($this->unPDO != null){
+				$tabLike = array();
+				foreach ($lesAttributs as $unAttribut){
+					$tabLike[] = $unAttribut." like :filtre";
+				}
+				$chaineLike = implode(" or ", $tabLike);
+				$requete = "select * from ".$this->table." where ".$chaineLike.";";
+				$donnees = array(":filtre" => '%'.$filtre.'%');
+        $select = $this->unPDO -> prepare($requete);
+        $select -> execute($donnees);
+        $lesDonnees = $select -> fetchAll();
+        return $lesDonnees;
+      } else {
+        return null;
+      }
+    }
   }
 ?>

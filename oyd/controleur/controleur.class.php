@@ -24,5 +24,10 @@
       $lesDonnees = $this->unModele -> select_all();
       return $lesDonnees;
     }
+
+    public function select_filter($filtre, $lesAttributs){
+      $lesDonnees = $this->unModele -> select_filter($filtre, $lesAttributs);
+      return $lesDonnees;
+    }
   }
 ?>

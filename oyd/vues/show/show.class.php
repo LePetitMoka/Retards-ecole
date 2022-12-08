@@ -28,12 +28,20 @@
     function showLoop($x, $y){
       if($x != $y){
         for($i=$x; $i<=$y; $i++){
-          $unElement = $this->lesElements[$i];
-          $this->unDisplay -> display($unElement);
+          if($this->lesElements[$i] != null){
+            $unElement = $this->lesElements[$i];
+            $this->unDisplay -> display($unElement);
+          } else {
+            echo "Aucun resultat";
+          }
         }
       } else {
-        $unElement = $this->lesElements[$x];
-        $this->unDisplay -> display($unElement);
+        if(isset($this->lesElements[$x])){
+          $unElement = $this->lesElements[$x];
+          $this->unDisplay -> display($unElement);
+        } else {
+          echo "Aucun resultat";
+        }
       }
     }
 
@@ -44,6 +52,9 @@
         $this->showLoop($a, $b);
       } elseif($_SESSION['pg'] == $this->totpg){
         $b = $this->totEl-1;
+        if($b <= 0){
+          $b = 0;
+        }
         if($b > 0){
           $a = $b - ($this->totEl - floor($this->totEl/$this->nbEp)*$this->nbEp);
           if($a < 0){
@@ -57,9 +68,13 @@
         $_SESSION['pg'] = 1;
         $a = ($_SESSION['pg']-1)*$this->nbEp;
         $b = $_SESSION['pg']*$this->nbEp-1;
+        $this->showLoop($a, $b);
       } elseif($_SESSION['pg']>$this->totpg){
         $_SESSION['pg'] = $this->totpg;
         $b = $this->totEl-1;
+        if($b <= 0){
+          $b = 0;
+        }
         if($b > 0){
           $a = $b - ($this->totEl - floor($this->totEl/$this->nbEp)*$this->nbEp);
           if($a < 0){
@@ -91,9 +106,11 @@
         echo "</form>";
         if(isset($_POST['pre'])){
           $_SESSION['pg'] = $_SESSION['pg']-1;
+          header("refresh");
           // require_once("./vues/tableau_de_bord/admin/tdb-admin-InfoTrafic.php");
         } elseif (isset($_POST['sui'])){
           $_SESSION['pg'] = $_SESSION['pg']+1;
+          header("refresh");
           // require_once("./vues/tableau_de_bord/admin/tdb-admin-InfoTrafic.php");
         }
         echo "<p>page ".$_SESSION['pg']."/".$this->totpg."</p>";

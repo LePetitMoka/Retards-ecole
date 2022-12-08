@@ -3,7 +3,13 @@
   require_once ("show.class.php");
 
   $unControleur -> setTable("transport");
-  $lesTransports = $unControleur -> select_all();
+  if(isset($_POST['Filtrer'])){
+    $filtre = $_POST['filtre'];
+    $lesAttributs = array("IdTp", "nom", "type", "transporteur");
+    $lesTransports = $unControleur -> select_filter($filtre, $lesAttributs);
+  } else {
+    $lesTransports = $unControleur -> select_all();
+  }
   $leType = "transport";
   $unShow = new Show($lesTransports);
   $unShow->setType($leType);
