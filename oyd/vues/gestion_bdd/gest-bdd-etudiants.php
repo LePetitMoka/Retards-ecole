@@ -8,8 +8,10 @@
         <a href="index.php?user=admin&page=1&subPage=0&action=insert_etudiant">Ajouter un etudiant</a>
       </li>
       <li>
-        <input type="text" name="filtre">
-        <input type="submit" name="Filtrer" value="Filtrer" class="sub-buton">
+        <form method="post">
+          <input type="text" name="filtre">
+          <input type="submit" name="Filtrer" value="Filtrer" class="sub-buton">
+        </form>
       </li>
     </ul>
     <div class="result">

@@ -3,9 +3,25 @@
   require_once ("show.class.php");
 
   $unControleur -> setTable("etudiant");
-  $lesEtudiants = $unControleur -> select_all();
+  $filtre = ""; 
+  if(isset($_POST['Filtrer'])){
+    $filtre = $_POST['filtre'];
+    if (isset($_SESSION['filtre']) && (isset($_POST['sui']) || isset($_POST['pre']))){
+      if($filtre != $_SESSION['filtre']){
+        $_SESSION['pg'] = 1; 
+      }
+    }else {
+      $_SESSION['pg'] =1; 
+      $_SESSION['filtre'] = $filtre;
+    }
+    $lesAttributs = array("IdE", "nom", "prenom", "role", "email", "telephone", "adresse", "mdp", "IdCl");
+    $lesEtudiants = $unControleur -> select_filter($filtre, $lesAttributs);
+   
+  } else {
+    $lesEtudiants = $unControleur -> select_all();
+  }
   $leType = "etudiant";
   $unShow = new Show($lesEtudiants);
   $unShow->setType($leType);
-  $unShow->traitement(); 
+  $unShow->traitement($filtre); 
 ?>
