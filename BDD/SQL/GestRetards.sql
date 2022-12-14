@@ -6,6 +6,7 @@ create table Professeur (
     IdPf int (6) not null auto_increment,
     nom varchar (25) not null,
     prenom varchar (25) not null,
+    diplome varchar (50) not null,
     email varchar (25) not null unique,
     telephone varchar (10) not null unique,
     adresse varchar (50) not null,
@@ -48,11 +49,18 @@ create table Matiere(
     constraint pk_Matiere primary key (IdM)
 );
 
+create table ZoneStation(
+    IdZSt varchar (30) not null,
+    nom varchar (30) not null,
+    ville varchar(25) not null,
+    CP varchar (5) not null,
+    constraint pk_ZoneStation primary key (IdZSt)
+);
+
 create table Station(
     IdSt varchar (30) not null,
     nom varchar (30) not null,
-    transporteur varchar (25) not null,
-    ville varchar(25) not null,
+    ville varchar (30) not null,
     constraint pk_Station primary key (IdSt)
 );
 
@@ -147,9 +155,17 @@ create table Enseigner(
 
 create table Desservir(
     IdTp varchar (30) not null,
-    IdSt varchar (30) not null,
-    constraint pk_Desservir primary key (IdTp,IdSt),
+    IdZSt varchar (30) not null,
+    constraint pk_Desservir primary key (IdTp,IdZSt),
     constraint fk_Transport foreign key (IdTp) references Transport(IdTp),
+    constraint fk_ZoneStation2 foreign key (IdZSt) references ZoneStation(IdZSt)
+);
+
+create table Appartenir(
+    IdSt varchar(30) not null,
+    IdZSt varchar (30) not null,
+    constraint pk_Appartenir primary key (IdSt,IdZSt),
+    constraint fk_ZoneStation foreign key (IdZSt) references ZoneStation(IdZSt),
     constraint fk_Station foreign key (IdSt) references Station(IdSt)
 );
 
@@ -165,10 +181,27 @@ create table Billet(
 );
 
 LOAD DATA LOCAL INFILE 
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Professeurs.txt' into table Professeur (IdPf,nom,prenom,diplome,email,telephone,adresse,mdp);
+
+LOAD DATA LOCAL INFILE 
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Classes.txt' into table Classe (IdCl,nom,email,diplomePrepare);
+
+LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Transports.txt' into table Transport (IdTp,nom,type,transporteur,pictogramme);
 
 LOAD DATA LOCAL INFILE 
- '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Stations.txt' into table Station (IdSt,nom,transporteur,ville);
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Stations.txt' into table Station (IdSt,nom,ville);
+
+LOAD DATA LOCAL INFILE 
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Etudiants.txt' into table Etudiant (IdE,nom,prenom,email,telephone,adresse,mdp,IdCl);
+
+LOAD DATA LOCAL INFILE 
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/ZonesStations.txt' into table ZoneStation (IdZSt,nom,ville,CP);
+
+LOAD DATA LOCAL INFILE 
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Appartenir.txt' into table Appartenir (IdSt,IdZSt);
+
+
  -- sourcer le fichier InsertDesservir.sql --
 
 
@@ -177,18 +210,12 @@ LOAD DATA LOCAL INFILE
 insert into Administrateur values
 (null, 'Admin', 'Admin', 'abc@gmail.com', '0612345678', '11 Rue de la Paix', 'test');
 
-insert into Classe (nom,email,diplomePrepare) values 
-('BTS SIO 1 A','btssio1a@mediaschool.me','BTS');
-
-insert into Etudiant (nom,prenom,email,telephone,adresse,mdp,IdCl) values
-('Gates','Bill','billg@gmicrosoft.com','0678125638','20 Abbey Road Liverpool','123',1);
-
-
-
 update transport set pictogramme = ".\img\icons_colorees\bus.png" where type like 'bus';
 
 update transport set pictogramme = ".\img\icons_colorees\rer.png" where type like 'rail';
 
 update transport set pictogramme = ".\img\icons_colorees\metro.png" where type in ('metro', 'tram', 'funicular');
+
+-- executer le fichier updateRelStation.php --
 
 -- sourcer le fichier InsertDesservir.sql --
