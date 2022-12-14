@@ -31,7 +31,7 @@
     $user = $unControleur -> autentification($id, $mdp);
     if($user == null){
       echo "<br/>Assurez vous d'étre ".$_SESSION['role'];
-      echo "<br/>ou vérifiez vos Identifiants<br/>";
+      echo "<br/>et vérifiez vos Identifiants<br/>";
     } else {
       $_SESSION['id'] = $user['IdAd'];
       $_SESSION['nom'] = $user['nom'];

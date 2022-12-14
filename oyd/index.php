@@ -1,10 +1,9 @@
 <?php
 	session_start();
-
-	require_once("./controleur/bdd_config.php");
+	
 	require_once("./controleur/controleur.class.php");
-
-	$unControleur = new Controleur($server, $user, $password, $bdd);
+	require_once("./controleur/Connexion.class.php");
+	$unControleur = Connexion::getConnexion(); 
 ?>
 <!DOCTYPE html>
 <html>

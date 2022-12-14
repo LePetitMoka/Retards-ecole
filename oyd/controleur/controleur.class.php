@@ -29,5 +29,22 @@
       $lesDonnees = $this->unModele -> select_filter($filtre, $lesAttributs);
       return $lesDonnees;
     }
+
+    public function select_where($Attribut, $valeur){
+      $laTable = $this->unModele -> select_where($Attribut, $valeur);
+      return $laTable;
+    }
+
+    public function insert($ordre, $valeurs){
+      $this->unModele -> insert($ordre, $valeurs);
+    }
+
+    public function update_where($tableau, $Attribut, $valeur){
+      $this->unModele -> update_where($tableau, $Attribut, $valeur);
+    }
+
+    public function delete_where($Attribut, $valeur){
+      $this->unModele -> delete_where($Attribut, $valeur);
+    }
   }
 ?>

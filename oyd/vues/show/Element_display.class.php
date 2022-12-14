@@ -1,4 +1,5 @@
 <?php
+	require_once("./controleur/Connexion.class.php");
   class Display {
     private
     $var,
@@ -8,7 +9,9 @@
     $sdtClass = '"show-div-title"',
     $classFull = '"full"',
     $classPartial = '"partial"',
-    $stateClass = '"state"';
+    $stateClass = '"state"',
+    $Edit = "edit",
+    $Del = "del";
 
     public function __construct (){
       $this->var = 0;
@@ -57,18 +60,21 @@
           break;
 
         case 'etudiant':
+          $unControleur = Connexion::getConnexion();
+          $unControleur -> setTable("classe");
+          $saClasse = $unControleur -> select_where("IdCl", $unElement['IdCl']);
           echo "<div class=".$this->sdClass.">";
           echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
           echo "<table>";
           echo "<tr>";
           echo "<td>Classe : </td>";
-          echo "<td>".$unElement['IdCl']."</td>";
-          echo "<td rowspan='5'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></td>";
-          echo "<td rowspan='5'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></td>";
+          echo "<td>".$saClasse['nom']."</td>";
+          echo "<td rowspan='5'><a href='./index.php?user=admin&page=1&subPage=0&idE=".$unElement['IdE']."&act=".$this->Edit."'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></a></td>";
+          echo "<td rowspan='5'><a href='./index.php?user=admin&page=1&subPage=0&idE=".$unElement['IdE']."&act=".$this->Del."'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></a></td>";
           echo "</tr>";
           echo "<tr>";
           echo "<td>Diplome preparé : </td>";
-          echo "<td>BTS SIO option SLAM</td>";
+          echo "<td>".$saClasse['diplomePrep']."</td>";
           echo "</tr>";
           echo "<tr>";
           echo "<td>Email : </td>";
@@ -114,11 +120,11 @@
 
         case 'classe':
           echo "<div class=".$this->sdClass.">";
-          echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." 2022/2023</h3>";
+          echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['promotion']."</h3>";
           echo "<table>";
           echo "<tr>";
           echo "<td>Diplome preparé : </td>";
-          echo "<td>BTS SIO option SLAM</td>";
+          echo "<td>".$unElement['diplomePrep']."</td>";
           echo "<td rowspan='3'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></td>";
           echo "<td rowspan='3'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></td>";
           echo "</tr>";

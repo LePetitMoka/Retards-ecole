@@ -1,6 +1,22 @@
-<h2>Listes de tout les transports</h2>
+<br/>
+<center>
+<form method="post">
+  <label for="nbep">Nombre d'éléments par page : </label>
+  <input type="numbre" name="nbep" id="nbep" required>
+  <input type="submit" name="Changer" value="Changer">
+</form>
+</center>
+<br/>
 <?php
   require_once ("show.class.php");
+
+  if(isset($_POST['Changer'])){
+    $_SESSION['nbep'] = $_POST['nbep'];
+  }
+
+  if(!isset($_SESSION['nbep'])){
+    $_SESSION['nbep'] = 10;
+  }
 
   $unControleur -> setTable("transport");
   $filtre = ""; 
@@ -21,7 +37,7 @@
     $lesTransports = $unControleur -> select_all();
   }
   $leType = "transport";
-  $unShow = new Show($lesTransports);
+  $unShow = new Show($lesTransports, $_SESSION['nbep']);
   $unShow->setType($leType);
   $unShow->traitement($filtre); 
 ?>

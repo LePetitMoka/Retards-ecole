@@ -8,11 +8,12 @@
     $inpClass = '"invisible"',
     $lesElements,
     $totEl,
-    $nbEp = 10,
+    $nbEp,
     $totpg;
 
-    public function __construct ($lesElements){
-      $this->lesElements = $lesElements ;
+    public function __construct ($lesElements, $nbEpE){
+      $this->lesElements = $lesElements;
+      $this->nbEp = $nbEpE;
       $this->unDisplay = new Display;
       $this->totEl = count($lesElements);
       $this->totpg = floor($this->totEl/$this->nbEp);

@@ -89,7 +89,7 @@
     }
   } else {
     $class = '"welcome"';
-    echo "<p class=".$class.">Bienvenue ".$_SESSION['nom']." ".$_SESSION['prenom']."</p>";
+    echo "<p class=".$class.">Bienvenue ".$_SESSION['nom']."</p>";
   }
 ?>
 </section>
