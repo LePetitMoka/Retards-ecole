@@ -74,7 +74,7 @@
           echo "</tr>";
           echo "<tr>";
           echo "<td>Diplome preparé : </td>";
-          echo "<td>".$saClasse['diplomePrep']."</td>";
+          echo "<td>".$saClasse['diplomePrepare']."</td>";
           echo "</tr>";
           echo "<tr>";
           echo "<td>Email : </td>";
@@ -124,7 +124,7 @@
           echo "<table>";
           echo "<tr>";
           echo "<td>Diplome preparé : </td>";
-          echo "<td>".$unElement['diplomePrep']."</td>";
+          echo "<td>".$unElement['diplomePrepare']."</td>";
           echo "<td rowspan='3'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></td>";
           echo "<td rowspan='3'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></td>";
           echo "</tr>";

@@ -31,7 +31,7 @@
       $_SESSION['pg'] =1; 
       $_SESSION['filtre'] = $filtre;
     }
-    $lesAttributs = array("IdCl", "nom", "nbEtudiants", "email");
+    $lesAttributs = array("IdCl", "nom", "nbEtudiants", "email", "diplomePrepare", "promotion");
     $lesClasses = $unControleur -> select_filter($filtre, $lesAttributs);
    
   } else {

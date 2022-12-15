@@ -27,12 +27,11 @@
         $_SESSION['pg'] = 1; 
       }
     }else {
-      $_SESSION['pg'] =1; 
+      $_SESSION['pg'] = 1; 
       $_SESSION['filtre'] = $filtre;
     }
     $lesAttributs = array("IdTp", "nom", "type", "transporteur");
     $lesTransports = $unControleur -> select_filter($filtre, $lesAttributs);
-   
   } else {
     $lesTransports = $unControleur -> select_all();
   }

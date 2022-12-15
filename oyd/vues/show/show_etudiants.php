@@ -28,10 +28,10 @@
         $_SESSION['pg'] = 1; 
       }
     }else {
-      $_SESSION['pg'] =1; 
+      $_SESSION['pg'] = 1; 
       $_SESSION['filtre'] = $filtre;
     }
-    $lesAttributs = array("IdE", "nom", "prenom", "role", "email", "telephone", "adresse", "mdp", "IdCl");
+    $lesAttributs = array("IdE", "nom", "prenom", "email", "telephone", "adresse", "mdp", "IdCl");
     $lesEtudiants = $unControleur -> select_filter($filtre, $lesAttributs);
   } else {
     $lesEtudiants = $unControleur -> select_all();
