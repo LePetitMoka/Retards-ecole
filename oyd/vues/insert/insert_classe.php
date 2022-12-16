@@ -18,13 +18,32 @@
     </tr>
     <tr>
       <td>
-        <label for="dippre">Diplome preparé : </label>
+        <label for="email">Email : </label>
       </td>
       <td>
-        <input type="text" name="dippre" id="dippre">
+        <input type="text" name="email" id="email" placeholder="ex: exemple@iris.fr" required>
+      </td>
+      <td>
+        <label for="dipprepre">dipprelome preparé : </label>
+      </td>
+      <td>
+        <input type="text" name="dipprepre" id="dipprepre">
       </td>
     </tr>
   </table>
+  <input type="hidden" name="id" value="null">
   <input type="submit" name="Ajouter" value="Ajouter" class="sub-buton">
 </form>
 </center>
+<?php
+  if(isset($_POST['Ajouter'])){
+    $_POST['nom'] = "'".$_POST['nom']."'";
+    $_POST['promotion'] = "'".$_POST['promotion']."'";
+    $_POST['dipprepre'] = "'".$_POST['dipprepre']."'";
+    $_POST['email'] = "'".$_POST['email']."'";
+    $ordre = "IdCl, nom, promotion, diplomePrepare, email";
+    $valeurs = array("IdCl"=>$_POST['id'], "nom"=>$_POST['nom'], "promotion"=>$_POST['promotion'], "dipprepre"=>$_POST['dipprepre'], "email"=>$_POST['email']);
+    $unControleur -> setTable("classe");
+    $unControleur -> insert($ordre, $valeurs);
+  }
+?>

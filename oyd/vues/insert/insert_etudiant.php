@@ -26,6 +26,7 @@
       </td>
       <td>
         <select name="classe" id="classe" required>
+          <option>Choisir une classe</option>
           <?php
             for($i=0; $i<=count($lesClasses)-1; $i++){
               $uneClasse = $lesClasses[$i];

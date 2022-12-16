@@ -4,44 +4,38 @@
   <table>
     <tr>
       <td>
-        <label for="nom">Nom : </label>
+        <label for="dater">Date : </label>
       </td>
       <td>
-        <input type="text" name="nom" id="nom" class="input-zone">
+        <input type="date" name="dater" id="dater" value=<?php echo date("J\N\Y"); ?> class="input-zone" required>
       </td>
       <td>
-        <label for="prenom">prenom : </label>
+        <label for="dureer">Durée de retard : </label>
       </td>
       <td>
-        <input type="text" name="prenom" id="prenom">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label for="hdeb">Heure de debut : </label>
-      </td>
-      <td>
-        <input type="time" name="hdeb" id="hdeb">
-      </td>
-      <td>
-        <label for="durr">Durée de retard : </label>
-      </td>
-      <td>
-        <input type="time" name="durr" id="durr">
+        <input type="time" name="dureer" id="dureer" required>
       </td>
     </tr>
     <tr>
       <td>
-        <label for="classe">Classe : </label>
+        <label for="etud">Etudiant concerné : </label>
       </td>
       <td>
-        <input type="text" name="classe" id="classe">
+        <select name="etud" id="etud" required>
+          <option>Choisir un étudiant</option>
+          <!-- <?php
+            for($i=0; $i<=count($lesClasses)-1; $i++){
+              $uneClasse = $lesClasses[$i];
+              echo "<option value=".$uneClasse['IdCl'].">".$uneClasse['nom']."</option>";
+            }
+          ?> -->
+        </select>
       </td>
       <td>
         <label for="sign">Signature : </label>
       </td>
       <td>
-        <input type="text" name="sign" id="sign">
+        <label for="sign"><?php echo $_SESSION['nom']." ".$_SESSION['prenom'] ?></label>
       </td>
     </tr>
   </table>

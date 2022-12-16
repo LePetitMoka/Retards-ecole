@@ -98,9 +98,9 @@
           echo "<table>";
           echo "<tr>";
           echo "<td>Diplome récent : </td>";
-          echo "<td>Master Informatique</td>";
-          echo "<td rowspan='4'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></td>";
-          echo "<td rowspan='4'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></td>";
+          echo "<td>".$unElement['diplome']."</td>";
+          echo "<td rowspan='4'><a href='./index.php?user=admin&page=1&subPage=1&idPf=".$unElement['IdPf']."&act=".$this->Edit."'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></a></td>";
+          echo "<td rowspan='4'><a href='./index.php?user=admin&page=1&subPage=1&idPf=".$unElement['IdPf']."&act=".$this->Del."'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></a></td>";
           echo "</tr>";
           echo "<tr>";
           echo "<td>Email : </td>";
@@ -125,8 +125,8 @@
           echo "<tr>";
           echo "<td>Diplome preparé : </td>";
           echo "<td>".$unElement['diplomePrepare']."</td>";
-          echo "<td rowspan='3'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></td>";
-          echo "<td rowspan='3'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></td>";
+          echo "<td rowspan='3'><a href='./index.php?user=admin&page=1&subPage=2&idCl=".$unElement['IdCl']."&act=".$this->Edit."'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></a></td>";
+          echo "<td rowspan='3'><a href='./index.php?user=admin&page=1&subPage=2&idCl=".$unElement['IdCl']."&act=".$this->Del."'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></a></td>";
           echo "</tr>";
           echo "<tr>";
           echo "<td>Nombre d'étudiants : </td>";
