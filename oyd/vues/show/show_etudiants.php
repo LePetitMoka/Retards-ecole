@@ -4,7 +4,7 @@
 <form method="post">
   <label for="nbep">Nombre d'éléments par page : </label>
   <input type="numbre" name="nbep" id="nbep" required>
-  <input type="submit" name="Changer" value="Changer">
+  <input type="submit" name="Changer" value="Changer" class="sub-buton">
 </form>
 </center>
 <br/>
