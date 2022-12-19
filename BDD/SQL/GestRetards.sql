@@ -49,14 +49,6 @@ create table Matiere(
     constraint pk_Matiere primary key (IdM)
 );
 
-create table ZoneStation(
-    IdZSt varchar (30) not null,
-    nom varchar (30) not null,
-    ville varchar(25) not null,
-    CP varchar (5) not null,
-    constraint pk_ZoneStation primary key (IdZSt)
-);
-
 create table Station(
     IdSt varchar (30) not null,
     nom varchar (30) not null,
@@ -102,7 +94,7 @@ create table HistoAdmin(
 );
 
 create table Perturbation(
-    IdPt varchar (6) not null,
+    IdPt varchar (40) not null,
     raisonCourte varchar (250),
     raisonLongue varchar (250),
     dateDeb datetime,
@@ -110,9 +102,7 @@ create table Perturbation(
     jourDeb enum('Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'),
     jourFin enum('Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'),
     heureDeb time,
-    IdTp varchar (30) not null,
-    constraint pk_Perturbation primary key (IdPt),
-    constraint fk_Transport2 foreign key (IdTp) references Transport(IdTp)
+    constraint pk_Perturbation primary key (IdPt)
 );
 
 create table Trajet(
@@ -153,20 +143,12 @@ create table Enseigner(
     constraint fk_Matiere foreign key (IdM) references Matiere(IdM)
 );
 
-create table Desservir(
-    IdTp varchar (30) not null,
-    IdZSt varchar (30) not null,
-    constraint pk_Desservir primary key (IdTp,IdZSt),
-    constraint fk_Transport foreign key (IdTp) references Transport(IdTp),
-    constraint fk_ZoneStation2 foreign key (IdZSt) references ZoneStation(IdZSt)
-);
-
 create table Appartenir(
     IdSt varchar(30) not null,
-    IdZSt varchar (30) not null,
-    constraint pk_Appartenir primary key (IdSt,IdZSt),
-    constraint fk_ZoneStation foreign key (IdZSt) references ZoneStation(IdZSt),
-    constraint fk_Station foreign key (IdSt) references Station(IdSt)
+    IdTp varchar (30) not null,
+    constraint pk_Appartenir primary key (IdSt,IdTp),
+    constraint fk_ZoneStation foreign key (IdSt) references Station(IdSt),
+    constraint fk_Station foreign key (IdTp) references Transport(IdTp)
 );
 
 create table Billet(
@@ -178,6 +160,14 @@ create table Billet(
     constraint pk_Billet primary key (IdE, IdAd),
     constraint fk_Etudiant3 foreign key (IdE) references Etudiant(IdE),
     constraint fk_Administrateur2 foreign key (IdAd) references Administrateur(IdAd) 
+);
+
+create table Concerner(
+    IdSt varchar (30) not null,
+    IdPt varchar (50) not null,
+    constraint pk_Concerner primary key (IdSt,IdPt),
+    constraint fk_Perturbation foreign key (IdPt) references Perturbation(IdPt),
+    constraint fk_Station2 foreign key (IdSt) references Station(IdSt)
 );
 
 LOAD DATA LOCAL INFILE 
@@ -196,10 +186,7 @@ LOAD DATA LOCAL INFILE
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Etudiants.txt' into table Etudiant (IdE,nom,prenom,email,telephone,adresse,mdp,IdCl);
 
 LOAD DATA LOCAL INFILE 
- '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/ZonesStations.txt' into table ZoneStation (IdZSt,nom,ville,CP);
-
-LOAD DATA LOCAL INFILE 
- '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Appartenir.txt' into table Appartenir (IdSt,IdZSt);
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Appartenir.txt' into table Appartenir (IdSt,IdTp);
 
 
  -- sourcer le fichier InsertDesservir.sql --
