@@ -62,8 +62,8 @@ create table Etudiant (
     prenom varchar (25) not null,
     email varchar (25) not null unique,
     telephone varchar (10) not null unique,
-    adresse varchar (50) not null,
     mdp varchar (25) not null,
+    adresse varchar (50) not null,
     IdCl int (6) not null,
     constraint pk_Etudiant primary key (IdE,IdCl),
     constraint fk_Classe foreign key (IdCl) references Classe(IdCl)
@@ -94,14 +94,11 @@ create table HistoAdmin(
 );
 
 create table Perturbation(
-    IdPt varchar (40) not null,
+    IdPt varchar (90) not null,
     raisonCourte varchar (250),
     raisonLongue varchar (250),
     dateDeb datetime,
     dateFin datetime,
-    jourDeb enum('Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'),
-    jourFin enum('Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'),
-    heureDeb time,
     constraint pk_Perturbation primary key (IdPt)
 );
 
@@ -164,14 +161,14 @@ create table Billet(
 
 create table Concerner(
     IdSt varchar (30) not null,
-    IdPt varchar (50) not null,
+    IdPt varchar (90) not null,
     constraint pk_Concerner primary key (IdSt,IdPt),
     constraint fk_Perturbation foreign key (IdPt) references Perturbation(IdPt),
     constraint fk_Station2 foreign key (IdSt) references Station(IdSt)
 );
 
 LOAD DATA LOCAL INFILE 
- '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Professeurs.txt' into table Professeur (IdPf,nom,prenom,diplome,email,telephone,adresse,mdp);
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Professeurs.txt' into table Professeur (IdPf,nom,prenom,diplome,email,telephone,mdp,adresse);
 
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Classes.txt' into table Classe (IdCl,nom,email,diplomePrepare);
@@ -183,7 +180,7 @@ LOAD DATA LOCAL INFILE
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Stations.txt' into table Station (IdSt,nom,ville);
 
 LOAD DATA LOCAL INFILE 
- '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Etudiants.txt' into table Etudiant (IdE,nom,prenom,email,telephone,adresse,mdp,IdCl);
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Etudiants.txt' into table Etudiant (IdE,nom,prenom,email,telephone,mdp,adresse,IdCl);
 
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Appartenir.txt' into table Appartenir (IdSt,IdTp);
