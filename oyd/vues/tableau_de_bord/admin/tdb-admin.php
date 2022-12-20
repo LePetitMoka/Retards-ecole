@@ -4,7 +4,7 @@
     <div class="submenu">
       <ul class="submenu-list unstyled-list">
         <li><a class="buton selected" href="index.php?user=admin&page=0&subPage=0">Info Trafic</a></li>
-        <li><a class="buton selected" href="index.php?user=admin&page=0&subPage=1">Ticket de retard</a></li>
+        <li><a class="buton selected" href="index.php?user=admin&page=0&subPage=1">Tickets de retard</a></li>
       </ul>
     </div>
   </div>

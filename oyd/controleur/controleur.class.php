@@ -35,6 +35,11 @@
       return $laTable;
     }
 
+    public function select_where_all($Attribut, $valeur){
+      $laTable = $this->unModele -> select_where_all($Attribut, $valeur);
+      return $laTable;
+    }
+
     public function insert($ordre, $valeurs){
       $this->unModele -> insert($ordre, $valeurs);
     }

@@ -40,6 +40,7 @@
       $_SESSION['telephone'] = $user['telephone'];
       $_SESSION['mdp'] = $user['mdp'];
       $_SESSION['adresse'] = $user['adresse'];
+      $_SESSION['IdCl'] = $user['IdCl'];
       header("location:index.php");
     }
   }

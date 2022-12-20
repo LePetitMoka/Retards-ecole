@@ -91,6 +91,37 @@
           echo "</table>";
           echo "</div>";
           break;
+
+        case 'etudiant-lite':
+          $unControleur = Connexion::getConnexion();
+          $unControleur -> setTable("classe");
+          $saClasse = $unControleur -> select_where("IdCl", $unElement['IdCl']);
+          echo "<div class=".$this->sdClass.">";
+          echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
+          echo "<table>";
+          echo "<tr>";
+          echo "<td>Classe : </td>";
+          echo "<td>".$saClasse['nom']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Diplome preparé : </td>";
+          echo "<td>".$saClasse['diplomePrepare']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Email : </td>";
+          echo "<td>".$unElement['email']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Téléphone : </td>";
+          echo "<td>".$unElement['telephone']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Adresse : </td>";
+          echo "<td>".$unElement['adresse']."</td>";
+          echo "</tr>";
+          echo "</table>";
+          echo "</div>";
+          break;
         
         case 'professeur':
           echo "<div class=".$this->sdClass.">";
@@ -101,6 +132,30 @@
           echo "<td>".$unElement['diplome']."</td>";
           echo "<td rowspan='4'><a href='./index.php?user=admin&page=1&subPage=1&idPf=".$unElement['IdPf']."&act=".$this->Edit."'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></a></td>";
           echo "<td rowspan='4'><a href='./index.php?user=admin&page=1&subPage=1&idPf=".$unElement['IdPf']."&act=".$this->Del."'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></a></td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Email : </td>";
+          echo "<td>".$unElement['email']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Téléphone : </td>";
+          echo "<td>".$unElement['telephone']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Adresse : </td>";
+          echo "<td>".$unElement['adresse']."</td>";
+          echo "</tr>";
+          echo "</table>";
+          echo "</div>";
+          break;
+
+        case 'professeur-lite':
+          echo "<div class=".$this->sdClass.">";
+          echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
+          echo "<table>";
+          echo "<tr>";
+          echo "<td>Diplome récent : </td>";
+          echo "<td>".$unElement['diplome']."</td>";
           echo "</tr>";
           echo "<tr>";
           echo "<td>Email : </td>";

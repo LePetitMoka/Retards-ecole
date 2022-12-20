@@ -82,6 +82,18 @@
       }
     }
 
+    public function select_where_all($Attribut, $valeur){
+      if($this->unPDO != null){
+        $requete = "select * from ".$this->table." where ".$Attribut." = ".$valeur.";";
+        $select = $this->unPDO -> prepare($requete);
+        $select -> execute();
+        $laTable = $select -> fetchAll();
+        return $laTable;
+      } else {
+        return null;
+      }
+    }
+
     public function insert($ordre, $valeurs){
       if($this->unPDO != null){
         $valeurs = implode(', ', $valeurs);

@@ -98,18 +98,15 @@
       case 'etudiant':
         switch ($page) {
           case 0:
-            require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
+            require_once("./vues/tableau_de_bord/etudiant/tdb-etudiant.php");
             break;
           case 1:
-            require_once("./vues/gestion_bdd/gest-bdd.php");
+            require_once("./vues/message/msg-etudiant.php");
             break;
           case 2:
-            require_once("./vues/message/msg-admin.php");
-            break;
-          case 3:
             require_once("./vues/compte/compte-admin.php");
             break;
-          case 4:
+          case 3:
             session_destroy();
             unset($_SESSION['role']);
             // require_once("./index.php");
@@ -123,7 +120,7 @@
       break;
       
       default:
-        require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
+        header("location:index.php");
         break;
     }
   } else {
