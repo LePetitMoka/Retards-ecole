@@ -40,6 +40,7 @@ create table Classe (
     nbEtudiants int (2) default 0,
     email varchar (25) not null,
     diplomePrepare varchar (30) not null,
+    promotion varchar (9),
     constraint pk_Classe primary key (IdCl)
 );
 
@@ -97,8 +98,8 @@ create table Perturbation(
     IdPt varchar (90) not null,
     raisonCourte varchar (250),
     raisonLongue varchar (250),
-    dateDeb datetime,
-    dateFin datetime,
+    dateDebMessage datetime,
+    dateFinMessage datetime,
     constraint pk_Perturbation primary key (IdPt)
 );
 
@@ -167,6 +168,12 @@ create table Concerner(
     constraint fk_Station2 foreign key (IdSt) references Station(IdSt)
 );
 
+ -- DONNEES TEST
+
+update Classe set promotion = "2022/2023";
+
+update Classe set nbEtudiants = 30;
+
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Professeurs.txt' into table Professeur (IdPf,nom,prenom,diplome,email,telephone,mdp,adresse);
 
@@ -185,6 +192,7 @@ LOAD DATA LOCAL INFILE
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Appartenir.txt' into table Appartenir (IdSt,IdTp);
 
+ --
 
  -- sourcer le fichier InsertDesservir.sql --
 
