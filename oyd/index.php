@@ -32,9 +32,9 @@
 					// case 'professeur':
 					//   require_once("./connexion_prof.php");
 					//   break;
-					// case 'etudiant':
-					//   require_once("./connexion_etudiant.php");
-					//   break;
+					case 'etudiant':
+					  require_once("./vues/connexion/connexion_etudiant.php");
+					  break;
 					
 					default:
 						unset($_SESSION['role']);

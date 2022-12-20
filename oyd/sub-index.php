@@ -39,7 +39,23 @@
 <section class="vertical-navbar">
   <div class="container">
     <ul class="menu unstyled-list">
-      <?php require_once("./vues/navbar/nav-admin.php"); ?>
+      <?php
+        switch ($_SESSION['role']) {
+          case 'administrateur':
+            require_once("./vues/navbar/nav-admin.php");
+            break;
+          case 'professeur':
+            # code...
+            break;
+          case 'etudiant':
+            require_once("./vues/navbar/nav-etudiant.php");
+            break;
+          
+          default:
+          require_once("./vues/navbar/nav-etudiant.php");
+            break;
+        }
+      ?>
     </ul>
   </div>
 </section>
@@ -79,9 +95,32 @@
       // case 'prof':
       // 	# code...
       // 	break;
-      // case 'etudiant':
-      // 	# code...
-      // 	break;
+      case 'etudiant':
+        switch ($page) {
+          case 0:
+            require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
+            break;
+          case 1:
+            require_once("./vues/gestion_bdd/gest-bdd.php");
+            break;
+          case 2:
+            require_once("./vues/message/msg-admin.php");
+            break;
+          case 3:
+            require_once("./vues/compte/compte-admin.php");
+            break;
+          case 4:
+            session_destroy();
+            unset($_SESSION['role']);
+            // require_once("./index.php");
+            header("location:index.php");
+            break;
+            
+          default:
+            header("location:index.php");
+            break;
+        }				
+      break;
       
       default:
         require_once("./vues/tableau_de_bord/admin/tdb-admin.php");

@@ -27,6 +27,28 @@
       </td>
     </tr>
   </table>
-  <input type="submit" name="Modifier" value="Modifier" class="sub-buton">
+  <input type="submit" name="ModifierM" value="Modifier" class="sub-buton">
 </form>
 </center>
+<?php
+  $unControleur = Connexion::getConnexion();
+  if(isset($_POST['ModifierM'])){
+    if(($_POST['oldMdp'] == $_SESSION['mdp']) && ($_POST['newMdp'] == $_POST['confNewMdp'])){
+      $_POST['oldMdp'] = "'".$_POST['oldMdp']."'";
+      $_POST['confNewMdp'] = "'".$_POST['confNewMdp']."'";
+      $tableau = array("mdp" => $_POST['confNewMdp']);
+      $unControleur -> setTable($_SESSION['role']);
+      if($_SESSION['role'] == "administrateur"){
+        $unControleur -> update_where($tableau, "IdAd", $_SESSION['id']);
+      } elseif ($_SESSION['role'] == "professeur"){
+        $unControleur -> update_where($tableau, "IdPf", $_SESSION['id']);
+      } elseif ($_SESSION['role'] == "etudiant"){
+        $unControleur -> update_where($tableau, "IdE", $_SESSION['id']);
+      }
+      echo "Le mot de pass a bien été modifié.";
+      $_SESSION['mdp'] = $_POST['confNewMdp'];
+    } else {
+      echo "Les mots de pass ne correspondent pas.";
+    }
+  }
+?>
