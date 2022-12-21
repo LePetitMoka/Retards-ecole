@@ -126,10 +126,10 @@ create table Cours(
 );
 
 create table Avoir(
-    IdTp varchar (30) not null,
+    IdSt varchar (30) not null,
     IdTj varchar (30) not null,
-    constraint pk_Avoir primary key(IdTp,IdTj),
-    constraint fk_Transport3 foreign key (IdTp) references Transport(IdTp),
+    constraint pk_Avoir primary key(IdSt,IdTj),
+    constraint fk_Troncon foreign key (IdTc) references Troncon(IdTc),
     constraint fk_Trajet foreign key (IdTj) references Trajet(IdTj)
 );
 
@@ -150,12 +150,14 @@ create table Appartenir(
 );
 
 create table Billet(
+    IdB int (9) not null auto_increment,
     dateB date not null,
+    heureB time not null,
     dureeRetard time not null,
     URLSignature varchar (50) not null,
     IdAd int (6) not null,
     IdE int (6) not null,
-    constraint pk_Billet primary key (IdE, IdAd),
+    constraint pk_Billet primary key (IdB),
     constraint fk_Etudiant3 foreign key (IdE) references Etudiant(IdE),
     constraint fk_Administrateur2 foreign key (IdAd) references Administrateur(IdAd) 
 );
@@ -198,13 +200,11 @@ LOAD DATA LOCAL INFILE
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Enseigner.txt' into table Enseigner (IdM,IdPf);
 
+LOAD DATA LOCAL INFILE
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Billet.txt' into table Billet (dateB, heureB, dureeRetard, URLSignature, IdAd, IdE);
+
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Cours.txt' into table Cours (IdCl,IdPf,matiere,dateC,heureDeb,heureFin,duree,salle);
-
-
- --
-
- -- sourcer le fichier InsertDesservir.sql --
 
 
  -- changer chemin sur windows et mettre des double slash --

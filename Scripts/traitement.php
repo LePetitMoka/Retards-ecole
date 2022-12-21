@@ -15,24 +15,42 @@ $delete->execute();
 
 //APPEL API
 
-$curl = curl_init();
+try{
+    $curl = curl_init();
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://prim.iledefrance-mobilites.fr/marketplace/general-message?LineRef=all&InfoChannelRef=Perturbation',
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 30,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'GET',
-  CURLOPT_HTTPHEADER => array($apiKey),
-));
+    // Check if initialization had gone wrong*    
+    if ($curl === false) {
+        throw new Exception('failed to initialize');
+    }
 
-$response = curl_exec($curl);
+    curl_setopt_array($curl, array(
+    CURLOPT_URL => 'https://prim.iledefrance-mobilites.fr/marketplace/general-message?LineRef=all&InfoChannelRef=Perturbation',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_ENCODING => '',
+    CURLOPT_MAXREDIRS => 30,
+    CURLOPT_TIMEOUT => 0,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => 'GET',
+    CURLOPT_HTTPHEADER => array($apiKey),
+    ));
 
-curl_close($curl); 
+    $response = curl_exec($curl);
 
+    // Check the return value of curl_exec() too,
+    if ($response === false) {
+        throw new Exception(curl_error($curl), curl_errno($curl));
+    }
+} catch (Exception $e){
+    trigger_error(sprintf(
+        'Curl failed with error #%d: %s',
+        $e->getCode(), $e->getMessage()),
+        E_USER_ERROR);
+} finally {
+    if (is_resource($curl)) {
+        curl_close($curl);
+    }
+}
 //Transformation de la reponse en Array PHP
 
 $parsed_json = json_decode($response);

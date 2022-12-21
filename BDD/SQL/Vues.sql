@@ -16,3 +16,16 @@ and e.IdM = m.IdM;
 
 -- Jointure 
 
+select * from Classe cl, Cours c, Etudiant e
+where c.Idcl = cl.IdCl
+and cl.IdCl = e.IdE
+and 
+
+-- Jointure PERTURBATION
+
+create or replace view Perturbation_Ligne (IdTp,nom)
+as select distinct t.IdTp, t.nom
+from Transport t, Station s, Concerner c, Appartenir a
+where c.IdSt = s.IdSt
+and a.IdSt = s.IdSt
+and a.IdTp = t.IdTp;
