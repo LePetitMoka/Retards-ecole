@@ -26,7 +26,7 @@
           <?php
             for($i=0; $i<=count($lesEtudiants)-1; $i++){
               $unEtudiant = $lesEtudiants[$i];
-              echo "<option value=".$unEtudiant['IdE'].">".$unEtudiant['nom']."</option>";
+              echo "<option value=".$unEtudiant['IdE'].">".$unEtudiant['nom']." ".$unEtudiant['prenom']."</option>";
             }
           ?>
         </select>

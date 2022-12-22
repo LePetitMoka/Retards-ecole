@@ -3,17 +3,11 @@
 <section class="stats">
   <div class="container">
     <?php 
-      $unControleur -> setTable("billet");
-      $lesTickets = $unControleur -> select_where_all("IdE", $_SESSION['id']);
-      $nbret = count($lesTickets);
-      // foreach($lesTickets as $unTicket){
-      //   $dureeTot;
-      //   var_dump($unTicket);
-      // }
+      $unControleur -> setTable("vue_totalbilleteleve");
+      $lesInfos = $unControleur -> select_where("IdE", $_SESSION['id']);
     ?>
-    <p>Nombre total de retards : <?php echo $nbret ?>
-    </p>
-    <!-- <p>Durée total de retards : </p> -->
+    <p>Nombre total de retards : <?php echo $lesInfos['nbBillets'] ?></p>
+    <p>Durée total de retards : <?php echo $lesInfos['dureeCumulee'] ?></p>
   </div>
 </section>
 <?php

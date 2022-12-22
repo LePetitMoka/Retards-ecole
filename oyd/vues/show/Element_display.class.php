@@ -134,6 +134,40 @@
           echo "</table>";
           echo "</div>";
           break;
+
+        case 'etudiant-perturbation':
+          $unControleur = Connexion::getConnexion();
+          $unControleur -> setTable("etudiant");
+          $lEtudiant = $unControleur -> select_where("IdE", $unElement['IdE']);
+          $unControleur -> setTable("classe");
+          $saClasse = $unControleur -> select_where("IdCl", $lEtudiant['IdCl']);
+          echo "<div class=".$this->sdClass.">";
+          echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
+          echo "<table>";
+          echo "<tr>";
+          echo "<td>Date de la perturbation : </td>";
+          echo "<td>".$unElement['date']."</td>";
+          echo "<td rowspan='5'><a href='./index.php?user=admin&page=0&subPage=0&perturbe=2&idE=".$unElement['IdE']."&date=".$unElement['date']."'><img src='./img/icons_colorees/le-recu.png' whidth='80' height='80' class='ticket-btn'></a></td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Diplome preparé : </td>";
+          echo "<td>".$saClasse['diplomePrepare']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Email : </td>";
+          echo "<td>".$lEtudiant['email']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Téléphone : </td>";
+          echo "<td>".$lEtudiant['telephone']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Adresse : </td>";
+          echo "<td>".$lEtudiant['adresse']."</td>";
+          echo "</tr>";
+          echo "</table>";
+          echo "</div>";
+          break;
         
         case 'professeur':
           echo "<div class=".$this->sdClass.">";

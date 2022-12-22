@@ -217,6 +217,13 @@ textarea {
   border-radius: 4px;
 }
 
+.ticket-btn {
+  background-color: #F9B104;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
 .profil {
   display: flex;
   align-self: center;
