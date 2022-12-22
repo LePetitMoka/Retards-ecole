@@ -208,6 +208,12 @@ update transport set pictogramme = ".\img\icons_colorees\rer.png" where type lik
 
 update transport set pictogramme = ".\img\icons_colorees\metro.png" where type in ('metro', 'tram', 'funicular');
 
+update Professeur set mdp = sha1(mdp);
+
+update Etudiant set mdp = sha1(mdp);
+
+update Administrateur set mdp = sha1(mdp);
+
 LOAD DATA LOCAL INFILE
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Billet.txt' into table Billet (dateB, heureB, dureeRetard, URLSignature, IdAd, IdE);
 
