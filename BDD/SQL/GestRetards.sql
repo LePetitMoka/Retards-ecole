@@ -104,14 +104,6 @@ create table Perturbation(
     constraint pk_Perturbation primary key (IdPt)
 );
 
-create table Trajet(
-    IdTj varchar (6) not null,
-    IdE int (2) not null,
-    active boolean not null default 1,
-    constraint pk_Trajet primary key (IdTj),
-    constraint fk_Etudiant2 foreign key (IdE) references Etudiant(IdE) on delete cascade
-);
-
 create table Cours(
     IdCl int (6) not null,
     IdPf int (6) not null,
@@ -126,12 +118,12 @@ create table Cours(
     constraint fk_Professeur2 foreign key (IdPf) references Professeur(IdPf) on delete cascade on update cascade
 );
 
-create table Avoir(
+create table Trajet(
     IdSt varchar (30) not null,
-    IdTj varchar (30) not null,
-    constraint pk_Avoir primary key(IdSt,IdTj),
+    IdE int (6) not null,
+    constraint pk_Trajet primary key(IdSt,IdE),
     constraint fk_Station foreign key (IdSt) references Station(IdSt) on delete cascade on update cascade,
-    constraint fk_Trajet foreign key (IdTj) references Trajet(IdTj) on delete cascade on update cascade
+    constraint fk_Etudiant4 foreign key (IdE) references Etudiant(IdE) on delete cascade on update cascade
 );
 
 create table Enseigner(
@@ -203,6 +195,9 @@ LOAD DATA LOCAL INFILE
 
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Cours.txt' into table Cours (IdCl,IdPf,matiere,dateC,heureDeb,heureFin,duree,salle);
+
+LOAD DATA LOCAL INFILE 
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Trajet.txt' into table Trajet (IdSt,IdE);
 
 insert into Administrateur values
 (null, 'Admin', 'Admin', 'abc@gmail.com', '0612345678', '11 Rue de la Paix', 'test');

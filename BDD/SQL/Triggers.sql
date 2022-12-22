@@ -9,11 +9,10 @@ begin
 if new.mdp != old.mdp
     then
     insert into HistoAdmin values (null, old.IdAd, old.mdp);
+    update Administrateur set new.mdp = sha1(new.mdp);
 end if;
 end //
 delimiter ;
-
---placer apres l'insert : update Administrateur set new.mdp = sha1(new.mdp);--
 
 drop trigger if exists HistoEtudiant_MDP;
 delimiter //
@@ -24,12 +23,10 @@ begin
 if new.mdp != old.mdp
     then
     insert into HistoEtudiant values (null, old.IdE, old.mdp); 
-    
+    update Etudiant set new.mdp = sha1(new.mdp);
 end if;
 end //
 delimiter ;
-
---placer apres l'insert : update Etudiant set new.mdp = sha1(new.mdp);--
 
 drop trigger if exists HistoProfesseur_MDP;
 delimiter //
@@ -39,25 +36,46 @@ for each row
 begin
 if new.mdp != old.mdp
     then
-    insert into HistoProf values (null, old.IdPf, old.mdp); 
+    insert into HistoProf values (null, old.IdPf, old.mdp);
+    update Professeur set new.mdp = sha1(new.mdp);
 end if;
 end //
 delimiter ;
 
---placer apres l'insert : update Professeur set new.mdp = sha1(new.mdp);--
 
 -- INS MDPSHA1 --
 
---drop trigger if exists insert_MDPSHA1;
---delimiter $
---create trigger insert_MDPSHA1
---after insert on User
---for each row
---begin
---    update user set mdp = sha1(mdp);
---end $
---delimiter ;
--- UPDT/INS ETUDIANT --
+drop trigger if exists insert_MDPSHA1_admin;
+delimiter $
+create trigger insert_MDPSHA1_admin
+after insert on Administrateur
+for each row
+begin
+    update Administrateur set mdp = sha1(mdp);
+end $
+delimiter ;
+
+drop trigger if exists insert_MDPSHA1_prof;
+delimiter $
+create trigger insert_MDPSHA1_prof
+after insert on Professeur
+for each row
+begin
+    update Professeur set mdp = sha1(mdp);
+end $
+delimiter ;
+
+drop trigger if exists insert_MDPSHA1_etudiant;
+delimiter $
+create trigger insert_MDPSHA1_etudiant
+after insert on Etudiant
+for each row
+begin
+    update Etudiant set mdp = sha1(mdp);
+end $
+delimiter ;
+
+-- UPDT/INS ETUDIANT (rien, deja fait dans les triggers histo)--
 
 -- CLASSE --
 
@@ -107,59 +125,7 @@ update Classe
 end //
 delimiter ;
 
--- Trajet ONE ACTIVE ONLY
-
-drop trigger if exists InsActiveTrajet;
-delimiter //
-create trigger InsActiveTrajet
-    before insert on Trajet
-    for each row
-begin
-    declare ide int(6);
-    select IdE  into ide from Etudiant e where e.IdE = new.IdE;
-    if new.active = 1
-        then
-            update Trajet
-                set active = 0
-                where IdE = ide
-                and active = 1;
-end if;
-end //
-delimiter ;
-
-drop trigger if exists activeTrajet;
-delimiter //
-create trigger UpdActiveTrajet
-    before update on Trajet
-    for each row
-begin
-    declare ide int(6);
-    if new.active != old.active
-        then
-            select IdE into ide from Etudiant e where e.IdE = new.IdE;
-                update Trajet
-                    set active = 0
-                    where IdE = ide
-                    and active = 1;
-end if;
-end //
-delimiter ;
-
-drop trigger if exists DelActiveTrajet;
-delimiter //
-create trigger DelActiveTrajet
-    before delete on Trajet
-    for each row
-begin
-    if old.active = 1
-        then
-            signal sqlstate '45000'
-                set message_text = "Impossible de supprimer un trajet actif, definissez-en un d'abord avant de supprimer celui-ci";
-end if;
-end //
-delimiter ;
-
--- Fluidite Transport (ATTENTION: CHARGER LA VUE Vue_Perturbation_Ligne pour que le trigger fonctionne)
+-- Fluidite Transport (ATTENTION: CHARGER LA VUE Vue_Perturbation_Ligne pour que le trigger fonctionne) --
 
 drop trigger if exists InsFluidite;
 delimiter //
@@ -184,5 +150,3 @@ begin
             where etat = "Perturbée";
 end //
 delimiter ;
-
-

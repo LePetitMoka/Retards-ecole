@@ -26,8 +26,8 @@ and curtime() between heureDeb and heureFin;
 
 -- Jointure Quelles lignes sont perturbées ?
 
-create or replace view Vue_Perturbation_Ligne (IdTp,nom,type,transporteur)
-as select distinct t.IdTp, t.nom, t.type, t.transporteur
+create or replace view Vue_Perturbation_Ligne (IdTp,nom,type,transporteur, pictogramme, etat)
+as select distinct t.IdTp, t.nom, t.type, t.transporteur, t.pictogramme, t.etat
 from Transport t, Station s, Concerner c, Appartenir a
 where c.IdSt = s.IdSt
 and a.IdSt = s.IdSt
@@ -49,4 +49,12 @@ from Etudiant e, Classe c, Billet b
 where c.IdCl =  e.IdCl
 and b.IdE = e.IdE;
 
--- V
+-- Vue Etudiant/Perturbation
+
+create or replace view Vue_EtudiantPerturbation (IdE, nom, prenom, date)
+as select distinct e.IdE, e.nom, e.prenom, curdate()
+from Etudiant e, Trajet tj, Station s, Concerner c, Perturbation p
+where tj.IdE = e.IdE
+and tj.IdSt = s.IdSt
+and c.IdSt = s.IdSt
+and c.IdPt = p.IdPt;
