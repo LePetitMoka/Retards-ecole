@@ -48,3 +48,5 @@ as select b.IdB, e.IdE, e.nom, e.prenom, c.nom, b.dateB, b.heureB , b.dureeRetar
 from Etudiant e, Classe c, Billet b
 where c.IdCl =  e.IdCl
 and b.IdE = e.IdE;
+
+-- V

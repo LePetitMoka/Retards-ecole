@@ -31,6 +31,7 @@ create table Transport (
     type varchar (15) not null,
     transporteur varchar (25) not null,
     pictogramme varchar (50),
+    etat set ("Fluide","Perturbée") default "Fluide",
     constraint pk_Transport primary key (IdTp)
 );
 

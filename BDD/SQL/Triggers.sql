@@ -68,23 +68,28 @@ create trigger insMAJnbEtudiants
     for each row
 begin
 declare somme int;
-select count(*) from Etudiant where IdCl = new.IdCl;
+select count(*) into somme from Etudiant where IdCl = new.IdCl;
 update Classe
-    set nbEtudiant = somme;
+    set nbEtudiants = somme
+    where IdCl = new.IdCl;
 end //
 delimiter ;
 
 
 drop trigger if exists updMAJnbEtudiants;
 delimiter //
-create trigger udpMAJnbEtudiants
+create trigger updMAJnbEtudiants
     after update on Etudiant
     for each row
 begin
 declare somme int;
-select count(*) from Etudiant where IdCl = new.IdCl;
-update Classe
-    set nbEtudiant = somme;
+if old.IdCl != new.IdCl
+    then
+        select count(*) into somme from Etudiant where IdCl = new.IdCl;
+        update Classe
+            set nbEtudiants = somme
+            where IdCl = new.IdCl;
+end if;
 end //
 delimiter ;
 
@@ -95,17 +100,18 @@ create trigger delMAJnbEtudiants
     for each row
 begin
 declare somme int;
-select count(*) from Etudiant where IdCl = old.IdCl;
+select count(*) into somme from Etudiant where IdCl = old.IdCl;
 update Classe
-    set nbEtudiant = somme;
+    set nbEtudiants = somme
+    where IdCl = old.IdCl;
 end //
 delimiter ;
 
 -- Trajet ONE ACTIVE ONLY
 
-drop trigger if exists activeTrajet;
+drop trigger if exists InsActiveTrajet;
 delimiter //
-create trigger activeTrajet
+create trigger InsActiveTrajet
     before insert on Trajet
     for each row
 begin
@@ -120,3 +126,63 @@ begin
 end if;
 end //
 delimiter ;
+
+drop trigger if exists activeTrajet;
+delimiter //
+create trigger UpdActiveTrajet
+    before update on Trajet
+    for each row
+begin
+    declare ide int(6);
+    if new.active != old.active
+        then
+            select IdE into ide from Etudiant e where e.IdE = new.IdE;
+                update Trajet
+                    set active = 0
+                    where IdE = ide
+                    and active = 1;
+end if;
+end //
+delimiter ;
+
+drop trigger if exists DelActiveTrajet;
+delimiter //
+create trigger DelActiveTrajet
+    before delete on Trajet
+    for each row
+begin
+    if old.active = 1
+        then
+            signal sqlstate '45000'
+                set message_text = "Impossible de supprimer un trajet actif, definissez-en un d'abord avant de supprimer celui-ci";
+end if;
+end //
+delimiter ;
+
+-- Fluidite Transport (ATTENTION: CHARGER LA VUE Vue_Perturbation_Ligne pour que le trigger fonctionne)
+
+drop trigger if exists InsFluidite;
+delimiter //
+create trigger InsFluidite
+    after insert on Concerner
+    for each row
+begin
+    update Transport
+        set etat = "Perturbée"
+            where IdTp in (select IdTp from Vue_Perturbation_Ligne);
+end //
+delimiter ;
+
+drop trigger if exists DelFluidite;
+delimiter //
+create trigger DelFluidite
+    after delete on Concerner
+    for each row
+begin
+    update Transport
+        set etat = "Fluide"
+            where etat = "Perturbée";
+end //
+delimiter ;
+
+
