@@ -64,12 +64,13 @@ delimiter ;
 drop trigger if exists insMAJnbEtudiants;
 delimiter //
 create trigger insMAJnbEtudiants
-after insert on Etudiant
-for each row
+    after insert on Etudiant
+    for each row
 begin
+declare somme int;
+select count(*) from Etudiant where IdCl = new.IdCl;
 update Classe
-    set nbEtudiant = (select count(IdE) from Etudiant e, Classe c where IdCl.c = IdCl.e and IdCl.c = IdCl)
-    where IdCl = new.IdCl;
+    set nbEtudiant = somme;
 end //
 delimiter ;
 
@@ -77,40 +78,26 @@ delimiter ;
 drop trigger if exists updMAJnbEtudiants;
 delimiter //
 create trigger udpMAJnbEtudiants
-after update on Etudiant
-for each row
+    after update on Etudiant
+    for each row
 begin
-if new.IdCl != old.IdCl
-    then
-        update Classe set nbEtudiants = nbEtudiant + 1 where IdCl = new.IdCl;
-        update Classe set nbEtudiants = nbEtudiant - 1 where IdCl = old.IdCl;
-end if;
-end //
-delimiter ; -- COPIE
-
-drop trigger if exists updMAJnbEtudiants;
-delimiter //
-create trigger udpMAJnbEtudiants
-after update on Etudiant
-for each row
-begin
-if new.IdCl != old.IdCl
-    then
-        update Classe set nbEtudiant = (select count(IdE) from Etudiant e, Classe c where IdCl.c = IdCl.e and IdCl.c = IdCl)
-        where IdCl = new.IdCl;
-end if;
+declare somme int;
+select count(*) from Etudiant where IdCl = new.IdCl;
+update Classe
+    set nbEtudiant = somme;
 end //
 delimiter ;
-
 
 drop trigger if exists delMAJnbEtudiants;
 delimiter //
 create trigger delMAJnbEtudiants
-after delete on Etudiant
-for each row
+    after delete on Etudiant
+    for each row
 begin
-    update Classe set nbEtudiant = (select count(IdE) from Etudiant e, Classe c where IdCl.c = IdCl.e and IdCl.c = IdCl)
-    where IdCl = old.IdCl;
+declare somme int;
+select count(*) from Etudiant where IdCl = old.IdCl;
+update Classe
+    set nbEtudiant = somme;
 end //
 delimiter ;
 
@@ -119,13 +106,17 @@ delimiter ;
 drop trigger if exists activeTrajet;
 delimiter //
 create trigger activeTrajet
-before insert on Trajet t
-for each row
+    before insert on Trajet
+    for each row
 begin
-    if active = 1
+    declare ide int(6);
+    select IdE  into ide from Etudiant e where e.IdE = new.IdE;
+    if new.active = 1
         then
-            update Trajet set active = 0
-            where t.Ide = e.IdE and active = 1;
-end if
+            update Trajet
+                set active = 0
+                where IdE = ide
+                and active = 1;
+end if;
 end //
 delimiter ;
