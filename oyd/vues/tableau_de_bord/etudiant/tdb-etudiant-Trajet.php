@@ -95,10 +95,10 @@
 
         echo "<tr>";
         echo "<td>";
-        echo "<label for='deptp".$m."'>Depart du transport : ".$leTransport['type']." ".$leTransport['nom']."</label>";
+        echo "<label for='".$m."'>Depart du transport : ".$leTransport['type']." ".$leTransport['nom']."</label>";
         echo "</td>";
         echo "<td>";
-        echo "<select name='deptp".$m."' id='deptp".$m."' required>";
+        echo "<select name='".$m."' id='".$m."' required>";
         for($j=0; $j<=count($lesArretsTransport)-1; $j++){
           $lArretTransport = $lesArretsTransport[$j];
           echo "<option value=".$lArretTransport['IdSt'].">".$lArretTransport['NomArret']."</option>";
@@ -106,10 +106,10 @@
         echo "<select>";
         echo "</td>";
         echo "<td>";
-        echo "<label for='arrtp".$n."'>Arret du transport : ".$leTransport['type']." ".$leTransport['nom']."</label>";
+        echo "<label for='".$n."'>Arret du transport : ".$leTransport['type']." ".$leTransport['nom']."</label>";
         echo "</td>";
         echo "<td>";
-        echo "<select name='arrtp".$n."' id='arrtp".$n."' required>";
+        echo "<select name='".$n."' id='".$n."' required>";
         for($j=0; $j<=count($lesArretsTransport)-1; $j++){
           $lArretTransport = $lesArretsTransport[$j];
           echo "<option value=".$lArretTransport['IdSt'].">".$lArretTransport['NomArret']."</option>";
@@ -125,6 +125,13 @@
   }
   if(isset($_POST['Confirmer'])){
     var_dump($_POST);
+    for($i=1; $i<=count($_POST)-1; $i++){
+      $_POST[$i] = "'".$_POST[$i]."'";
+      $ordre = "IdSt, IdE";
+      $valeurs = array("IdSt" => $_POST[$i], "IdE" => $_SESSION['id']);
+      $unControleur -> setTable("trajet");
+      $unControleur -> insert($ordre, $valeurs);
+    }
   }
 ?>
 </center>
