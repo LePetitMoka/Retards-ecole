@@ -73,7 +73,7 @@
 
         echo "<tr>";
         echo "<td>";
-        echo "<label for='".$m."'>Depart du transport : ".$leTransport['type']." ".$leTransport['nom']."</label>";
+        echo "<label for='".$m."'>Transport ".$leTransport['type']." ".$leTransport['nom']." de : </label>";
         echo "</td>";
         echo "<td>";
         echo "<select name='".$m."' id='".$m."' required>";
@@ -84,7 +84,7 @@
         echo "<select>";
         echo "</td>";
         echo "<td>";
-        echo "<label for='".$n."'>Arret du transport : ".$leTransport['type']." ".$leTransport['nom']."</label>";
+        echo "<label for='".$n."'>à : </label>";
         echo "</td>";
         echo "<td>";
         echo "<select name='".$n."' id='".$n."' required>";
