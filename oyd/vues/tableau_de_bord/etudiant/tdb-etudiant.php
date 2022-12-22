@@ -27,6 +27,7 @@
       <ul class="submenu-list unstyled-list">
         <li><a class="buton selected" href="index.php?user=etudiant&page=0&subPage=0">Info Classe</a></li>
         <li><a class="buton selected" href="index.php?user=etudiant&page=0&subPage=1">Tickets de retard</a></li>
+        <li><a class="buton selected" href="index.php?user=etudiant&page=0&subPage=2">Trajet</a></li>
       </ul>
     </div>
   </div>
@@ -45,6 +46,9 @@
           break;
         case 1:
           require_once("./vues/tableau_de_bord/etudiant/tdb-etudiant-Tickets.php");
+          break;
+        case 2:
+          require_once("./vues/tableau_de_bord/etudiant/tdb-etudiant-Trajet.php");
           break;
         
         default:

@@ -26,8 +26,10 @@
             require_once("./vues/show/show_tickets.php");
             break;
           case 'insert_tickets':
+            $unControleur -> setTable("etudiant");
+            $lesEtudiants = $unControleur -> select_all();
             require_once("./vues/insert/insert_ticket.php");
-            break;
+            break; 
 
           default :
             require_once("index.php?user=admin&page=0&subPage=1&action=show_tickets");

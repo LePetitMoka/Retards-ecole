@@ -219,8 +219,9 @@ textarea {
 
 .profil {
   display: flex;
+  align-self: center;
   align-items: center;
-  margin: 20px;
+  margin: 20px 300px;
 }
 
 .profil .container {

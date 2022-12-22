@@ -28,7 +28,7 @@
     $mdp = $_POST['mdp'];
 
     $unControleur -> setTable($_SESSION['role']);
-    $user = $unControleur -> autentification($id, $mdp);
+    $user = $unControleur -> autentification($id, sha1($mdp));
     if($user == null){
       echo "<br/>Assurez vous d'étre ".$_SESSION['role'];
       echo "<br/>et vérifiez vos Identifiants<br/>";
