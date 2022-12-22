@@ -17,7 +17,6 @@
   if(isset($_POST['Valider'])){
     $nbtc = $_POST['nbtc'];
     $limb = $nbtc*2-1;
-    var_dump($limb);
 
     $unControleur -> setTable("transport");
     $lesTransports = $unControleur -> select_all();
@@ -52,28 +51,8 @@
     $limb = (count($_POST)-1)*2;
 
     $tp = array();
-    var_dump($_POST);
     for($i=1; $i<=$limb; $i = $i+2){
       $tp[$i] = $_POST['tp'.$i];
-      // $_SESSION['tp'] = $i;
-
-      // if($i%2!=0 && $i==1){
-      //   // $_SESSION['tp'] = $i;
-      //   $tp[$i] = $_POST['tp'.$i];
-      //   echo "tp".$i." pour 1 <br/>";
-      //   var_dump($tp[$i]);
-      // } elseif($i%2!=0 && $i!=1){
-      //   // $_SESSION['tp'] = $i+2;
-      //   $tp[$i+2] = $_POST['tp'.$i];
-      //   echo "tp".$i." pour les impaires <br/>";
-      //   var_dump($tp[$i+2]);
-      // } elseif($i%2==0 && $i>1){
-      //   // $_SESSION['tp']++;
-      //   $tp[$i+1] = $_POST['tp'.$i];
-      //   echo "tp".$i." les paires <br/>";
-      //   var_dump($tp[$i+1]);
-      //   echo "paire ";
-      // }
     }
 
     echo "<br/>"; 
@@ -83,7 +62,6 @@
     for($i=1; $i<=$limb; $i = $i+2){
       if($i%2!=0){
         $tp[$i] = "'".$tp[$i]."'";
-        var_dump($tp);
         $m = $i;
         $n = $i+1;
 
@@ -124,7 +102,6 @@
     echo "</form>";
   }
   if(isset($_POST['Confirmer'])){
-    var_dump($_POST);
     for($i=1; $i<=count($_POST)-1; $i++){
       $_POST[$i] = "'".$_POST[$i]."'";
       $ordre = "IdSt, IdE";
