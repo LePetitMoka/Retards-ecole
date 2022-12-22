@@ -75,7 +75,7 @@ create table HistoEtudiant(
     IdE int (6) not null,
     mdp varchar(50),
     constraint pk_histoetudiant primary key(IdHE),
-    constraint fk_Etudiant foreign key(IdE) references Etudiant(IdE)
+    constraint fk_Etudiant foreign key(IdE) references Etudiant(IdE) on delete cascade
 );
 
 create table HistoProf(
@@ -83,7 +83,7 @@ create table HistoProf(
     IdPf int (6) not null,
     mdp varchar(50),
     constraint pk_histoprof primary key(IdHPf),
-    constraint fk_Professeur foreign key(IdPf) references Professeur(IdPf)
+    constraint fk_Professeur foreign key(IdPf) references Professeur(IdPf) on delete cascade
 );
 
 create table HistoAdmin(
@@ -91,7 +91,7 @@ create table HistoAdmin(
     IdAd int (6) not null,
     mdp varchar(50),
     constraint pk_histoadmin primary key(IdHAd),
-    constraint fk_Administrateur foreign key(IdAd) references Administrateur(IdAd)
+    constraint fk_Administrateur foreign key(IdAd) references Administrateur(IdAd) on delete cascade
 );
 
 create table Perturbation(
@@ -106,9 +106,9 @@ create table Perturbation(
 create table Trajet(
     IdTj varchar (6) not null,
     IdE int (2) not null,
-    dureeTotale time,
+    active boolean not null default 1,
     constraint pk_Trajet primary key (IdTj),
-    constraint fk_Etudiant2 foreign key (IdE) references Etudiant(IdE)
+    constraint fk_Etudiant2 foreign key (IdE) references Etudiant(IdE) on delete cascade
 );
 
 create table Cours(
@@ -121,32 +121,32 @@ create table Cours(
     duree time,
     salle varchar (20),
     constraint pk_Cours primary key (IdCl, IdPf),
-    constraint fk_Classe2 foreign key (IdCl) references Classe(IdCl),
-    constraint fk_Professeur2 foreign key (IdPf) references Professeur(IdPf)
+    constraint fk_Classe2 foreign key (IdCl) references Classe(IdCl) on delete cascade on update cascade,
+    constraint fk_Professeur2 foreign key (IdPf) references Professeur(IdPf) on delete cascade on update cascade
 );
 
 create table Avoir(
     IdSt varchar (30) not null,
     IdTj varchar (30) not null,
     constraint pk_Avoir primary key(IdSt,IdTj),
-    constraint fk_Troncon foreign key (IdTc) references Troncon(IdTc),
-    constraint fk_Trajet foreign key (IdTj) references Trajet(IdTj)
+    constraint fk_Station foreign key (IdSt) references Station(IdSt) on delete cascade on update cascade,
+    constraint fk_Trajet foreign key (IdTj) references Trajet(IdTj) on delete cascade on update cascade
 );
 
 create table Enseigner(
     IdM int (6) not null,
     IdPf int (6) not null,
     constraint pk_Enseigner primary key (IdM,IdPf),
-    constraint fk_Professeur3 foreign key (IdPf) references Professeur(IdPf),
-    constraint fk_Matiere foreign key (IdM) references Matiere(IdM)
+    constraint fk_Professeur3 foreign key (IdPf) references Professeur(IdPf) on delete cascade on update cascade,
+    constraint fk_Matiere foreign key (IdM) references Matiere(IdM) on delete cascade on update cascade
 );
 
 create table Appartenir(
     IdSt varchar(30) not null,
     IdTp varchar (30) not null,
     constraint pk_Appartenir primary key (IdSt,IdTp),
-    constraint fk_ZoneStation foreign key (IdSt) references Station(IdSt),
-    constraint fk_Station foreign key (IdTp) references Transport(IdTp)
+    constraint fk_Station2 foreign key (IdSt) references Station(IdSt) on delete cascade on update cascade,
+    constraint fk_Transport foreign key (IdTp) references Transport(IdTp) on delete cascade on update cascade
 );
 
 create table Billet(
@@ -158,16 +158,16 @@ create table Billet(
     IdAd int (6) not null,
     IdE int (6) not null,
     constraint pk_Billet primary key (IdB),
-    constraint fk_Etudiant3 foreign key (IdE) references Etudiant(IdE),
-    constraint fk_Administrateur2 foreign key (IdAd) references Administrateur(IdAd) 
+    constraint fk_Etudiant3 foreign key (IdE) references Etudiant(IdE) on delete cascade on update cascade,
+    constraint fk_Administrateur2 foreign key (IdAd) references Administrateur(IdAd) on delete cascade on update cascade
 );
 
 create table Concerner(
     IdSt varchar (30) not null,
     IdPt varchar (90) not null,
     constraint pk_Concerner primary key (IdSt,IdPt),
-    constraint fk_Perturbation foreign key (IdPt) references Perturbation(IdPt),
-    constraint fk_Station2 foreign key (IdSt) references Station(IdSt)
+    constraint fk_Perturbation foreign key (IdPt) references Perturbation(IdPt) on delete cascade on update cascade,
+    constraint fk_Station3 foreign key (IdSt) references Station(IdSt) on delete cascade on update cascade
 );
 
  -- DONNEES TEST
@@ -200,14 +200,8 @@ LOAD DATA LOCAL INFILE
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Enseigner.txt' into table Enseigner (IdM,IdPf);
 
-LOAD DATA LOCAL INFILE
- '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Billet.txt' into table Billet (dateB, heureB, dureeRetard, URLSignature, IdAd, IdE);
-
 LOAD DATA LOCAL INFILE 
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Cours.txt' into table Cours (IdCl,IdPf,matiere,dateC,heureDeb,heureFin,duree,salle);
-
-
- -- changer chemin sur windows et mettre des double slash --
 
 insert into Administrateur values
 (null, 'Admin', 'Admin', 'abc@gmail.com', '0612345678', '11 Rue de la Paix', 'test');
@@ -218,6 +212,9 @@ update transport set pictogramme = ".\img\icons_colorees\rer.png" where type lik
 
 update transport set pictogramme = ".\img\icons_colorees\metro.png" where type in ('metro', 'tram', 'funicular');
 
--- executer le fichier updateRelStation.php --
+LOAD DATA LOCAL INFILE
+ '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Billet.txt' into table Billet (dateB, heureB, dureeRetard, URLSignature, IdAd, IdE);
 
--- sourcer le fichier InsertDesservir.sql --
+-- IMPORTANT : changer chemin sur windows et mettre des doubles slash
+
+-- executer traitement.php pour actualiser la liste des perturbations

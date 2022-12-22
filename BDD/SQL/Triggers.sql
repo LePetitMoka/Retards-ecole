@@ -113,3 +113,19 @@ begin
     where IdCl = old.IdCl;
 end //
 delimiter ;
+
+-- Trajet ONE ACTIVE ONLY
+
+drop trigger if exists activeTrajet;
+delimiter //
+create trigger activeTrajet
+before insert on Trajet t
+for each row
+begin
+    if active = 1
+        then
+            update Trajet set active = 0
+            where t.Ide = e.IdE and active = 1;
+end if
+end //
+delimiter ;
