@@ -1,0 +1,110 @@
+/* fin contenu */
+
+.content {
+  background-color: #fff;
+  color: black;
+  padding: 0 100px;
+  height: calc(100vh - 247.6);
+  align-content: center;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.subnavbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subnavbar .container div {
+  width: 100%;
+  align-items: center;
+}
+
+.subnavbar .submenu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submenu-list li {
+  align-items: center;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.subnavbar .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  padding: 0;
+}
+
+.buton {
+  background-color: #F9B104;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+.sub-buton {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+.minibar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.minibar li {
+  margin: 0 15px;
+}
+
+.gest-etudiants .search-bar, .gest-profs .search-bar, .gest-classes .search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+form {
+  font-size: 1.2rem;
+}
+
+form input { 
+  margin: 0 15px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  margin-bottom: 10px;
+  resize: none;
+}
+
+/* fin contenu */

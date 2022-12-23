@@ -1,0 +1,32 @@
+/* Test */
+
+/* * {
+  border: 2px solid red;
+} */
+
+/* fin Test */
+
+/* General */
+
+body {
+  display: relative;
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+}
+
+.unstyled-list {
+  list-style: none;
+  padding: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  margin: 5px 10px;
+}
+
+/* fin General */
