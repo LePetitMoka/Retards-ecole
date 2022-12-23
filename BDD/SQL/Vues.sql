@@ -16,8 +16,8 @@ and e.IdM = m.IdM;
 
 -- Qui est en retard actuellement ? (attention: la duree du retard concerne le cours actuel !)
 
-create or replace view Vue_RetardQuiDuree (IdE, IdCl, nomEleve, nomClasse, heureDebutCours, dureeRetard)
-as select e.IdE, cl.IdCl, e.nom, cl.nom, c.heureDeb, time(curtime()-c.heureDeb)
+create or replace view Vue_RetardQuiDuree (IdE, IdCl, nomEleve, prenomEleve, nomClasse, heureDebutCours, dureeRetard)
+as select e.IdE, cl.IdCl, e.nom, e.prenom, .cl.nom, c.heureDeb, time(curtime()-c.heureDeb)
 from Classe cl, Cours c, Etudiant e
 where c.Idcl = cl.IdCl
 and cl.IdCl = e.IdCl
@@ -73,6 +73,6 @@ and c.IdSt = s.IdSt;
 create or replace view Vue_Etudiant_Retard_Perturbation_SansBillet (IdE,date)
 as select vep.IdE, vep.date
 from Vue_EtudiantPerturbation vep, Billet b, Vue_RetardQuiDuree vrqd
-where vep.IdE = b.IdE 
-and vep.IdE = vrqd.IdE
+where b.IdE = vep.IdE
+and b.IdE = vrqd.IdE
 and b.dateB != curdate();
