@@ -161,13 +161,13 @@ create trigger InsBilletTempsJustif
 begin
 declare dureeR time;
 select dureeRetard into dureeR from Vue_RetardQuiDuree where IdE = new.IdE;
-if new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
-    then
-    set new.raison = "Transports ";
-end if;
 set new.dureeRetard = dureeR;
 set new.dateheure = now();
 set new.dateB = curdate();
 set new.heureB = curtime();
+if new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
+    then
+    set new.raison = "Transports ";
+end if;
 end //
 delimiter ;
