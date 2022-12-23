@@ -1,1 +1,0 @@
-<h2>Liste des étudiants</h2>

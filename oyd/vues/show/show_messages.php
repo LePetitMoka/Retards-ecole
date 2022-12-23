@@ -1,1 +1,0 @@
-<h2>Messages reçues</h2>
