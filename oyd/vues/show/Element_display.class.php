@@ -73,6 +73,10 @@
           echo "<td class=".$this->stateClass.">".$unElement['dureeRetard']."</td>";
           echo "</tr>";
           echo "<tr>";
+          echo "<td class=".$this->classPartial.">Raison : </td>";
+          echo "<td class=".$this->stateClass.">".$unElement['raison']."</td>";
+          echo "</tr>";
+          echo "<tr>";
           echo "<td class=".$this->classPartial."> Signature : </td>";
           echo "<td class=".$this->stateClass.">".$unElement['URLSignature']."</td>";
           echo "</tr>";
@@ -160,7 +164,7 @@
           $unControleur -> setTable("classe");
           $saClasse = $unControleur -> select_where("IdCl", $lEtudiant['IdCl']);
           echo "<div class=".$this->sdClass.">";
-          echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
+          echo "<h3 class=".$this->sdtClass.">".$lEtudiant['nom']." ".$lEtudiant['prenom']."</h3>";
           echo "<table>";
           echo "<tr>";
           echo "<td>Date de la perturbation : </td>";
