@@ -10,7 +10,7 @@ create table Professeur (
     email varchar (25) not null unique,
     telephone varchar (10) not null unique,
     adresse varchar (50) not null,
-    mdp varchar (25) not null,
+    mdp varchar (100) not null,
     constraint pk_Professeur primary key (IdPf)
 );
 
@@ -21,7 +21,7 @@ create table Administrateur (
     email varchar (25) not null unique,
     telephone varchar (10) not null unique,
     adresse varchar (50) not null,
-    mdp varchar (25) not null,
+    mdp varchar (100) not null,
     constraint pk_Administrateur primary key (IdAd)
 );
 
@@ -64,7 +64,7 @@ create table Etudiant (
     prenom varchar (25) not null,
     email varchar (25) not null unique,
     telephone varchar (10) not null unique,
-    mdp varchar (25) not null,
+    mdp varchar (100) not null,
     adresse varchar (50) not null,
     IdCl int (6) not null,
     constraint pk_Etudiant primary key (IdE,IdCl),
