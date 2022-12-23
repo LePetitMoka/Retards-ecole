@@ -62,16 +62,17 @@ and c.IdPt = p.IdPt;
 -- Vue Etudiant en retard actuellement et mais qui est justifié par une perturbation
 
 create or replace view Vue_EtudiantRetardJustifie (IdE, IdCl, nomEleve, nomClasse, heureDebutCours, dureeRetard)
-as select distinct rqd.IdE , rqd.IdCl, rqd.nomEleve, rqd.nomClasse, rqd.heureDebutCours, rqd.dureeRetard
-from Vue_RetardQuiDuree rqd, Perturbation p, Concerner c, Trajet tj, Station s
-where rqd.IdE = tj.IdE
+as select distinct vrqd.IdE , vrqd.IdCl, vrqd.nomEleve, vrqd.nomClasse, vrqd.heureDebutCours, vrqd.dureeRetard
+from Vue_RetardQuiDuree vrqd, Perturbation p, Concerner c, Trajet tj, Station s
+where vrqd.IdE = tj.IdE
 and s.IdSt = tj.IdSt
 and c.IdSt = s.IdSt;
 
--- Vue Etudiant perturbé sans billet de la journée
+-- Vue Etudiants perturbés ET en retard (censés etre en cours actuellement) ET sans billet de la journée
 
-create or replace view Vue_EtudiantPerturbationSansBillet (IdE,date)
+create or replace view Vue_Etudiant_Retard_Perturbation_SansBillet (IdE,date)
 as select vep.IdE, vep.date
-from Vue_EtudiantPerturbation vep, Billet b
-where vep.IdE = b.IdE
+from Vue_EtudiantPerturbation vep, Billet b, Vue_RetardQuiDuree vrqd
+where vep.IdE = b.IdE 
+and vep.IdE = vrqd.IdE
 and b.dateB != curdate(); 

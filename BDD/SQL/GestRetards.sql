@@ -145,7 +145,7 @@ create table Appartenir(
 create table Billet(
     dateB date not null,
     heureB time not null,
-    dureeRetard time not null,
+    dureeRetard time,
     URLSignature varchar (50) not null,
     dateheure datetime not null,
     raison varchar (50) default " ",
