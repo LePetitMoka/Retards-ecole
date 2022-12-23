@@ -153,13 +153,20 @@ delimiter ;
 
 -- Billet autotime --
 
-drop trigger if exists InsBilletTemps;
+drop trigger if exists InsBilletTempsJustif;
 delimiter //
-create trigger InsBilletTemps
+create trigger InsBilletTempsJustif
     before insert on Billet
     for each row
 begin
-set new.dateheure = curdatetime();
+declare dureeR time;
+select dureeRetard into dureeR from Vue_RetardQuiDuree where IdE = new.IdE;
+if new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
+    then
+    set new.raison = "Transports ";
+end if;
+set new.dureeRetard = dureeR;
+set new.dateheure = now();
 set new.dateB = curdate();
 set new.heureB = curtime();
 end //

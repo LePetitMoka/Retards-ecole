@@ -148,6 +148,7 @@ create table Billet(
     dureeRetard time not null,
     URLSignature varchar (50) not null,
     dateheure datetime not null,
+    raison varchar (50) default " ",
     IdAd int (6) not null,
     IdE int (6) not null,
     constraint pk_Billet primary key (IdE,IdAd,dateheure),

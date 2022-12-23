@@ -58,3 +58,20 @@ where tj.IdE = e.IdE
 and tj.IdSt = s.IdSt
 and c.IdSt = s.IdSt
 and c.IdPt = p.IdPt;
+
+-- Vue Etudiant en retard actuellement et mais qui est justifié par une perturbation
+
+create or replace view Vue_EtudiantRetardJustifie (IdE, IdCl, nomEleve, nomClasse, heureDebutCours, dureeRetard)
+as select distinct rqd.IdE , rqd.IdCl, rqd.nomEleve, rqd.nomClasse, rqd.heureDebutCours, rqd.dureeRetard
+from Vue_RetardQuiDuree rqd, Perturbation p, Concerner c, Trajet tj, Station s
+where rqd.IdE = tj.IdE
+and s.IdSt = tj.IdSt
+and c.IdSt = s.IdSt;
+
+-- Vue Etudiant perturbé sans billet de la journée
+
+create or replace view Vue_EtudiantPerturbationSansBillet (IdE,date)
+as select vep.IdE, vep.date
+from Vue_EtudiantPerturbation vep, Billet b
+where vep.IdE = b.IdE
+and b.dateB != curdate(); 
