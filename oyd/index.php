@@ -29,9 +29,9 @@
 					case 'administrateur':
 						require_once("./vues/connexion/connexion_admin.php");
 						break;
-					// case 'professeur':
-					//   require_once("./connexion_prof.php");
-					//   break;
+					case 'professeur':
+					  require_once("./vues/connexion/connexion_prof.php");
+					  break;
 					case 'etudiant':
 					  require_once("./vues/connexion/connexion_etudiant.php");
 					  break;

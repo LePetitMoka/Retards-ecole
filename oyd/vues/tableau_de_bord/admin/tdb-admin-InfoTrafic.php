@@ -38,11 +38,12 @@
           
               $unControleur -> setTable("etudiant");
               $lEtudiant = $unControleur -> select_where("IdE", $ID);
-              if(isset($_POST['Ajouter'])){
-                require_once("./vues/show/show_disturbed_etudiants.php");
-              } else {
-                require_once("./vues/insert/insert_ticket-perturbation.php");
-              }
+              // if(isset($_POST['Ajouter'])){
+              //   require_once("./vues/show/show_disturbed_etudiants.php");
+              // } else {
+              //   require_once("./vues/insert/insert_ticket-perturbation.php");
+              // }
+              require_once("./vues/insert/insert_ticket-perturbation.php");
             }else {
               require_once("./vues/show/show_disturbed_etudiants.php");
             }

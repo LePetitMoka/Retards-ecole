@@ -99,6 +99,7 @@
         $valeurs = implode(', ', $valeurs);
         $requete = "insert into ".$this->table."(".$ordre.") values(".$valeurs.");";
         $insert = $this->unPDO -> prepare($requete);
+        var_dump($requete);
         $insert -> execute();
       } else {
         return null;

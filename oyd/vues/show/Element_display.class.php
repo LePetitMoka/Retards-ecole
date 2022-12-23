@@ -130,6 +130,14 @@
           echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
           echo "<table>";
           echo "<tr>";
+          echo "<td>Classe : </td>";
+          echo "<td>".$saClasse['nom']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Diplome preparé : </td>";
+          echo "<td>".$saClasse['diplomePrepare']."</td>";
+          echo "</tr>";
+          echo "<tr>";
           echo "<td>Email : </td>";
           echo "<td>".$unElement['email']."</td>";
           echo "</tr>";

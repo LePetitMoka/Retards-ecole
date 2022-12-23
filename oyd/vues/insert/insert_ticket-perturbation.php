@@ -10,13 +10,19 @@
         <input type="hidden" name="dater" value=<?php echo $date ?>>
       </td>
       <td>
+        <label for="heure">Heure du billet : </label>
+      </td>
+      <td>
+        <input type="time" name="heure" id="heure" required>
+      </td>
+    </tr>
+    <tr>
+      <td>
         <label for="dureer">Durée de retard : </label>
       </td>
       <td>
         <input type="time" name="dureer" id="dureer" required>
       </td>
-    </tr>
-    <tr>
       <td>
         <label for="etud">Etudiant concerné : </label>
       </td>
@@ -27,6 +33,8 @@
           ?>
         </select>
       </td>
+    </tr>
+    <tr>
       <td>
         <label for="sign">Signature : </label>
       </td>
@@ -45,8 +53,9 @@
     $_POST['dater'] = "'".$_POST['dater']."'";
     $_POST['sign'] = "'".$_POST['sign']."'";
     $_POST['dureer'] = "'".$_POST['dureer'].":00'";
-    $ordre = "dateb, dureeRetard, URLSignature, IdE, IdAd";
-    $valeurs = array("dateb" => $_POST['dater'], "dureeRetard" => $_POST['dureer'], "sign" => $_POST['sign'], "IdE" => $_POST['etud'], "IdAd" => $_POST['admin']);
+    $_POST['heure'] = "'".$_POST['heure'].":00'";
+    $ordre = "dateb, heureB, dureeRetard, URLSignature, IdE, IdAd";
+    $valeurs = array("dateb" => $_POST['dater'], "heureB" => $_POST['heure'], "dureeRetard" => $_POST['dureer'], "sign" => $_POST['sign'], "IdE" => $_POST['etud'], "IdAd" => $_POST['admin']);
     $unControleur -> setTable("billet");
     $unControleur -> insert($ordre, $valeurs);
   }

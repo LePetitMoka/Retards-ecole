@@ -45,14 +45,10 @@
             require_once("./vues/navbar/nav-admin.php");
             break;
           case 'professeur':
-            # code...
+            require_once("./vues/navbar/nav-prof.php");
             break;
           case 'etudiant':
             require_once("./vues/navbar/nav-etudiant.php");
-            break;
-          
-          default:
-          require_once("./vues/navbar/nav-etudiant.php");
             break;
         }
       ?>
@@ -92,9 +88,29 @@
             break;
         }				
         break;
-      // case 'prof':
-      // 	# code...
-      // 	break;
+      case 'professeur':
+        switch ($page) {
+          case 0:
+            require_once("./vues/tableau_de_bord/professeur/tdb-professeur.php");
+            break;
+          case 1:
+            require_once("./vues/message/msg-professeur.php");
+            break;
+          case 2:
+            require_once("./vues/compte/compte-admin.php");
+            break;
+          case 3:
+            session_destroy();
+            unset($_SESSION['role']);
+            // require_once("./index.php");
+            header("location:index.php");
+            break;
+            
+          default:
+            header("location:index.php");
+            break;
+        }
+      	break;
       case 'etudiant':
         switch ($page) {
           case 0:
