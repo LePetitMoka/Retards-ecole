@@ -161,13 +161,17 @@ create trigger InsBilletTempsJustif
 begin
 declare dureeR time;
 select dureeRetard into dureeR from Vue_RetardQuiDuree where IdE = new.IdE;
-set new.dureeRetard = dureeR;
-set new.dateheure = now();
-set new.dateB = curdate();
-set new.heureB = curtime();
-if new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
+if dureeR is null
     then
-    set new.raison = "Transports ";
+        signal sqlstate '45000'
+                set message_text = "l'etudiant n'a pas cours actuellement";
+elseif new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
+    then
+        set new.raison = "Transports ";
+        set new.dureeRetard = dureeR;
+        set new.dateheure = now();
+        set new.dateB = curdate();
+        set new.heureB = curtime();
 end if;
 end //
 delimiter ;

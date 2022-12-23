@@ -75,4 +75,4 @@ as select vep.IdE, vep.date
 from Vue_EtudiantPerturbation vep, Billet b, Vue_RetardQuiDuree vrqd
 where vep.IdE = b.IdE 
 and vep.IdE = vrqd.IdE
-and b.dateB != curdate(); 
+and b.dateB != curdate();
