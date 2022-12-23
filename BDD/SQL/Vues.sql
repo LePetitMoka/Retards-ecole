@@ -36,15 +36,15 @@ and a.IdTp = t.IdTp;
 -- Billet par eleve et total des retards
 
 create or replace view Vue_TotalBilletEleve (IdE, nom_prenom, nbBillets, dureeCumulee)
-as select e.IdE, group_concat(e.nom," ",e.prenom), count(b.IdB), time(sum(b.dureeRetard))
+as select e.IdE, group_concat(e.nom," ",e.prenom), count(b.dateB), time(sum(b.dureeRetard))
 from Etudiant e, Billet b
 where b.IdE = e.IdE
 group by e.IdE;
 
 -- Vue Billet/Eleve
 
-create or replace view Vue_BilletEleve (IdB, IdE, nom, prenom, classe, date, heure, dureeRetard)
-as select b.IdB, e.IdE, e.nom, e.prenom, c.nom, b.dateB, b.heureB , b.dureeRetard
+create or replace view Vue_BilletEleve (IdE, nom, prenom, classe, date, heure, dureeRetard)
+as select e.IdE, e.nom, e.prenom, c.nom, b.dateB, b.heureB , b.dureeRetard
 from Etudiant e, Classe c, Billet b
 where c.IdCl =  e.IdCl
 and b.IdE = e.IdE;

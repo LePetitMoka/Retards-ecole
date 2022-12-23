@@ -48,30 +48,30 @@ delimiter ;
 drop trigger if exists insert_MDPSHA1_admin;
 delimiter $
 create trigger insert_MDPSHA1_admin
-after insert on Administrateur
+before insert on Administrateur
 for each row
 begin
-    update Administrateur set mdp = sha1(mdp);
+    set new.mdp = sha1(new.mdp);
 end $
 delimiter ;
 
 drop trigger if exists insert_MDPSHA1_prof;
 delimiter $
 create trigger insert_MDPSHA1_prof
-after insert on Professeur
+before insert on Professeur
 for each row
 begin
-    update Professeur set mdp = sha1(mdp);
+    set new.mdp = sha1(new.mdp);
 end $
 delimiter ;
 
 drop trigger if exists insert_MDPSHA1_etudiant;
 delimiter $
 create trigger insert_MDPSHA1_etudiant
-after insert on Etudiant
+before insert on Etudiant
 for each row
 begin
-    update Etudiant set mdp = sha1(mdp);
+    set new.mdp = sha1(new.mdp);
 end $
 delimiter ;
 
