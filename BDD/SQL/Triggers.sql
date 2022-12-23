@@ -150,3 +150,17 @@ begin
             where etat = "Perturbée";
 end //
 delimiter ;
+
+-- Billet autotime --
+
+drop trigger if exists InsBilletTemps;
+delimiter //
+create trigger InsBilletTemps
+    before insert on Billet
+    for each row
+begin
+set new.dateheure = curdatetime();
+set new.dateB = curdate();
+set new.heureB = curtime();
+end //
+delimiter ;
