@@ -6,10 +6,10 @@ require_once("perturbationAPI.class.php");
 //SUPPRESSION des anciennes données Perturbation et Concerner
 
 $unPDO = new PDO("mysql:host=".$server.";dbname=".$bdd, $user, $password);
-$requete = "delete from concerner;";
+$requete = "delete from Concerner;";
 $delete = $unPDO->prepare($requete);
 $delete->execute();
-$requete = "delete from perturbation;";
+$requete = "delete from Perturbation;";
 $delete = $unPDO->prepare($requete);
 $delete->execute();
 
@@ -141,7 +141,7 @@ foreach ($InfoMessages as $InfoMessage){ // pour chaque message (SQL => ligne da
             $type = $message->{$messageTypeF};
             $text = $message->{$messageTextF}->{'value'};
             $messages[$type]=$text;
-            // idem, faire attention, seulement deux types de messages (TEXT_ONLY et SHORT)
+            // seulement deux types de messages (TEXT_ONLY et SHORT)
             foreach($blacklist as $banword){ // BLACKLIST
                 if (preg_match("/".$banword."/",$text) == 1){
 

@@ -26,7 +26,7 @@ class PerturbationAPI {
     public function constructPerturbation(){
         $chaineCol = "";
         $chaineVal = "";
-        $this->requetePt = "insert into perturbation "; // insert perturbation
+        $this->requetePt = "insert into Perturbation "; // insert perturbation
         
         $chaineCol .= "(IdPt,";
         if ($this->raisonCourte != ""){ 
@@ -44,7 +44,7 @@ class PerturbationAPI {
         var_dump($this->requetePt);
     }    
     public function constructConcerner(){
-        $this->requeteCr = "insert into concerner values "; // insert perturber
+        $this->requeteCr = "insert into Concerner values "; // insert perturber
         for($i = 0; $i+1 <= sizeof($this->arrets); $i++){
             $chaineVal = "";
             $chaineVal = '("'.$this->arrets[$i].'","'.$this->IDMessage.'")';
@@ -92,7 +92,7 @@ class PerturbationAPI {
         if ($this->transporteur == "RATP" && $this->unPDO != null){ // SI RATP ALORS ARRETS = tous les arrets de la/les ligne(s)
             $unPDO = new PDO("mysql:host=".$this->server.";dbname=".$this->bdd, $this->user, $this->password);
             foreach($tab as $ligne){ //pour chaque ligne de la table en parametre
-                $requete = "select IdSt from appartenir where IdTp = ".$ligne.";"; //renvoyer toutes les stations de la ligne
+                $requete = "select IdSt from Appartenir where IdTp = ".$ligne.";"; //renvoyer toutes les stations de la ligne
                 $extract = $unPDO->prepare($requete);
                 $extract->execute();
                 $lesStations = $select -> fetchAll();

@@ -161,11 +161,7 @@ create trigger InsBilletTempsJustif
 begin
 declare dureeR time;
 select dureeRetard into dureeR from Vue_RetardQuiDuree where IdE = new.IdE;
-if dureeR is null
-    then
-        signal sqlstate '45000'
-                set message_text = "l'etudiant n'a pas cours actuellement";
-elseif new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
+if new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
     then
         set new.raison = "Transports ";
         set new.dureeRetard = dureeR;

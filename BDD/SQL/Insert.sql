@@ -33,11 +33,11 @@ LOAD DATA LOCAL INFILE
 insert into Administrateur values
 (null, 'Admin', 'Admin', 'abc@gmail.com', '0612345678', '11 Rue de la Paix', 'test');
 
-update transport set pictogramme = ".\img\icons_colorees\bus.png" where type like 'bus';
+update Transport set pictogramme = ".\img\icons_colorees\bus.png" where type like 'bus';
 
-update transport set pictogramme = ".\img\icons_colorees\rer.png" where type like 'rail';
+update Transport set pictogramme = ".\img\icons_colorees\rer.png" where type like 'rail';
 
-update transport set pictogramme = ".\img\icons_colorees\metro.png" where type in ('metro', 'tram', 'funicular');
+update Transport set pictogramme = ".\img\icons_colorees\metro.png" where type in ('metro', 'tram', 'funicular');
 
 
 LOAD DATA LOCAL INFILE
