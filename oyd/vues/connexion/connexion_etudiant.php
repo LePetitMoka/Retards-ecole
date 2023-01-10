@@ -24,11 +24,11 @@
 </form>
 <?php
   if(isset($_POST['Connexion'])){
-    $id = $_POST['id'];
+    $id = sha1($_POST['id']);
     $mdp = $_POST['mdp'];
 
     $unControleur -> setTable($_SESSION['role']);
-    $user = $unControleur -> autentification($id, sha1($mdp));
+    $user = $unControleur -> autentification($id, $mdp);
     if($user == null){
       echo "<br/>Assurez vous d'étre ".$_SESSION['role'];
       echo "<br/>et vérifiez vos Identifiants<br/>";

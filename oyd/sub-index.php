@@ -5,7 +5,15 @@
     </div>
     <div class="buttons">
       <div class="user_icon">
-        <a href="index.php?page=3">
+        <a href="index.php?<?php 
+          if($_SESSION['role'] == "administrateur"){
+            echo "page=3";
+          }else if($_SESSION['role'] == "professeur"){
+            echo "user=prof&page=2";
+          }else if($_SESSION['role'] == "etudiant"){
+            echo "user=etudiant&page=2";
+          }
+        ?>">
           <img src="./img/icons_colorees/parametres.png" width="60" height="60">
         </a>
       </div>
