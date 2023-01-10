@@ -24,8 +24,8 @@
 </form>
 <?php
   if(isset($_POST['Connexion'])){
-    $id = sha1($_POST['id']);
-    $mdp = $_POST['mdp'];
+    $id = $_POST['id'];
+    $mdp = sha1($_POST['mdp']);
 
     $unControleur -> setTable($_SESSION['role']);
     $user = $unControleur -> autentification($id, $mdp);
