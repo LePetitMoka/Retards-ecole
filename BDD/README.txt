@@ -10,7 +10,7 @@ source /Applications/MAMP/htdocs/Retards-ecole/BDD/SQL/Insert.sql;
 
 Oumar:
 
-source C:\wamp64\www\Retards-ecole\oyd\BDD\SQL\GestRetards.sql
-source C:\wamp64\www\Retards-ecole\oyd\BDD\SQL\Vues.sql
-source C:\wamp64\www\Retards-ecole\oyd\BDD\SQL\Triggers.sql
-source C:\wamp64\www\Retards-ecole\oyd\BDD\SQL\Insert.sql
+source C:\\wamp64\\www\\Retards-ecole\\oyd\\BDD\\SQL\\GestRetards.sql
+source C:\\wamp64\\www\\Retards-ecole\\oyd\\BDD\\SQL\\Vues.sql
+source C:\\wamp64\\www\\Retards-ecole\\oyd\\BDD\\SQL\\Triggers.sql
+source C:\\wamp64\\www\\Retards-ecole\\oyd\\BDD\\SQL\\Insert.sql
