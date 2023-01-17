@@ -171,3 +171,15 @@ if new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
 end if;
 end //
 delimiter ;
+
+-- Cours autotime --
+
+drop trigger if exists InsCours;
+delimiter //
+create trigger InsCours
+    before insert on Cours
+    for each row
+begin
+        set new.dateTS= now();
+end //
+delimiter ;

@@ -107,13 +107,14 @@ create table Perturbation(
 create table Cours(
     IdCl int (6) not null,
     IdPf int (6) not null,
+    dateTS datetime not null,
     matiere varchar (25) not null,
     dateC date not null,
     heureDeb time not null,
     heureFin time not null,
     duree time,
     salle varchar (20),
-    constraint pk_Cours primary key (IdCl, IdPf),
+    constraint pk_Cours primary key (IdCl, IdPf,dateTS),
     constraint fk_Classe2 foreign key (IdCl) references Classe(IdCl) on delete cascade on update cascade,
     constraint fk_Professeur2 foreign key (IdPf) references Professeur(IdPf) on delete cascade on update cascade
 );
