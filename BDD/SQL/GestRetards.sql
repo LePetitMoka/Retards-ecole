@@ -30,7 +30,7 @@ create table Transport (
     nom varchar (30) not null,
     type varchar (15) not null,
     transporteur varchar (25) not null,
-    pictogramme varchar (50),
+    pictogramme varchar (75),
     etat set ("Fluide","Perturbée") default "Fluide",
     constraint pk_Transport primary key (IdTp)
 );
@@ -46,7 +46,7 @@ create table Classe (
 );
 
 create table Matiere(
-    IdM int (6) not null,
+    IdM int (6) not null auto_increment,
     intitule varchar (25) not null,
     constraint pk_Matiere primary key (IdM)
 );
