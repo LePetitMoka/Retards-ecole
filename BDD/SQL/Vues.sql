@@ -26,12 +26,14 @@ and curtime() between heureDeb and heureFin;
 
 -- Jointure Quelles lignes sont perturbées ?
 
-create or replace view Vue_Perturbation_Ligne (IdTp,nom,type,transporteur, pictogramme, etat)
-as select distinct t.IdTp, t.nom, t.type, t.transporteur, t.pictogramme, t.etat
-from Transport t, Station s, Concerner c, Appartenir a
-where c.IdSt = s.IdSt
-and a.IdSt = s.IdSt
-and a.IdTp = t.IdTp;
+create or replace view Vue_Perturbation_Ligne (IdTp,nom,type,transporteur, pictogramme, etat, raison)
+as select distinct t.IdTp, t.nom, t.type, t.transporteur, t.pictogramme, t.etat, p.raisonLongue 
+from Transport t, Station s, Concerner c, Appartenir a, Perturbation p 
+where c.IdSt = s.IdSt 
+and a.IdSt = s.IdSt 
+and a.IdTp = t.IdTp 
+and c.IdPt = p.IdPt 
+order by IdTp;
 
 -- Billet par eleve et total des retards
 
@@ -75,3 +77,4 @@ as select vep.IdE, vep.date
 from Vue_EtudiantPerturbation vep, Vue_RetardQuiDuree vrqd
 where vrqd.IdE = vep.IdE
 and vrqd.IdE not in (select IdE from billet where dateB = curdate());
+
