@@ -7,7 +7,7 @@
         <label for="oldId">Identifiant actuel (email)</label>
       </td>
       <td>
-        <input type="text" name="oldId" id="oldId">
+        <input type="text" name="oldId" id="oldId" required>
       </td>
     </tr>
     <tr>
@@ -15,7 +15,7 @@
         <label for="newId">Nouvel identifiant (email)</label>
       </td>
       <td>
-        <input type="text" name="newId" id="newId">
+        <input type="text" name="newId" id="newId" required>
       </td>
     </tr>
     <tr>
@@ -23,11 +23,11 @@
         <label for="confNewId">Confirmer</label>
       </td>
       <td>
-        <input type="text" name="confNewId" id="confNewId">
+        <input type="text" name="confNewId" id="confNewId" required>
       </td>
     </tr>
   </table>
-  <input type="submit" name="ModifierI" value="Modifier" class="sub-buton">
+  <input type="submit" name="ModifierI" value="Modifier" class="sub-buton" required>
 </form>
 </center>
 <?php

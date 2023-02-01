@@ -20,6 +20,10 @@
       return $user;
     }
 
+    public function nouveau_compte($ordre, $valeurs){
+      $this->unModele -> nouveau_compte($ordre, $valeurs);
+    }
+
     public function select_all (){
       $lesDonnees = $this->unModele -> select_all();
       return $lesDonnees;

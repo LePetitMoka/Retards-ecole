@@ -8,14 +8,26 @@
 
 .role-choice .container form {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+}
+
+.role-choice .container form .roles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
   cursor: pointer;
 }
 
-.role-choice .container form input {
+.role-choice .container form .options input {
+  cursor: pointer;
+}
+
+.role-choice .container form .roles input {
   display: none;
   cursor: pointer;
 }

@@ -36,6 +36,9 @@
           echo "<tr>";
           echo "<td class=".$this->classPartial."> Géré par : ".$unElement['transporteur']."</td>";
           echo "</tr>";
+          // echo "<tr>";
+          // echo "<td class=".$this->classPartial."> Raison : ".$unElement['raisonLongue']."</td>";
+          // echo "</tr>";
           echo "<tr>";
           echo "<td class=".$this->classFull.">".$unElement['type']."</td>";
           echo "<td class=".$this->stateClass.">Etat : ".$unElement['etat']."</td>";

@@ -7,7 +7,7 @@
         <label for="oldMdp">Mot de passe Actuel</label>
       </td>
       <td>
-        <input type="text" name="oldMdp" id="oldMdp">
+        <input type="text" name="oldMdp" id="oldMdp" required>
       </td>
     </tr>
     <tr>
@@ -15,7 +15,7 @@
         <label for="newMdp">Nouvau mot de passe</label>
       </td>
       <td>
-        <input type="text" name="newMdp" id="newMdp">
+        <input type="text" name="newMdp" id="newMdp" required>
       </td>
     </tr>
     <tr>
@@ -23,17 +23,17 @@
         <label for="confNewMdp">Comfirmer</label>
       </td>
       <td>
-        <input type="text" name="confNewMdp" id="confNewMdp">
+        <input type="text" name="confNewMdp" id="confNewMdp" required>
       </td>
     </tr>
   </table>
-  <input type="submit" name="ModifierM" value="Modifier" class="sub-buton">
+  <input type="submit" name="ModifierM" value="Modifier" class="sub-buton" required>
 </form>
 </center>
 <?php
   $unControleur = Connexion::getConnexion();
   if(isset($_POST['ModifierM'])){
-    if(($_POST['oldMdp'] == $_SESSION['mdp']) && ($_POST['newMdp'] == $_POST['confNewMdp'])){
+    if((sha1($_POST['oldMdp']) == $_SESSION['mdp']) && ($_POST['newMdp'] == $_POST['confNewMdp'])){
       $_POST['oldMdp'] = "'".$_POST['oldMdp']."'";
       $_POST['confNewMdp'] = "'".$_POST['confNewMdp']."'";
       $tableau = array("mdp" => $_POST['confNewMdp']);

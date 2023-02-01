@@ -1,0 +1,32 @@
+.front-texte {
+  font-size: 2rem;
+}
+
+.front-texte a {
+  color: black;
+}
+
+.Main-text{
+  text-align: center;
+}
+
+.front-texte h3 {
+  font-family: Caros Soft,Helvetica,Arial,sans-serif;
+  color: #F9B104;
+}
+
+.front-v-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.front-v-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.front-texte li {
+  padding-left: 3rem;
+  list-style: none;
+}

@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="./css/vertical-navbar.css">
 	<link rel="stylesheet" href="./css/content.css">
 	<link rel="stylesheet" href="./css/connexion.css">
+	<link rel="stylesheet" href="./css/front-page.css">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,500,600,700&amp;display=swap" rel="stylesheet">
 	<script src="./js/script.js" defer></script>
 	<title>GREI</title>
@@ -24,25 +25,40 @@
 <body>
 	<?php
 		if(!isset($_SESSION['id'])){
-			if(isset($_SESSION['role'])){
-				switch ($_SESSION['role']) {
-					case 'administrateur':
-						require_once("./vues/connexion/connexion_admin.php");
-						break;
-					case 'professeur':
-					  require_once("./vues/connexion/connexion_prof.php");
-					  break;
-					case 'etudiant':
-					  require_once("./vues/connexion/connexion_etudiant.php");
-					  break;
-					
-					default:
-						unset($_SESSION['role']);
-						header("location:index.php");
-						break;
+			if(isset($_POST['SConnexion'])){
+				$_SESSION['POS'] = $_POST['SConnexion'];
+			}
+			if(isset($_POST['NCompte'])){
+				$_SESSION['POS'] = $_POST['NCompte'];
+			}
+			if(isset($_POST['AConnexion'])){
+				unset($_SESSION['POS']);
+			}
+			if(isset($_SESSION['POS']) && $_SESSION['POS'] == "Se connecter"){
+				if(isset($_SESSION['role'])){
+					switch ($_SESSION['role']) {
+						case 'administrateur':
+							require_once("./vues/connexion/connexion_admin.php");
+							break;
+						case 'professeur':
+							require_once("./vues/connexion/connexion_prof.php");
+							break;
+						case 'etudiant':
+							require_once("./vues/connexion/connexion_etudiant.php");
+							break;
+						
+						default:
+							unset($_SESSION['role']);
+							header("location:index.php");
+							break;
+					}
+				} else {
+					require_once("./vues/connexion/connexion.php");
 				}
-			} else {
-				require_once("./vues/connexion/connexion.php");
+			}elseif(isset($_SESSION['POS']) && $_SESSION['POS'] == "Créer un compte"){
+				require_once("./vues/compte/nouveau-compte.php");
+			} elseif(!isset($_SESSION['POS'])) {
+				require_once("./front-page.php");
 			}
 		}
 		if(isset($_SESSION['id'])) {

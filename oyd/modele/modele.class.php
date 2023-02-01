@@ -40,6 +40,17 @@
       }
     }
 
+    public function nouveau_compte($ordre, $valeurs){
+      if($this->unPDO != null){
+        $valeurs = implode(', ', $valeurs);
+        $requete = "insert into ".$this->table."(".$ordre.") values(null,".$valeurs.");";
+        $insert = $this->unPDO -> prepare($requete);
+        $insert -> execute();
+      }else{
+        return null;
+      }
+    }
+
     public function select_all (){
 			if($this->unPDO != null){
 				$requete = "select * from ".$this->table.";";
