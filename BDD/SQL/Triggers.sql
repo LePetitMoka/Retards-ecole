@@ -20,10 +20,10 @@ create trigger HistoEtudiant_MDP
 after update on Etudiant
 for each row
 begin
-if new.mdp != old.mdp
+if sha1(new.mdp) != old.mdp
     then
-    insert into HistoEtudiant values (null, old.IdE, old.mdp); 
-    update Etudiant set new.mdp = sha1(new.mdp);
+        insert into HistoEtudiant values (null, old.IdE, old.mdp); 
+        update Etudiant set new.mdp = sha1(new.mdp);
 end if;
 end //
 delimiter ;

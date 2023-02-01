@@ -216,5 +216,5 @@ foreach ($InfoMessages as $InfoMessage){ // pour chaque message (SQL => ligne da
     $c++;
 }
 echo "</br>";
-
+echo "FIN";
 ?>
