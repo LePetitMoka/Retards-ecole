@@ -31,7 +31,7 @@ LOAD DATA LOCAL INFILE
  '/Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/Trajet.txt' into table Trajet (IdSt,IdE);
 
 insert into Administrateur values
-(null, 'Admin', 'Admin', 'abc@gmail.com', '0612345678', '11 Rue de la Paix', 'test');
+(null, 'Admin', 'Admin', 'abc@gmail.com', '0612345678', '11 Rue de la Paix', 'test', 'signatures/Admin1sign.png');
 
 update Transport set pictogramme = ".\img\icons_colorees\bus.png" where type like 'bus';
 

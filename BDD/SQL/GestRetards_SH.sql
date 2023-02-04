@@ -2,19 +2,8 @@ drop database if exists GestRetards;
 create database GestRetards;
 use GestRetards;
 
-create table User(
-    IdU int not null,
-    nom varchar (25) not null,
-    prenom varchar (25) not null,
-    email varchar (25) not null unique,
-    telephone varchar (10) not null unique,
-    adresse varchar (50) not null,
-    mdp varchar (100) not null,
-    constraint pk_User primary key (IdU)
-);
-
 create table Professeur (
-    IdPf int (6) not null,
+    IdPf int (6) not null auto_increment,
     nom varchar (25) not null,
     prenom varchar (25) not null,
     diplome varchar (50) not null,
@@ -26,7 +15,7 @@ create table Professeur (
 );
 
 create table Administrateur (
-    IdAd int (6) not null,
+    IdAd int (6) not null auto_increment,
     nom varchar (25) not null,
     prenom varchar (25) not null,
     email varchar (25) not null unique,
@@ -71,7 +60,7 @@ create table Station(
 );
 
 create table Etudiant (
-    IdE int (6) not null,
+    IdE int (6) not null auto_increment,
     nom varchar (25) not null,
     prenom varchar (25) not null,
     email varchar (25) not null unique,
@@ -79,16 +68,32 @@ create table Etudiant (
     mdp varchar (100) not null,
     adresse varchar (50) not null,
     IdCl int (6) not null,
-    constraint pk_Etudiant primary key (IdE),
+    constraint pk_Etudiant primary key (IdE,IdCl),
     constraint fk_Classe foreign key (IdCl) references Classe(IdCl)
 );
 
-create table HistoUser(
-    IdHU int (6) not null auto_increment,
-    IdU int (6) not null,
+create table HistoEtudiant(
+    IdHE int (6) not null,
+    IdE int (6) not null,
     mdp varchar(50),
-    constraint pk_histouser primary key(IdHU, IdU),
-    constraint fk_user foreign key(IdU) references User(IdU) on delete cascade
+    constraint pk_histoetudiant primary key(IdHE),
+    constraint fk_Etudiant foreign key(IdE) references Etudiant(IdE) on delete cascade
+);
+
+create table HistoProf(
+    IdHPf int (6) not null,
+    IdPf int (6) not null,
+    mdp varchar(50),
+    constraint pk_histoprof primary key(IdHPf),
+    constraint fk_Professeur foreign key(IdPf) references Professeur(IdPf) on delete cascade
+);
+
+create table HistoAdmin(
+    IdHAd int (6) not null,
+    IdAd int (6) not null,
+    mdp varchar(50),
+    constraint pk_histoadmin primary key(IdHAd),
+    constraint fk_Administrateur foreign key(IdAd) references Administrateur(IdAd) on delete cascade
 );
 
 create table Perturbation(
