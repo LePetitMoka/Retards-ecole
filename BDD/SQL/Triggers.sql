@@ -46,29 +46,75 @@ end //
 delimiter ;
 
 --      /UPDATE
-
-drop trigger if exists upd_admin;
+--          /BEFORE
+drop trigger if exists beforeupd_admin;
 delimiter //
-create trigger upd_admin
+create trigger beforeupd_admin
 before update on Administrateur
 for each row
 begin
 
--- chiffrage mdp
-if sha1(new.mdp) != old.mdp && sha1(new.mdp) != sha1(old.mdp)
+-- chiffrage mdp + controle
+if sha1(new.mdp) = old.mdp
     then
-        set new.mdp = sha1(new.mdp);
+        signal sqlstate '45000'
+        set message_text = 'Le mot de passe doit etre different';
+    else if sha1(new.mdp) in (select mdp from HistoUser where IdU = new.IdAd) = 1
+        && new.mdp != (select mdp from User where IdU = new.IdAd)
+        then
+            signal sqlstate '45000'
+            set message_text = 'Le mot de passe a déjà été utilisé dans le passé';
+        else if sha1(new.mdp) != sha1(old.mdp) 
+                && new.mdp != (select mdp from User where IdU = new.IdAd)
+                then
+                    set new.mdp = sha1(new.mdp);
+        end if;
+    end if;
+end if;
+end //
+delimiter ;
+
+--          /AFTER
+
+drop trigger if exists afterupd_admin;
+delimiter //
+create trigger afterupd_admin
+after update on Administrateur
+for each row
+begin
+declare mdpU varchar (100);
+declare nomU varchar (25);
+declare adresseU varchar(50);
+declare emailU varchar (50);
+declare telephoneU varchar (10);
+declare prenomU varchar (25);
+
+-- historisation
+
+if  new.mdp in (select mdp from HistoUser where IdU = new.IdAd) = 0
+    && new.mdp != (select mdp from User where IdU = new.IdAd)
+    then
+        insert into HistoUser values (null,new.IdAd,old.mdp);
 end if;
 
--- heritage
-update User
-    set nom = new.nom,
-        prenom = new.prenom,
-        email = new.email,
-        telephone = new.telephone,
-        adresse = new.adresse,
-        mdp = new.mdp
-        where IdU = new.IdAd;
+-- heritage mdp
+select mdp into mdpU from User where IdU = new.IdAd;
+if mdpU != new.mdp
+    then
+        update User set mdp = new.mdp where IdU = new.IdAd;
+end if;
+-- heritage (hors-mdp)
+select nom,prenom,adresse,telephone,email into nomU,prenomU,adresseU,telephoneU,emailU from User where IdU = new.IdAd;
+        if new.nom != nomU OR new.prenom != prenomU OR new.email != emailU OR new.telephone != telephoneU OR new.adresse != adresseU
+            then
+                update User
+                    set nom = new.nom,
+                    prenom = new.prenom,
+                    email = new.email,
+                    telephone = new.telephone,
+                    adresse = new.adresse
+                    where IdU = new.IdAd;
+end if;
 end //
 delimiter ;
 
@@ -76,7 +122,7 @@ delimiter ;
 
 drop trigger if exists del_admin;
 delimiter //
-create trigger delete_administrateur
+create trigger del_admin
 after delete on Administrateur
 for each row
 begin
@@ -90,7 +136,7 @@ delimiter ;
 
 drop trigger if exists ins_etudiant;
 delimiter //
-create trigger insert_etudiant
+create trigger ins_etudiant
 before insert on Etudiant
 for each row
 begin
@@ -139,11 +185,11 @@ update Classe
 end //
 delimiter ;
 
---    /UPDATE
-
-drop trigger if exists upd_etudiant;
+--      /UPDATE
+--          /BEFORE
+drop trigger if exists beforeupd_etudiant;
 delimiter //
-create trigger upd_etudiant
+create trigger beforeupd_etudiant
 before update on Etudiant
 for each row
 begin
@@ -158,21 +204,68 @@ if old.IdCl != new.IdCl
             where IdCl = new.IdCl;
 end if;
 
--- chiffrage mdp
-if sha1(new.mdp) != old.mdp && sha1(new.mdp) != sha1(old.mdp)
+-- chiffrage mdp + controle
+if sha1(new.mdp) = old.mdp
     then
-        update Etudiant set new.mdp = sha1(new.mdp);
+        signal sqlstate '45000'
+        set message_text = 'Le mot de passe doit etre different';
+    else if sha1(new.mdp) in (select mdp from HistoUser where IdU = new.IdE) = 1
+        && new.mdp != (select mdp from User where IdU = new.IdE)
+        then
+            signal sqlstate '45000'
+            set message_text = 'Le mot de passe a déjà été utilisé dans le passé';
+        else if sha1(new.mdp) != sha1(old.mdp) 
+                && new.mdp != (select mdp from User where IdU = new.IdE)
+                then
+                    set new.mdp = sha1(new.mdp);
+        end if;
+    end if;
+end if;
+end //
+delimiter ;
+
+--              /AFTER
+
+drop trigger if exists afterupd_etudiant;
+delimiter //
+create trigger afterupd_etudiant
+after update on Etudiant
+for each row
+begin
+declare mdpU varchar (100);
+declare nomU varchar (25);
+declare adresseU varchar (50);
+declare emailU varchar (50);
+declare telephoneU varchar (10);
+declare prenomU varchar (25);
+
+-- historisation
+
+if  new.mdp in (select mdp from HistoUser where IdU = new.IdE) = 0
+    && new.mdp != (select mdp from User where IdU = new.IdE)
+    then
+        insert into HistoUser values (null,new.IdE,old.mdp);
 end if;
 
--- heritage
-update User
-    set nom = new.nom,
-        prenom = new.prenom,
-        email = new.email,
-        telephone = new.telephone,
-        adresse = new.adresse,
-        mdp = new.mdp
-        where IdU = new.IdE;
+-- heritage mdp
+select mdp into mdpU from User where IdU = new.IdE;
+if mdpU != new.mdp
+    then
+        update User set mdp = new.mdp where IdU = new.IdE;
+end if;
+
+-- heritage (hors-mdp)
+select nom,prenom,adresse,telephone,email into nomU,prenomU,adresseU,telephoneU,emailU from User where IdU = new.IdE;
+        if new.nom != nomU OR new.prenom != prenomU OR new.email != emailU OR new.telephone != telephoneU OR new.adresse != adresseU
+            then
+                update User
+                    set nom = new.nom,
+                    prenom = new.prenom,
+                    email = new.email,
+                    telephone = new.telephone,
+                    adresse = new.adresse
+                    where IdU = new.IdE;
+end if;
 end //
 delimiter ;
 
@@ -180,7 +273,7 @@ delimiter ;
 
 drop trigger if exists del_etudiant;
 delimiter //
-create trigger delete_etudiant
+create trigger del_etudiant
 after delete on Etudiant
 for each row
 begin
@@ -203,7 +296,7 @@ delimiter ;
 
 drop trigger if exists ins_prof;
 delimiter //
-create trigger insert_professeur
+create trigger ins_prof
 before insert on Professeur
 for each row
 begin
@@ -248,28 +341,74 @@ delimiter ;
 
 --    /UPDATE
 
-drop trigger if exists upd_prof;
+drop trigger if exists beforeupd_prof;
 delimiter //
-create trigger upd_professeur
+create trigger beforeupd_prof
 before update on Professeur
 for each row
 begin
 
--- chiffrage mdp
-if sha1(new.mdp) != old.mdp && sha1(new.mdp) != sha1(old.mdp)
+-- chiffrage mdp + controle
+if sha1(new.mdp) = old.mdp
     then
-    update Professeur set new.mdp = sha1(new.mdp);
+        signal sqlstate '45000'
+        set message_text = 'Le mot de passe doit etre different';
+    else if sha1(new.mdp) in (select mdp from HistoUser where IdU = new.IdPf) = 1
+        && new.mdp != (select mdp from User where IdU = new.IdPf)
+        then
+            signal sqlstate '45000'
+            set message_text = 'Le mot de passe a déjà été utilisé dans le passé';
+        else if sha1(new.mdp) != sha1(old.mdp) 
+                && new.mdp != (select mdp from User where IdU = new.IdPf)
+                then
+                    set new.mdp = sha1(new.mdp);
+        end if;
+    end if;
+end if;
+end //
+delimiter ;
+
+--              /AFTER
+
+drop trigger if exists afterupd_prof;
+delimiter //
+create trigger afterupd_prof
+after update on Professeur
+for each row
+begin
+declare mdpU varchar (100);
+declare nomU varchar (25);
+declare adresseU varchar (50);
+declare emailU varchar (50);
+declare telephoneU varchar (10);
+declare prenomU varchar (25);
+
+-- historisation
+
+if  new.mdp in (select mdp from HistoUser where IdU = new.IdPf) = 0
+    && new.mdp != (select mdp from User where IdU = new.IdPf)
+    then
+        insert into HistoUser values (null,new.IdPf,old.mdp);
 end if;
 
--- heritage
-update User
-    set nom = new.nom,
-        prenom = new.prenom,
-        email = new.email,
-        telephone = new.telephone,
-        adresse = new.adresse,
-        mdp = new.mdp
-        where IdU = new.IdPf;
+-- heritage mdp
+select mdp into mdpU from User where IdU = new.IdPf;
+if mdpU != new.mdp
+    then
+        update User set mdp = new.mdp where IdU = new.IdPf;
+end if;
+-- heritage (hors-mdp)
+select nom,prenom,adresse,telephone,email into nomU,prenomU,adresseU,telephoneU,emailU from User where IdU = new.IdPf;
+        if new.nom != nomU OR new.prenom != prenomU OR new.email != emailU OR new.telephone != telephoneU OR new.adresse != adresseU
+            then
+                update User
+                    set nom = new.nom,
+                    prenom = new.prenom,
+                    email = new.email,
+                    telephone = new.telephone,
+                    adresse = new.adresse
+                    where IdU = new.IdPf;
+end if;
 end //
 delimiter ;
 
@@ -277,7 +416,7 @@ delimiter ;
 
 drop trigger if exists del_prof;
 delimiter //
-create trigger delete_professeur
+create trigger del_prof
 after delete on Professeur
 for each row
 begin
@@ -288,20 +427,129 @@ delimiter ;
 
 --  /USER
 --      /UPDATE
+--          /BEFORE
 
-drop trigger if exists histomdp_user;
+drop trigger if exists beforeupd_user;
 delimiter //
-create trigger histomdp_user
+create trigger beforeupd_user
 before update on User
 for each row
 begin
-if sha1(new.mdp) != old.mdp && sha1(new.mdp) != sha1(old.mdp)
+
+-- chiffrage mdp + controle
+if sha1(new.mdp) = old.mdp
     then
-    insert into HistoUser values (null, old.IdU, old.mdp);
+        signal sqlstate '45000'
+        set message_text = 'Le mot de passe doit etre different';
+    else if sha1(new.mdp) in (select mdp from HistoUser h where h.IdU = new.IdU) = 1
+            && (new.mdp != (select mdp from Administrateur where IdAd = new.IdU)
+                OR new.mdp != (select mdp from Professeur where IdPf = new.IdU)
+                OR new.mdp != (select mdp from Etudiant where IdE = new.IdU))
+        then
+            signal sqlstate '45000'
+            set message_text = 'Le mot de passe a déjà été utilisé dans le passé';
+        else if sha1(new.mdp) != sha1(old.mdp)
+                && (new.mdp != (select mdp from Administrateur where IdAd = new.IdU)
+                OR new.mdp != (select mdp from Professeur where IdPf = new.IdU)
+                OR new.mdp != (select mdp from Etudiant where IdE = new.IdU))
+                then
+                    set new.mdp = sha1(new.mdp);
+        end if;
+    end if;
 end if;
 end //
 delimiter ;
 
+--          /AFTER
+
+drop trigger if exists afterupd_user;
+delimiter //
+create trigger afterupd_user
+after update on User
+for each row
+begin
+declare mdp2 varchar (100);
+declare nom2 varchar (25);
+declare adresse2 varchar(50);
+declare email2 varchar (50);
+declare telephone2 varchar (10);
+declare prenom2 varchar (25);
+
+-- historisation mdp
+if  new.mdp in (select mdp from HistoUser h where h.IdU = new.IdU) = 0
+    && (new.mdp != (select mdp from Administrateur where IdAd = new.IdU)
+                OR new.mdp != (select mdp from Professeur where IdPf = new.IdU)
+                OR new.mdp != (select mdp from Etudiant where IdE = new.IdU))
+    then
+        insert into HistoUser values (null,new.IdU,old.mdp);
+end if;
+
+-- heritages
+if new.IdU IN (select IdPf from Professeur) = 1
+    then
+--      mdp
+        select mdp into mdp2 from Professeur where IdPf = new.IdU;
+        if mdp2 != new.mdp
+            then
+                update Professeur set mdp = new.mdp where IdPf = new.IdU;
+        end if;
+--      autres
+        select nom,prenom,adresse,telephone,email into nom2,prenom2,adresse2,telephone2,email2 from Professeur where IdPf = new.IdU;
+        if new.nom != nom2 OR new.prenom != prenom2 OR new.email != email2 OR new.telephone != telephone2 OR new.adresse != adresse2
+            then
+                update Professeur
+                    set nom = new.nom,
+                    prenom = new.prenom,
+                    email = new.email,
+                    telephone = new.telephone,
+                    adresse = new.adresse
+                    where IdPf = new.IdU;
+        end if;
+else if new.IdU IN (select IdE from Etudiant) = 1
+        then
+--      mdp
+            select mdp into mdp2 from Etudiant where IdE = new.IdU;
+            if mdp2 != new.mdp
+                then
+                    update Etudiant set mdp = new.mdp where IdE = new.IdU;
+            end if;
+--      autres
+            select nom,prenom,adresse,telephone,email into nom2,prenom2,adresse2,telephone2,email2 from Etudiant where IdE = new.IdU;
+            if new.nom != nom2 OR new.prenom != prenom2 OR new.email != email2 OR new.telephone != telephone2 OR new.adresse != adresse2
+                then
+                    update Etudiant
+                        set nom = new.nom,
+                        prenom = new.prenom,
+                        email = new.email,
+                        telephone = new.telephone,
+                        adresse = new.adresse
+                        where IdE = new.IdU;
+            end if;
+        else if new.IdU IN (select IdAd from Administrateur) = 1
+                then
+--      mdp
+                    select mdp into mdp2 from Administrateur where IdAd = new.IdU;
+                    if mdp2 != new.mdp
+                        then
+                            update Administrateur set mdp = new.mdp where IdAd = new.IdU;
+                    end if;
+--      autres
+                    select nom,prenom,adresse,telephone,email into nom2,prenom2,adresse2,telephone2,email2 from Administrateur where IdAd = new.IdU;
+                    if new.nom != nom2 OR new.prenom != prenom2 OR new.email != email2 OR new.telephone != telephone2 OR new.adresse != adresse2
+                        then
+                            update Administrateur
+                                set nom = new.nom,
+                                prenom = new.prenom,
+                                email = new.email,
+                                telephone = new.telephone,
+                                adresse = new.adresse
+                                where IdAd = new.IdU;
+            end if;     
+        end if;
+    end if;
+end if;
+end //
+delimiter ;
 
 --  /CONCERNER
 --      /INSERT
@@ -366,8 +614,28 @@ create trigger InsCours
 before insert on Cours
 for each row
 begin
+
 -- Cours autotime 
 set new.dateTS = now();
+
+-- Duree auto
+set new.duree = new.heureFin - new.heureDeb;
+
 end //
 delimiter ;
 
+--      /UPDATE
+
+drop trigger if exists UpdCours;
+delimiter //
+create trigger UpdCours
+before insert on Cours
+for each row
+begin
+
+-- Duree auto
+
+set new.duree = new.heureFin - new.heureDeb;
+
+end //
+delimiter ;
