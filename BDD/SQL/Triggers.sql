@@ -601,6 +601,8 @@ if new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
         set new.dateheure = now();
         set new.dateB = curdate();
         set new.heureB = curtime();
+-- auto sign
+        set new.URLSignature = (select URLSignature from Administrateur where IdAd = new.IdAd);
 end if;
 end //
 delimiter ;
