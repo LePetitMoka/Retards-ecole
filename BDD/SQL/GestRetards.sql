@@ -83,14 +83,6 @@ create table Etudiant (
     constraint fk_Classe foreign key (IdCl) references Classe(IdCl)
 );
 
-create table HistoUser(
-    IdHU int (6) not null auto_increment,
-    IdU int (6) not null,
-    mdp varchar(50),
-    constraint pk_histouser primary key(IdHU, IdU),
-    constraint fk_user foreign key(IdU) references User(IdU) on delete cascade
-);
-
 create table Perturbation(
     IdPt varchar (90) not null,
     raisonCourte varchar (250),
@@ -98,6 +90,14 @@ create table Perturbation(
     dateDebMessage datetime,
     dateFinMessage datetime,
     constraint pk_Perturbation primary key (IdPt)
+);
+
+create table HistoUser(
+    IdHU int (6) not null auto_increment,
+    IdU int (6) not null,
+    mdp varchar(50),
+    constraint pk_histouser primary key(IdHU, IdU),
+    constraint fk_user foreign key(IdU) references User(IdU) on delete cascade
 );
 
 create table Cours(
@@ -114,7 +114,7 @@ create table Cours(
     constraint pk_Cours primary key (IdCl, IdPf,dateTS),
     constraint fk_Classe2 foreign key (IdCl) references Classe(IdCl) on delete cascade on update cascade,
     constraint fk_Professeur2 foreign key (IdPf) references Professeur(IdPf) on delete cascade on update cascade
-);
+);d
 
 create table Trajet(
     IdSt varchar (30) not null,
