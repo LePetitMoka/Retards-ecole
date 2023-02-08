@@ -114,7 +114,7 @@ create table Cours(
     constraint pk_Cours primary key (IdCl, IdPf,dateTS),
     constraint fk_Classe2 foreign key (IdCl) references Classe(IdCl) on delete cascade on update cascade,
     constraint fk_Professeur2 foreign key (IdPf) references Professeur(IdPf) on delete cascade on update cascade
-);d
+);
 
 create table Trajet(
     IdSt varchar (30) not null,

@@ -11,12 +11,13 @@ declare e int;
 declare p int;
 declare u int;
 
-set new.IdAd = (select count(*) from User) + 1;
+set new.IdAd = (select ifnull(idu,0) from User where idu >= all(select idu from user)) + 1;
 
 -- heritage
 select count(*) into u
 from user
 where IdU=new.IdAd;
+
 if u=0
     then    
         select count(*) into p
@@ -126,8 +127,11 @@ create trigger del_admin
 after delete on Administrateur
 for each row
 begin
-delete from User
-where IdU = old.IdAd;
+if old.idad in (select idu from user)
+    then
+        delete from User
+        where IdU = old.IdAd;
+end if;
 end //
 delimiter ;
 
@@ -145,7 +149,7 @@ declare p int;
 declare u int;
 declare somme int;
 
-set new.IdE = (select count(*) from User) + 1;
+set new.IdE = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
 
 -- heritage
 select count(*) into u
@@ -280,8 +284,11 @@ begin
 declare somme int;
 
 -- heritage
-delete from User
-where IdU = old.IdE;
+if old.ide in (select idu from user)
+    then
+        delete from User
+        where IdU = old.ide;
+end if;
 
 -- maj nbEtudiant dans classe
 select count(*) into somme from Etudiant where IdCl = old.IdCl;
@@ -305,7 +312,7 @@ declare a int;
 declare u int;
 declare temp int(6);
 
-set new.IdPf = (select count(*) from User) + 1;
+set new.IdPf = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
 
 -- heritage
 select count(*) into u
@@ -420,8 +427,11 @@ create trigger del_prof
 after delete on Professeur
 for each row
 begin
-delete from User
-where IdU = old.IdPf;
+if old.idpf in (select idu from user)
+    then
+        delete from User
+        where IdU = old.IdPf;
+end if;
 end //
 delimiter ;
 
@@ -548,6 +558,23 @@ else if new.IdU IN (select IdE from Etudiant) = 1
         end if;
     end if;
 end if;
+end //
+delimiter ;
+
+--       /DELETE
+
+drop trigger if exists del_user;
+delimiter //
+create trigger del_user
+after delete on user
+for each row
+begin
+    if old.IdU in (select idPf from Professeur) OR old.IdU in (select ide from Etudiant) OR old.IdU in (select idad from administrateur)
+        then
+            delete from Professeur where idpf = old.IdU;
+            delete from Administrateur where idad = old.IdU;
+            delete from Etudiant where ide = old.IdU;
+    end if;
 end //
 delimiter ;
 
