@@ -11,38 +11,17 @@ declare e int;
 declare p int;
 declare u int;
 
-set new.IdAd = (select ifnull(idu,0) from User where idu >= all(select idu from user)) + 1;
+-- auto_increment
+if new.IdAd is null OR new.IdAd in (select IdU from User) OR new.IdAd = 0
+    then
+        set new.IdAd = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
+end if;
 
 -- heritage
-select count(*) into u
-from user
-where IdU=new.IdAd;
 
-if u=0
-    then    
-        select count(*) into p
-        from Professeur
-        where IdPf = new.IdAd;
-        if p > 0
-            then
-                signal sqlstate '45000'
-                set message_text = 'il est deja professeur';
-        end if;
+set new.mdp = sha1(new.mdp);
+insert into User values (new.IdAd,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
 
-        select count(*) into e
-        from Etudiant
-        where IdE = new.IdAd;
-        if e > 0
-            then
-                    signal sqlstate '45000'
-                    set message_text = 'il est deja etudiant';
-        end if;
-        set new.mdp = sha1(new.mdp);
-        insert into User values (new.IdAd,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
-else
-    signal sqlstate '45000'
-                set message_text = "l'utilisateur existe deja";
-end if;
 end //
 delimiter ;
 
@@ -137,49 +116,36 @@ delimiter ;
 
 --  /ETUDIANT
 --      /INSERT
+--          /BEFORE
 
-drop trigger if exists ins_etudiant;
+drop trigger if exists beforeins_etudiant;
 delimiter //
-create trigger ins_etudiant
+create trigger beforeins_etudiant
 before insert on Etudiant
 for each row
 begin
-declare a int;
-declare p int;
-declare u int;
-declare somme int;
 
-set new.IdE = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
+-- auto_increment
+if new.IdE is null OR new.IdE in (select IdU from User) OR new.IdE = 0
+    then
+        set new.IdE = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
+end if;
 
 -- heritage
-select count(*) into u
-from user
-where IdU=new.IdE;
-if u=0
-    then    
-        select count(*) into p
-        from Professeur
-        where IdPf = new.IdE;
-        if p > 0
-            then
-                signal sqlstate '45000'
-                set message_text = 'il est deja professeur';
-        end if;
+set new.mdp = sha1(new.mdp);
+insert into user values (new.IdE,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
 
-        select count(*) into a
-        from Administrateur
-        where IdAd = new.IdE;
-        if a > 0
-            then
-                    signal sqlstate '45000'
-                    set message_text = 'il est deja administrateur';
-        end if;
-    set new.mdp = sha1(new.mdp);
-    insert into user values (new.IdE,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
-else
-    signal sqlstate '45000'
-                set message_text = "l'utilisateur existe deja";
-end if;
+end //
+delimiter ;
+--          /AFTER
+
+drop trigger if exists afterins_etudiant;
+delimiter //
+create trigger afterins_etudiant
+after insert on Etudiant
+for each row
+begin
+declare somme int;
 
 -- maj nbEtudiant dans classe
 select count(*) into somme from Etudiant where IdCl = new.IdCl;
@@ -197,16 +163,6 @@ create trigger beforeupd_etudiant
 before update on Etudiant
 for each row
 begin
-declare somme int;
-
--- maj nbEtudiant dans classe
-if old.IdCl != new.IdCl
-    then
-        select count(*) into somme from Etudiant where IdCl = new.IdCl;
-        update Classe
-            set nbEtudiants = somme
-            where IdCl = new.IdCl;
-end if;
 
 -- chiffrage mdp + controle
 if sha1(new.mdp) = old.mdp
@@ -236,6 +192,7 @@ create trigger afterupd_etudiant
 after update on Etudiant
 for each row
 begin
+declare somme int;
 declare mdpU varchar (100);
 declare nomU varchar (25);
 declare adresseU varchar (50);
@@ -269,6 +226,19 @@ select nom,prenom,adresse,telephone,email into nomU,prenomU,adresseU,telephoneU,
                     telephone = new.telephone,
                     adresse = new.adresse
                     where IdU = new.IdE;
+end if;
+
+-- maj nbEtudiant dans classe
+if old.IdCl != new.IdCl
+    then
+        select count(*) into somme from Etudiant where IdCl = new.IdCl;
+        update Classe
+            set nbEtudiants = somme
+            where IdCl = new.IdCl;
+        select count(*) into somme from Etudiant where IdCl = old.IdCl;
+        update Classe
+            set nbEtudiants = somme
+            where IdCl = old.IdCl;
 end if;
 end //
 delimiter ;
@@ -307,42 +277,16 @@ create trigger ins_prof
 before insert on Professeur
 for each row
 begin
-declare e int;
-declare a int;
-declare u int;
-declare temp int(6);
-
-set new.IdPf = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
+-- auto_increment
+if new.IdPf is null OR new.IdPf in (select IdU from User) OR new.IdPf = 0
+    then
+        set new.IdPf = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
+end if;
 
 -- heritage
-select count(*) into u
-from user
-where IdU=new.IdPf;
-if u=0
-    then    
-        select count(*) into a
-        from Administrateur
-        where IdAd = new.IdPf;
-        if a > 0
-            then
-                signal sqlstate '45000'
-                set message_text = 'il est deja administrateur';
-        end if;
+set new.mdp = sha1(new.mdp);
+insert into user values (new.IdPf,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
 
-        select count(*) into e
-        from Etudiant
-        where IdE = new.IdPf;
-        if e > 0
-            then
-                    signal sqlstate '45000'
-                    set message_text = 'il est deja etudiant';
-        end if;
-    set new.mdp = sha1(new.mdp);
-    insert into user values (new.IdPf,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
-else
-    signal sqlstate '45000'
-                set message_text = "l'utilisateur existe deja";
-end if;
 end //
 delimiter ;
 
