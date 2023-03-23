@@ -9,15 +9,16 @@ and a.IdTp = t.IdTp;
 -- Jointure Matiere/Professeur (Qui enseigne quoi ?)
 
 create or replace view Vue_Prof_Matiere (IdPf,nom,prenom,IdM,intitule)
-as select p.IdPf, p.nom, p.prenom, m.Idm, m.intitule
-from Professeur p, Matiere m, Enseigner e
-where e.IdPf = p.IdPf 
-and e.IdM = m.IdM;
+as select distinct pf.IdPf, pf.nom, pf.prenom, m.IdM, m.intitule
+from Professeur pf, Matiere m, Cours c
+where pf.IdPf = c.IdPf 
+and c.IdM = m.IdM
+order by pf.IdPf;
 
 -- Qui est en retard actuellement ? (attention: la duree du retard concerne le cours actuel !)
 
-create or replace view Vue_RetardQuiDuree (IdE, IdCl, nomEleve, prenomEleve, nomClasse, heureDebutCours, dureeRetard)
-as select distinct e.IdE, cl.IdCl, e.nom, e.prenom, .cl.nom, c.heureDeb, time(curtime()-c.heureDeb)
+create or replace view Vue_RetardQuiDuree (IdE, IdCl, nomEleve, prenomEleve, nomClasse, heureDebutCours, heureFinCours, dureeRetard)
+as select distinct e.IdE, cl.IdCl, e.nom, e.prenom, .cl.nom, c.heureDeb, c.heureFin, timediff(curtime(),c.heureDeb)
 from Classe cl, Cours c, Etudiant e
 where c.Idcl = cl.IdCl
 and cl.IdCl = e.IdCl
@@ -41,7 +42,8 @@ create or replace view Vue_TotalBilletEleve (IdE, nom_prenom, nbBillets, dureeCu
 as select e.IdE, group_concat(e.nom," ",e.prenom), count(b.dateB), time(sum(b.dureeRetard))
 from Etudiant e, Billet b
 where b.IdE = e.IdE
-group by e.IdE;
+group by e.IdE
+order by IdE;
 
 -- Vue Billet/Eleve
 
@@ -70,11 +72,44 @@ where vrqd.IdE = tj.IdE
 and s.IdSt = tj.IdSt
 and c.IdSt = s.IdSt;
 
--- Vue Etudiants perturbés ET en retard (censés etre en cours actuellement) ET sans billet de la journée
+-- Vue Etudiants perturbés ET en retard (censés etre en cours actuellement) ET sans billet pour le cours actuel
 
-create or replace view Vue_Etudiant_Retard_Perturbation_SansBillet (IdE,date)
-as select vep.IdE, vep.date
+create or replace view Vue_Etudiant_Retard_Perturbation_SansBillet (IdE, nom, prenom, date)
+as select vep.IdE, vep.nom, vep.prenom, vep.date
 from Vue_EtudiantPerturbation vep, Vue_RetardQuiDuree vrqd
 where vrqd.IdE = vep.IdE
-and vrqd.IdE not in (select IdE from billet where dateB = curdate());
+and vrqd.IdE not in (select IdE from billet where dateB = curdate() and (heureB between vrqd.heureDebutCours and vrqd.heureFinCours));
 
+-- Vue Etudiant en retard (censé etre en cours actuellement) ET sans billet
+
+create or replace view Vue_Etudiant_Retard__SansBillet (IdE)
+as select vrqd.IdE
+from Vue_RetardQuiDuree vrqd
+where vrqd.IdE not in (select IdE from billet where dateB = curdate() and (heureB between vrqd.heureDebutCours and vrqd.heureFinCours));
+
+-- Vue Cours detaillés
+
+create or replace view Vue_Cours_Details(matiere,nomCl,nomPf,dateTS,dateC,heureDeb,heureFin,duree,salle,IdCl,IdPf,IdM)
+as select m.intitule, cl.nom, pf.nom , c.dateTS, c.dateC ,c.heureDeb, c.heurefin, c.duree, c.salle, cl.idcl, pf.idpf, c.idm
+from cours c, classe cl, Professeur pf, matiere m
+where cl.idcl = c.idcl
+and pf.idpf = c.idpf
+and m.idm = c.idm
+order by IdCl;
+
+-- Vue Arret / Transport simplifiée
+
+create or replace view Vue_Arret_Transport_Concat(IdSt, NomArret, transports)
+as select IdSt, NomArret, group_concat(NomTransport) transports
+from vue_arret_transport
+group by idst;
+
+-- Composition des Trajets des etudiants details
+
+create or replace view Vue_Trajet_Details(nom,prenom,arret, transports, ide,idst)
+as select e.nom, e.prenom, vatc.NomArret, vatc.transports, e.Ide, st.IdSt
+from trajet t, Etudiant e, Station st, Vue_Arret_Transport_Concat vatc
+where t.Ide = e.Ide
+and t.IdSt = vatc.idst
+and st.Idst = t.idst
+order by ide;

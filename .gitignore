@@ -4,3 +4,4 @@ oyd/Scripts
 .DS_Store
 /Applications/MAMP/htdocs/Retards-ecole/BDD/Sources/IDFM-gtfs
 BDD/SQL/Triggers.old.sql
+.vscode/settings.json

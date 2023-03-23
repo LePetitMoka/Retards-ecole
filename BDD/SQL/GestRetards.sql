@@ -53,7 +53,7 @@ create table Classe (
     nbEtudiants int (2) default 0,
     email varchar (50) not null unique,
     diplomePrepare varchar (30) not null,
-    promotion varchar (9),
+    promotion varchar (9) default "",
     constraint pk_Classe primary key (IdCl)
 );
 
@@ -103,17 +103,18 @@ create table HistoUser(
 create table Cours(
     IdCl int (6) not null,
     IdPf int (6) not null,
+    IdM int (6) not null,
     dateTS datetime not null,
-    matiere varchar (25) not null,
     dateC date not null,
     heureDeb time not null,
     heureFin time not null,
     duree time,
-    salle varchar (20),
+    salle varchar (20) default " ",
     constraint check_heure check (heureDeb < heureFin),
     constraint pk_Cours primary key (IdCl, IdPf,dateTS),
     constraint fk_Classe2 foreign key (IdCl) references Classe(IdCl) on delete cascade on update cascade,
-    constraint fk_Professeur2 foreign key (IdPf) references Professeur(IdPf) on delete cascade on update cascade
+    constraint fk_Professeur2 foreign key (IdPf) references Professeur(IdPf) on delete cascade on update cascade,
+    constraint fk_Matiere foreign key (IdM) references Matiere (IdM) on delete cascade on update cascade
 );
 
 create table Trajet(
@@ -122,14 +123,6 @@ create table Trajet(
     constraint pk_Trajet primary key(IdSt,IdE),
     constraint fk_Station foreign key (IdSt) references Station(IdSt) on delete cascade on update cascade,
     constraint fk_Etudiant4 foreign key (IdE) references Etudiant(IdE) on delete cascade on update cascade
-);
-
-create table Enseigner(
-    IdM int (6) not null,
-    IdPf int (6) not null,
-    constraint pk_Enseigner primary key (IdM,IdPf),
-    constraint fk_Professeur3 foreign key (IdPf) references Professeur(IdPf) on delete cascade on update cascade,
-    constraint fk_Matiere foreign key (IdM) references Matiere(IdM) on delete cascade on update cascade
 );
 
 create table Appartenir(

@@ -37,12 +37,12 @@ begin
 -- chiffrage mdp + controle
 if sha1(new.mdp) = old.mdp
     then
-        signal sqlstate '45000'
+        signal sqlstate '45001'
         set message_text = 'Le mot de passe doit etre different';
     else if sha1(new.mdp) in (select mdp from HistoUser where IdU = new.IdAd) = 1
         && new.mdp != (select mdp from User where IdU = new.IdAd)
         then
-            signal sqlstate '45000'
+            signal sqlstate '45002'
             set message_text = 'Le mot de passe a déjà été utilisé dans le passé';
         else if sha1(new.mdp) != sha1(old.mdp) 
                 && new.mdp != (select mdp from User where IdU = new.IdAd)
@@ -167,12 +167,12 @@ begin
 -- chiffrage mdp + controle
 if sha1(new.mdp) = old.mdp
     then
-        signal sqlstate '45000'
+        signal sqlstate '45001'
         set message_text = 'Le mot de passe doit etre different';
     else if sha1(new.mdp) in (select mdp from HistoUser where IdU = new.IdE) = 1
         && new.mdp != (select mdp from User where IdU = new.IdE)
         then
-            signal sqlstate '45000'
+            signal sqlstate '45002'
             set message_text = 'Le mot de passe a déjà été utilisé dans le passé';
         else if sha1(new.mdp) != sha1(old.mdp) 
                 && new.mdp != (select mdp from User where IdU = new.IdE)
@@ -302,12 +302,12 @@ begin
 -- chiffrage mdp + controle
 if sha1(new.mdp) = old.mdp
     then
-        signal sqlstate '45000'
+        signal sqlstate '45001'
         set message_text = 'Le mot de passe doit etre different';
     else if sha1(new.mdp) in (select mdp from HistoUser where IdU = new.IdPf) = 1
         && new.mdp != (select mdp from User where IdU = new.IdPf)
         then
-            signal sqlstate '45000'
+            signal sqlstate '45002'
             set message_text = 'Le mot de passe a déjà été utilisé dans le passé';
         else if sha1(new.mdp) != sha1(old.mdp) 
                 && new.mdp != (select mdp from User where IdU = new.IdPf)
@@ -393,14 +393,14 @@ begin
 -- chiffrage mdp + controle
 if sha1(new.mdp) = old.mdp
     then
-        signal sqlstate '45000'
+        signal sqlstate '45001'
         set message_text = 'Le mot de passe doit etre different';
     else if sha1(new.mdp) in (select mdp from HistoUser h where h.IdU = new.IdU) = 1
             && (new.mdp != (select mdp from Administrateur where IdAd = new.IdU)
                 OR new.mdp != (select mdp from Professeur where IdPf = new.IdU)
                 OR new.mdp != (select mdp from Etudiant where IdE = new.IdU))
         then
-            signal sqlstate '45000'
+            signal sqlstate '45002'
             set message_text = 'Le mot de passe a déjà été utilisé dans le passé';
         else if sha1(new.mdp) != sha1(old.mdp)
                 && (new.mdp != (select mdp from Administrateur where IdAd = new.IdU)
@@ -564,15 +564,32 @@ begin
 declare dureeR time;
 
 -- Billet autotime --
-select dureeRetard into dureeR from Vue_RetardQuiDuree where IdE = new.IdE;
-if new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
+if new.IdE not in (select IdE from Vue_RetardQuiDuree)
     then
+        signal sqlstate '45004'
+            set message_text = "Cet etudiant n a pas cours actuellement";
+elseif new.IdE not in (select IdE from Vue_Etudiant_Retard__SansBillet)
+    then
+        signal sqlstate '45005'
+            set message_text = "Cet etudiant a déjà un billet pour ce cours";
+elseif new.dateheure is null and new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
+    then
+        select dureeRetard into dureeR from Vue_RetardQuiDuree where IdE = new.IdE;
         set new.raison = "Transports ";
         set new.dureeRetard = dureeR;
         set new.dateheure = now();
         set new.dateB = curdate();
         set new.heureB = curtime();
--- auto sign
+--      auto sign
+        set new.URLSignature = (select URLSignature from Administrateur where IdAd = new.IdAd);
+elseif new.dateheure is null
+    then
+        select dureeRetard into dureeR from Vue_RetardQuiDuree where IdE = new.IdE;
+        set new.dureeRetard = dureeR;
+        set new.dateheure = now();
+        set new.dateB = curdate();
+        set new.heureB = curtime();
+--      auto sign
         set new.URLSignature = (select URLSignature from Administrateur where IdAd = new.IdAd);
 end if;
 end //
@@ -602,7 +619,7 @@ delimiter ;
 drop trigger if exists UpdCours;
 delimiter //
 create trigger UpdCours
-before insert on Cours
+before update on Cours
 for each row
 begin
 

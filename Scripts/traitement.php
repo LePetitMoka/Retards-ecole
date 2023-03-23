@@ -171,7 +171,7 @@ foreach ($InfoMessages as $InfoMessage){ // pour chaque message (SQL => ligne da
         }
         echo "Liste des lignes : </br>";
         var_dump($codes);
-        echo serialize($InfoMessage->{'Content'});
+        //echo serialize($InfoMessage->{'Content'});
         echo "</br>";
         $messages = array();
         foreach ($InfoMessage->{'Content'}->{$messageF} as $message){ // pour chaque message
@@ -205,7 +205,7 @@ foreach ($InfoMessages as $InfoMessage){ // pour chaque message (SQL => ligne da
         $listeMessages[$c]->setDates($DateDebutMessage,$DateFinMessage);
         $listeMessages[$c]->setTransporteur($transporteur);
         $listeMessages[$c]->setMessages($messages);
-        $listeMessages[$c]->setArrets($codes,$transporteur);
+        $listeMessages[$c]->setArrets($codes);
         $listeMessages[$c]->constructPerturbation();
         $listeMessages[$c]->constructConcerner();
         echo "INSERTION OBJ OK <br>";
