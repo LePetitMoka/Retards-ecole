@@ -270,6 +270,7 @@ delimiter ;
 
 --  /PROFESSEUR
 --      /INSERT
+--          /BEFORE
 
 drop trigger if exists ins_prof;
 delimiter //
@@ -291,7 +292,7 @@ end //
 delimiter ;
 
 --    /UPDATE
-
+--          /BEFORE
 drop trigger if exists beforeupd_prof;
 delimiter //
 create trigger beforeupd_prof
@@ -564,18 +565,18 @@ begin
 declare dureeR time;
 
 -- Billet autotime --
-if new.IdE not in (select IdE from Vue_RetardQuiDuree)
+if new.dateB is null and new.IdE not in (select IdE from Vue_RetardQuiDuree)
     then
         signal sqlstate '45004'
             set message_text = "Cet etudiant n a pas cours actuellement";
-elseif new.IdE not in (select IdE from Vue_Etudiant_Retard__SansBillet)
+elseif new.dateB is null and new.IdE not in (select IdE from Vue_Etudiant_Retard__SansBillet)
     then
         signal sqlstate '45005'
             set message_text = "Cet etudiant a déjà un billet pour ce cours";
 elseif new.dateheure is null and new.IdE in (select IdE from Vue_EtudiantRetardJustifie)
     then
         select dureeRetard into dureeR from Vue_RetardQuiDuree where IdE = new.IdE;
-        set new.raison = "Transports ";
+        set new.raison = concat("Transports / ", new.raison);
         set new.dureeRetard = dureeR;
         set new.dateheure = now();
         set new.dateB = curdate();
