@@ -2,8 +2,8 @@
 class Connexion {
   private static $unControleur ; 
   private static $server = "localhost";
-  private static $user = "root";
-  private static $password = "root";
+  private static $user = "Seb";
+  private static $password = "Seb";
   private static $bdd = "GestRetards";
   public static function  getConnexion(){
     if (Connexion::$unControleur == null){

@@ -47,7 +47,7 @@
     $_POST['dureer'] = "'".$_POST['dureer'].":00'";
     $ordre = "dateb, dureeRetard, URLSignature, IdE, IdAd";
     $valeurs = array("dateb" => $_POST['dater'], "dureeRetard" => $_POST['dureer'], "sign" => $_POST['sign'], "IdE" => $_POST['etud'], "IdAd" => $_POST['admin']);
-    $unControleur -> setTable("billet");
+    $unControleur -> setTable("Billet");
     $unControleur -> insert($ordre, $valeurs);
   }
 ?>

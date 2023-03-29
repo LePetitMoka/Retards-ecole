@@ -27,7 +27,7 @@
 
     public function display ($unElement){
       switch ($this->leType) {
-        case 'transport':
+        case 'Transport':
           echo "<table class=".$this->tabClass.">";
           echo "<tr>";
           echo "<td rowspan='2' class=".$this->classFull."><img src='".$unElement['pictogramme']."' width='100' height='100'></td>";
@@ -43,11 +43,11 @@
           echo "</table>";
           break;
         
-        case 'ticket':
+        case 'Ticket':
           $unControleur = Connexion::getConnexion();
-          $unControleur -> setTable("etudiant");
+          $unControleur -> setTable("Etudiant");
           $lEtudiant = $unControleur -> select_where("IdE", $unElement['IdE']);
-          $unControleur -> setTable("classe");
+          $unControleur -> setTable("Classe");
           $saClasse = $unControleur -> select_where("IdCl", $lEtudiant['IdCl']);
           $unControleur -> setTable("Administrateur");
           $lAdmin = $unControleur -> select_where("IdAd", $unElement['IdAd']);
@@ -79,9 +79,9 @@
           echo "</table>";
           break;
 
-        case 'etudiant':
+        case 'Etudiant':
           $unControleur = Connexion::getConnexion();
-          $unControleur -> setTable("classe");
+          $unControleur -> setTable("Classe");
           $saClasse = $unControleur -> select_where("IdCl", $unElement['IdCl']);
           echo "<div class=".$this->sdClass.">";
           echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
@@ -124,7 +124,7 @@
 
         case 'etudiant-lite':
           $unControleur = Connexion::getConnexion();
-          $unControleur -> setTable("classe");
+          $unControleur -> setTable("Classe");
           $saClasse = $unControleur -> select_where("IdCl", $unElement['IdCl']);
           echo "<div class=".$this->sdClass.">";
           echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
@@ -147,9 +147,9 @@
 
         case 'etudiant-perturbation':
           $unControleur = Connexion::getConnexion();
-          $unControleur -> setTable("etudiant");
+          $unControleur -> setTable("Etudiant");
           $lEtudiant = $unControleur -> select_where("IdE", $unElement['IdE']);
-          $unControleur -> setTable("classe");
+          $unControleur -> setTable("Classe");
           $saClasse = $unControleur -> select_where("IdCl", $lEtudiant['IdCl']);
           echo "<div class=".$this->sdClass.">";
           echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
@@ -189,7 +189,7 @@
           echo "</div>";
           break;
         
-        case 'professeur':
+        case 'Professeur':
           echo "<div class=".$this->sdClass.">";
           echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
           echo "<table>";
@@ -249,7 +249,7 @@
           echo "</div>";
           break;
 
-        case 'classe':
+        case 'Classe':
           echo "<div class=".$this->sdClass.">";
           echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['promotion']."</h3>";
           echo "<table>";

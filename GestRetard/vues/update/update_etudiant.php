@@ -1,6 +1,6 @@
 <h2>Modification d'un étudiant</h2>
 <?php
-  $unControleur -> setTable("classe");
+  $unControleur -> setTable("Classe");
   $lesClasses = $unControleur -> select_all();
 ?>
 <center>

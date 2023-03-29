@@ -19,7 +19,7 @@
     $_SESSION['nbep'] = 10;
   }
 
-  $unControleur -> setTable("vue_etudiantperturbation");
+  $unControleur -> setTable("Vue_EtudiantPerturbation");
   $filtre = ""; 
   if(isset($_POST['Filtrer'])){
     $filtre = $_POST['filtre'];

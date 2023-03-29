@@ -26,13 +26,13 @@
 		if(!isset($_SESSION['id'])){
 			if(isset($_SESSION['role'])){
 				switch ($_SESSION['role']) {
-					case 'administrateur':
+					case 'Administrateur':
 						require_once("./vues/connexion/connexion_admin.php");
 						break;
-					// case 'professeur':
+					// case 'Professeur':
 					//   require_once("./connexion_prof.php");
 					//   break;
-					case 'etudiant':
+					case 'Etudiant':
 					  require_once("./vues/connexion/connexion_etudiant.php");
 					  break;
 					

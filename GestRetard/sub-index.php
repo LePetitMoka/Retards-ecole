@@ -41,13 +41,13 @@
     <ul class="menu unstyled-list">
       <?php
         switch ($_SESSION['role']) {
-          case 'administrateur':
+          case 'Administrateur':
             require_once("./vues/navbar/nav-admin.php");
             break;
-          case 'professeur':
+          case 'Professeur':
             # code...
             break;
-          case 'etudiant':
+          case 'Etudiant':
             require_once("./vues/navbar/nav-etudiant.php");
             break;
           
@@ -66,7 +66,7 @@
     $page = $_GET['page'];
     
     switch ($_SESSION['role']) {
-      case 'administrateur':
+      case 'Administrateur':
         switch ($page) {
           case 0:
             require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
@@ -95,7 +95,7 @@
       // case 'prof':
       // 	# code...
       // 	break;
-      case 'etudiant':
+      case 'Etudiant':
         switch ($page) {
           case 0:
             require_once("./vues/tableau_de_bord/etudiant/tdb-etudiant.php");

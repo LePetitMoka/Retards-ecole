@@ -18,7 +18,7 @@
     $_SESSION['nbep'] = 10;
   }
 
-  $unControleur -> setTable("transport");
+  $unControleur -> setTable("Transport");
   $filtre = ""; 
   if(isset($_POST['Filtrer'])){
     $filtre = $_POST['filtre'];
@@ -35,7 +35,7 @@
   } else {
     $lesTransports = $unControleur -> select_all();
   }
-  $leType = "transport";
+  $leType = "Transport";
   $unShow = new Show($lesTransports, $_SESSION['nbep']);
   $unShow->setType($leType);
   $unShow->traitement($filtre); 

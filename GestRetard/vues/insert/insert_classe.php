@@ -43,7 +43,7 @@
     $_POST['email'] = "'".$_POST['email']."'";
     $ordre = "IdCl, nom, promotion, diplomePrepare, email";
     $valeurs = array("IdCl"=>$_POST['id'], "nom"=>$_POST['nom'], "promotion"=>$_POST['promotion'], "dipprepre"=>$_POST['dipprepre'], "email"=>$_POST['email']);
-    $unControleur -> setTable("classe");
+    $unControleur -> setTable("Classe");
     $unControleur -> insert($ordre, $valeurs);
   }
 ?>

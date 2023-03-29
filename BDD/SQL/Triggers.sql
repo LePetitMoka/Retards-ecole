@@ -14,7 +14,7 @@ declare u int;
 -- auto_increment
 if new.IdAd is null OR new.IdAd in (select IdU from User) OR new.IdAd = 0
     then
-        set new.IdAd = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
+        set new.IdAd = ifnull((select idu from User where idu >= all(select idu from User)),0) + 1;
 end if;
 
 -- heritage
@@ -106,7 +106,7 @@ create trigger del_admin
 after delete on Administrateur
 for each row
 begin
-if old.idad in (select idu from user)
+if old.idad in (select idu from User)
     then
         delete from User
         where IdU = old.IdAd;
@@ -128,12 +128,12 @@ begin
 -- auto_increment
 if new.IdE is null OR new.IdE in (select IdU from User) OR new.IdE = 0
     then
-        set new.IdE = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
+        set new.IdE = ifnull((select idu from User where idu >= all(select idu from User)),0) + 1;
 end if;
 
 -- heritage
 set new.mdp = sha1(new.mdp);
-insert into user values (new.IdE,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
+insert into User values (new.IdE,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
 
 end //
 delimiter ;
@@ -254,7 +254,7 @@ begin
 declare somme int;
 
 -- heritage
-if old.ide in (select idu from user)
+if old.ide in (select idu from User)
     then
         delete from User
         where IdU = old.ide;
@@ -281,12 +281,12 @@ begin
 -- auto_increment
 if new.IdPf is null OR new.IdPf in (select IdU from User) OR new.IdPf = 0
     then
-        set new.IdPf = ifnull((select idu from User where idu >= all(select idu from user)),0) + 1;
+        set new.IdPf = ifnull((select idu from User where idu >= all(select idu from User)),0) + 1;
 end if;
 
 -- heritage
 set new.mdp = sha1(new.mdp);
-insert into user values (new.IdPf,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
+insert into User values (new.IdPf,new.nom,new.prenom,new.email,new.telephone,new.adresse,new.mdp);
 
 end //
 delimiter ;
@@ -372,7 +372,7 @@ create trigger del_prof
 after delete on Professeur
 for each row
 begin
-if old.idpf in (select idu from user)
+if old.idpf in (select idu from User)
     then
         delete from User
         where IdU = old.IdPf;
@@ -511,7 +511,7 @@ delimiter ;
 drop trigger if exists del_user;
 delimiter //
 create trigger del_user
-after delete on user
+after delete on User
 for each row
 begin
     if old.IdU in (select idPf from Professeur) OR old.IdU in (select ide from Etudiant) OR old.IdU in (select idad from administrateur)

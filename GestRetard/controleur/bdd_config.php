@@ -1,6 +1,6 @@
 <?php
   $server = "localhost";
-  $user = "root";
-  $password = "root";
+  $user = "Seb";
+  $password = "Seb";
   $bdd = "GestRetards";
 ?>

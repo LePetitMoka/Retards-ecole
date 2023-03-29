@@ -1,6 +1,6 @@
 <h2>Modification d'une classe</h2>
 <?php
-  $unControleur -> setTable("classe");
+  $unControleur -> setTable("Classe");
 ?>
 <center>
 <form method="post">

@@ -1,6 +1,6 @@
 <h2>Nouveau étudiants</h2>
 <?php
-  $unControleur -> setTable("classe");
+  $unControleur -> setTable("Classe");
   $lesClasses = $unControleur -> select_all();
 ?>
 <center>
@@ -78,7 +78,7 @@
     $_POST['mdp'] = "'".$_POST['mdp']."'";
     $ordre = "IdE, nom, prenom, telephone, adresse, email, mdp, IdCl";
     $valeurs = array("IdE"=>$_POST['id'], "nom"=>$_POST['nom'], "prenom"=>$_POST['prenom'], "telephone"=>$_POST['tel'], "adresse"=>$_POST['addr'], "email"=>$_POST['email'], "mdp"=>$_POST['mdp'], "IdCl"=>$_POST['classe']);
-    $unControleur -> setTable("etudiant");
+    $unControleur -> setTable("Etudiant");
     $unControleur -> insert($ordre, $valeurs);
   }
 ?>
