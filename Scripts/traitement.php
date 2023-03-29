@@ -1,11 +1,22 @@
 <?php
+//Configuration de l'affichage des erreurs (PRODUCTION)
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
+print_r ("DEBUT\n");
 
 require_once("bdd_config.php");
 require_once("perturbationAPI.class.php");
 
+
 //SUPPRESSION des anciennes données Perturbation et Concerner
 
-$unPDO = new PDO("mysql:host=".$server.";dbname=".$bdd, $user, $password);
+try{
+    $unPDO = new PDO("mysql:host=".$server.";dbname=".$bdd, $user, $password);
+}catch (PDOExeption $exp){
+    print_r("Impossible de se connecter au serveur<br/>");
+    echo $exp -> getMessage();
+}
 $requete = "delete from Concerner;";
 $delete = $unPDO->prepare($requete);
 $delete->execute();
@@ -17,10 +28,12 @@ $delete->execute();
 
 try{
     $curl = curl_init();
-
+    var_dump($curl);
     // Check if initialization had gone wrong*    
     if ($curl === false) {
         throw new Exception('failed to initialize');
+    } elseif (!isset($curl)){
+        throw new Exception('Curl extension not working');
     }
 
     curl_setopt_array($curl, array(
@@ -58,7 +71,7 @@ $parsed_json = json_decode($response);
 //Importation de la blacklist
 
 $blacklist = array();
-$blacklist = explode("\n", file_get_contents('blacklist.txt'));
+$blacklist = explode("\n", file_get_contents('/Scripts/blacklist.txt'));
 var_dump($blacklist);
 echo "</br>" ;
 
