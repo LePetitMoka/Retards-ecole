@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-30T09:43:52.837Z" agent="5.0 (Macintosh)" etag="FIwL_sxE3ckR2QnS3JEy" version="20.8.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-30T09:44:08.466Z" agent="5.0 (Macintosh)" etag="yeDOV5oF7eGUx5yAiWcS" version="20.8.11" type="github">
   <diagram id="BXRtGHbMrKm54WQv6c_G" name="Page-1">
     <mxGraphModel dx="1274" dy="837" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -119,7 +119,7 @@
             <mxPoint x="590" y="273.5999999999999" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="AHKd4JmvOhIHxKT9gnMJ-8" value="w" style="swimlane;startSize=23;" vertex="1" parent="t7ZpOgtnZrypAFFjjD7j-17">
+        <mxCell id="AHKd4JmvOhIHxKT9gnMJ-8" value="Stats" style="swimlane;startSize=23;" vertex="1" parent="t7ZpOgtnZrypAFFjjD7j-17">
           <mxGeometry x="110" y="220" width="620" height="140" as="geometry" />
         </mxCell>
         <mxCell id="AHKd4JmvOhIHxKT9gnMJ-9" value="&lt;div align=&quot;center&quot;&gt;Voir les stats étudiants&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="AHKd4JmvOhIHxKT9gnMJ-8">
