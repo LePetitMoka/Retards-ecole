@@ -514,7 +514,7 @@ create trigger del_user
 after delete on User
 for each row
 begin
-    if old.IdU in (select idPf from Professeur) OR old.IdU in (select ide from Etudiant) OR old.IdU in (select idad from administrateur)
+    if old.IdU in (select idPf from Professeur) OR old.IdU in (select ide from Etudiant) OR old.IdU in (select idad from Administrateur)
         then
             delete from Professeur where idpf = old.IdU;
             delete from Administrateur where idad = old.IdU;
