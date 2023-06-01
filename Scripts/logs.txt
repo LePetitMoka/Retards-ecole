@@ -1,0 +1,1463 @@
+DEBUT
+resource(7) of type (curl)
+array(3) {
+  [0]=>
+  string(5) "COVID"
+  [1]=>
+  string(5) "Covid"
+  [2]=>
+  string(6) "masque"
+}
+</br>MAJ</br>array(0) {
+}
+<br><hr>ID message: RATP-SIV:InfoMessage::MSG.IVC.2727747911089013405:LOC</br>Date enregistrement du message: 2023-03-21 23:37:55  </br>Date de fin de validité du message: 2023-03-30 02:00:00  </br>Liste des lignes : </br>array(1) {
+  [0]=>
+  string(6) "C01381"
+}
+</br>Liste des messages: </br>array(2) {
+  ["SHORT_MESSAGE"]=>
+  string(124) "Jusqu'au 02/04, tous les jours, Le trafic est interrompu entre Mairie des Lilas et Belleville (travaux)
+Bus de remplacement."
+  ["TEXT_ONLY"]=>
+  string(135) "Jusqu'au 02/04, tous les jours, Le trafic est interrompu entre Mairie des Lilas et Belleville en raison de travaux
+Bus de remplacement."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonCourte,raisonLongue,dateDebMessage,dateFinMessage) values ("RATP-SIV:InfoMessage::MSG.IVC.2727747911089013405:LOC","Jusqu'au 02/04, tous les jours, Le trafic est interrompu entre Mairie des Lilas et Belleville (travaux)
+Bus de remplacement.","Jusqu'au 02/04, tous les jours, Le trafic est interrompu entre Mairie des Lilas et Belleville en raison de travaux
+Bus de remplacement.","2023-03-21 23:37:55  ","2023-03-30 02:00:00  ");<br>INSERE Perturbation REQUETE Concerner: call insertPtByTp("C01381","RATP-SIV:InfoMessage::MSG.IVC.2727747911089013405:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC</br>Date enregistrement du message: 2023-03-28 13:46:25  </br>Date de fin de validité du message: 2023-03-29 21:00:00  </br>Liste des stations : </br>array(8) {
+  [0]=>
+  string(5) "41061"
+  [1]=>
+  string(6) "411377"
+  [2]=>
+  string(6) "411380"
+  [3]=>
+  string(5) "41062"
+  [4]=>
+  string(5) "41038"
+  [5]=>
+  string(5) "41063"
+  [6]=>
+  string(6) "411383"
+  [7]=>
+  string(5) "41060"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(159) "Ligne P. mercredi 29 mars, trafic perturbé, prévoir 4 trains sur 5 entre Paris Est et Château-Thierry. Motif : mouvement social national interprofessionnel."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC","Ligne P. mercredi 29 mars, trafic perturbé, prévoir 4 trains sur 5 entre Paris Est et Château-Thierry. Motif : mouvement social national interprofessionnel.","2023-03-28 13:46:25  ","2023-03-29 21:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41061","SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC"),("411377","SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC"),("411380","SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC"),("41062","SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC"),("41038","SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC"),("41063","SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC"),("411383","SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC"),("41060","SNCF_ACCES_CLOUD:InfoMessage::ddaee978-8968-44aa-8625-1b1179ebeb9d-20230328T143000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC</br>Date enregistrement du message: 2023-03-28 07:44:36  </br>Date de fin de validité du message: 2023-03-29 14:59:00  </br>Liste des stations : </br>array(57) {
+  [0]=>
+  string(5) "41365"
+  [1]=>
+  string(5) "41364"
+  [2]=>
+  string(5) "41368"
+  [3]=>
+  string(6) "412815"
+  [4]=>
+  string(5) "41366"
+  [5]=>
+  string(5) "41530"
+  [6]=>
+  string(6) "411426"
+  [7]=>
+  string(5) "41099"
+  [8]=>
+  string(5) "41369"
+  [9]=>
+  string(5) "41367"
+  [10]=>
+  string(5) "41337"
+  [11]=>
+  string(5) "41361"
+  [12]=>
+  string(5) "41362"
+  [13]=>
+  string(5) "41396"
+  [14]=>
+  string(5) "41071"
+  [15]=>
+  string(6) "411416"
+  [16]=>
+  string(5) "41370"
+  [17]=>
+  string(6) "411414"
+  [18]=>
+  string(6) "411370"
+  [19]=>
+  string(5) "41338"
+  [20]=>
+  string(5) "41360"
+  [21]=>
+  string(5) "41359"
+  [22]=>
+  string(5) "41097"
+  [23]=>
+  string(5) "41363"
+  [24]=>
+  string(5) "41336"
+  [25]=>
+  string(5) "41344"
+  [26]=>
+  string(5) "41343"
+  [27]=>
+  string(5) "41309"
+  [28]=>
+  string(5) "41341"
+  [29]=>
+  string(5) "41340"
+  [30]=>
+  string(5) "41350"
+  [31]=>
+  string(5) "41395"
+  [32]=>
+  string(5) "41352"
+  [33]=>
+  string(5) "41354"
+  [34]=>
+  string(5) "41351"
+  [35]=>
+  string(5) "41353"
+  [36]=>
+  string(6) "411484"
+  [37]=>
+  string(5) "41349"
+  [38]=>
+  string(5) "41348"
+  [39]=>
+  string(5) "41386"
+  [40]=>
+  string(5) "41358"
+  [41]=>
+  string(5) "41355"
+  [42]=>
+  string(5) "41357"
+  [43]=>
+  string(5) "41387"
+  [44]=>
+  string(5) "41388"
+  [45]=>
+  string(5) "41356"
+  [46]=>
+  string(5) "41385"
+  [47]=>
+  string(6) "411417"
+  [48]=>
+  string(5) "41346"
+  [49]=>
+  string(5) "41345"
+  [50]=>
+  string(5) "41347"
+  [51]=>
+  string(5) "41098"
+  [52]=>
+  string(5) "41100"
+  [53]=>
+  string(5) "41342"
+  [54]=>
+  string(6) "411420"
+  [55]=>
+  string(5) "41101"
+  [56]=>
+  string(5) "41339"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(182) "Mercredi 29 Mars - Mouvement social national interprofessionnel : trafic du RER D perturbé. Prévoyez 2 trains sur 3 en moyenne. Nous vous recommandons de limiter vos déplacements."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC","Mercredi 29 Mars - Mouvement social national interprofessionnel : trafic du RER D perturbé. Prévoyez 2 trains sur 3 en moyenne. Nous vous recommandons de limiter vos déplacements.","2023-03-28 07:44:36  ","2023-03-29 14:59:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41365","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41364","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41368","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("412815","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41366","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41530","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("411426","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41099","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41369","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41367","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41337","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41361","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41362","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41396","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41071","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("411416","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41370","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("411414","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("411370","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41338","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41360","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41359","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41097","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41363","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41336","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41344","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41343","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41309","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41341","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41340","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41350","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41395","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41352","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41354","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41351","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41353","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("411484","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41349","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41348","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41386","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41358","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41355","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41357","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41387","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41388","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41356","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41385","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("411417","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41346","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41345","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41347","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41098","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41100","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41342","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("411420","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41101","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC"),("41339","SNCF_ACCES_CLOUD:InfoMessage::e2bf9256-f66f-4053-8e22-49bcc7ed4930-20230328T150100000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC</br>Date enregistrement du message: 2023-03-28 14:22:34  </br>Date de fin de validité du message: 2023-03-29 15:00:00  </br>Liste des stations : </br>array(11) {
+  [0]=>
+  string(5) "41528"
+  [1]=>
+  string(5) "40918"
+  [2]=>
+  string(6) "411352"
+  [3]=>
+  string(6) "411368"
+  [4]=>
+  string(6) "411350"
+  [5]=>
+  string(6) "411357"
+  [6]=>
+  string(5) "41527"
+  [7]=>
+  string(6) "411321"
+  [8]=>
+  string(6) "411360"
+  [9]=>
+  string(6) "411358"
+  [10]=>
+  string(6) "411359"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(164) "Mouvement social national interprofessionnel - mercredi 29/03 la circulation des trains du RER A sera légèrement perturbée. Prévoyez en moyenne 3 trains sur 4."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC","Mouvement social national interprofessionnel - mercredi 29/03 la circulation des trains du RER A sera légèrement perturbée. Prévoyez en moyenne 3 trains sur 4.","2023-03-28 14:22:34  ","2023-03-29 15:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41528","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("40918","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("411352","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("411368","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("411350","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("411357","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("41527","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("411321","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("411360","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("411358","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC"),("411359","SNCF_ACCES_CLOUD:InfoMessage::530057c2-afc6-4007-80cd-188d385f16c1-20230328T143000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC</br>Date enregistrement du message: 2023-03-28 07:47:28  </br>Date de fin de validité du message: 2023-03-29 14:59:00  </br>Liste des stations : </br>array(15) {
+  [0]=>
+  string(5) "41392"
+  [1]=>
+  string(5) "41371"
+  [2]=>
+  string(5) "41390"
+  [3]=>
+  string(5) "41394"
+  [4]=>
+  string(6) "411487"
+  [5]=>
+  string(5) "41372"
+  [6]=>
+  string(5) "41361"
+  [7]=>
+  string(6) "411481"
+  [8]=>
+  string(5) "41389"
+  [9]=>
+  string(5) "41374"
+  [10]=>
+  string(5) "41391"
+  [11]=>
+  string(5) "41393"
+  [12]=>
+  string(5) "41373"
+  [13]=>
+  string(5) "41376"
+  [14]=>
+  string(5) "41375"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(187) "Mercredi 29 Mars - Mouvement social national interprofessionnel : trafic de la Ligne R perturbé. Prévoyez 2 trains sur 3 en moyenne. Nous vous recommandons de limiter vos déplacements."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC","Mercredi 29 Mars - Mouvement social national interprofessionnel : trafic de la Ligne R perturbé. Prévoyez 2 trains sur 3 en moyenne. Nous vous recommandons de limiter vos déplacements.","2023-03-28 07:47:28  ","2023-03-29 14:59:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41392","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41371","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41390","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41394","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("411487","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41372","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41361","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("411481","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41389","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41374","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41391","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41393","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41373","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41376","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC"),("41375","SNCF_ACCES_CLOUD:InfoMessage::9d6b5217-0b18-46b5-878c-af764256279c-20230328T150100000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC</br>Date enregistrement du message: 2023-03-29 07:36:58  </br>Date de fin de validité du message: 2023-03-29 13:30:00  </br>Liste des stations : </br>array(8) {
+  [0]=>
+  string(5) "41382"
+  [1]=>
+  string(5) "41378"
+  [2]=>
+  string(5) "41379"
+  [3]=>
+  string(5) "41380"
+  [4]=>
+  string(5) "41384"
+  [5]=>
+  string(5) "41377"
+  [6]=>
+  string(5) "41383"
+  [7]=>
+  string(5) "41381"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(160) "Mercredi 29 Mars - Mouvement social national interprofessionnel: quelques trains en circulation en matinée et en soirée sur l'axe Melun/Montereau via Héricy."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC","Mercredi 29 Mars - Mouvement social national interprofessionnel: quelques trains en circulation en matinée et en soirée sur l'axe Melun/Montereau via Héricy.","2023-03-29 07:36:58  ","2023-03-29 13:30:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41382","SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC"),("41378","SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC"),("41379","SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC"),("41380","SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC"),("41384","SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC"),("41377","SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC"),("41383","SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC"),("41381","SNCF_ACCES_CLOUD:InfoMessage::ab65d7c6-fa0a-43e6-a289-16a7707dfdaa-20230329T073700000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: RATP-SIV:InfoMessage::MSG.IVC.3691321657283457054:LOC</br>Date enregistrement du message: 2023-03-03 13:52:20  </br>Date de fin de validité du message: 2023-04-15 03:00:00  </br>Liste des lignes : </br>array(1) {
+  [0]=>
+  string(6) "C01384"
+}
+</br>Liste des messages: </br>array(2) {
+  ["SHORT_MESSAGE"]=>
+  string(102) "Du 15/04 au 16/04, Le trafic sera interrompu sur l'ensemble de la ligne (travaux)
+Bus de remplacement."
+  ["TEXT_ONLY"]=>
+  string(113) "Du 15/04 au 16/04, Le trafic sera interrompu sur l'ensemble de la ligne en raison de travaux
+Bus de remplacement."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonCourte,raisonLongue,dateDebMessage,dateFinMessage) values ("RATP-SIV:InfoMessage::MSG.IVC.3691321657283457054:LOC","Du 15/04 au 16/04, Le trafic sera interrompu sur l'ensemble de la ligne (travaux)
+Bus de remplacement.","Du 15/04 au 16/04, Le trafic sera interrompu sur l'ensemble de la ligne en raison de travaux
+Bus de remplacement.","2023-03-03 13:52:20  ","2023-04-15 03:00:00  ");<br>INSERE Perturbation REQUETE Concerner: call insertPtByTp("C01384","RATP-SIV:InfoMessage::MSG.IVC.3691321657283457054:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC</br>Date enregistrement du message: 2023-03-28 13:29:20  </br>Date de fin de validité du message: 2023-03-29 15:00:00  </br>Liste des stations : </br>array(35) {
+  [0]=>
+  string(5) "41215"
+  [1]=>
+  string(5) "41220"
+  [2]=>
+  string(5) "41206"
+  [3]=>
+  string(6) "411491"
+  [4]=>
+  string(5) "41232"
+  [5]=>
+  string(5) "41235"
+  [6]=>
+  string(5) "41238"
+  [7]=>
+  string(6) "411494"
+  [8]=>
+  string(5) "41214"
+  [9]=>
+  string(5) "41254"
+  [10]=>
+  string(5) "41236"
+  [11]=>
+  string(5) "41203"
+  [12]=>
+  string(5) "41234"
+  [13]=>
+  string(5) "41246"
+  [14]=>
+  string(5) "41216"
+  [15]=>
+  string(5) "41222"
+  [16]=>
+  string(5) "41237"
+  [17]=>
+  string(5) "41205"
+  [18]=>
+  string(5) "41207"
+  [19]=>
+  string(5) "41233"
+  [20]=>
+  string(5) "41253"
+  [21]=>
+  string(5) "41221"
+  [22]=>
+  string(5) "41231"
+  [23]=>
+  string(5) "41202"
+  [24]=>
+  string(5) "41150"
+  [25]=>
+  string(5) "41158"
+  [26]=>
+  string(5) "41159"
+  [27]=>
+  string(5) "41160"
+  [28]=>
+  string(5) "41224"
+  [29]=>
+  string(5) "41225"
+  [30]=>
+  string(5) "41223"
+  [31]=>
+  string(5) "41226"
+  [32]=>
+  string(5) "41228"
+  [33]=>
+  string(5) "41251"
+  [34]=>
+  string(5) "41250"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(128) "Le trafic devrait rester perturbé jeudi 30/03. Dans la mesure du possible, nous vous recommandons de limiter vos déplacements."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC","Le trafic devrait rester perturbé jeudi 30/03. Dans la mesure du possible, nous vous recommandons de limiter vos déplacements.","2023-03-28 13:29:20  ","2023-03-29 15:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41215","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41220","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41206","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("411491","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41232","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41235","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41238","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("411494","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41214","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41254","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41236","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41203","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41234","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41246","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41216","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41222","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41237","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41205","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41207","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41233","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41253","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41221","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41231","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41202","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41150","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41158","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41159","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41160","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41224","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41225","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41223","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41226","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41228","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41251","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC"),("41250","SNCF_ACCES_CLOUD:InfoMessage::418a2cb7-5cf2-40ca-96c3-fe453bee196b-20230328T150000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC</br>Date enregistrement du message: 2023-03-29 11:00:42  </br>Date de fin de validité du message: 2023-03-29 13:00:00  </br>Liste des stations : </br>array(21) {
+  [0]=>
+  string(5) "41166"
+  [1]=>
+  string(5) "41140"
+  [2]=>
+  string(5) "41144"
+  [3]=>
+  string(6) "411344"
+  [4]=>
+  string(5) "41170"
+  [5]=>
+  string(5) "41167"
+  [6]=>
+  string(5) "41145"
+  [7]=>
+  string(6) "411340"
+  [8]=>
+  string(5) "41169"
+  [9]=>
+  string(5) "41168"
+  [10]=>
+  string(6) "411347"
+  [11]=>
+  string(6) "411341"
+  [12]=>
+  string(5) "41141"
+  [13]=>
+  string(5) "41139"
+  [14]=>
+  string(5) "41194"
+  [15]=>
+  string(5) "41091"
+  [16]=>
+  string(5) "41143"
+  [17]=>
+  string(5) "41146"
+  [18]=>
+  string(6) "411337"
+  [19]=>
+  string(5) "41142"
+  [20]=>
+  string(5) "41161"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(157) "Ligne J. Trafic perturbé entre Paris et Mantes-la-Jolie via Conflans / Gisors jusqu'à 15h00. Motif : panne sur les installations du gestionnaire de réseau"
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC","Ligne J. Trafic perturbé entre Paris et Mantes-la-Jolie via Conflans / Gisors jusqu'à 15h00. Motif : panne sur les installations du gestionnaire de réseau","2023-03-29 11:00:42  ","2023-03-29 13:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41166","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41140","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41144","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("411344","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41170","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41167","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41145","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("411340","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41169","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41168","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("411347","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("411341","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41141","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41139","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41194","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41091","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41143","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41146","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("411337","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41142","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC"),("41161","SNCF_ACCES_CLOUD:InfoMessage::6ef1fe7e-019e-43be-9d07-0ea5dd4c227a-20230329T110040439Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: RATP-SIV:InfoMessage::MSG.IVC.5065953313836167829:LOC</br>Date enregistrement du message: 2023-02-24 17:56:25  </br>Date de fin de validité du message: 2023-04-11 20:45:00  </br>Liste des lignes : </br>array(1) {
+  [0]=>
+  string(6) "C01743"
+}
+</br>Liste des messages: </br>array(2) {
+  ["SHORT_MESSAGE"]=>
+  string(215) "Du 11/04 au 14/04, du mardi au vendredi de 22h45 à fin de service Trafic interrompu entre Châtelet – Les Halles et Mitry – Claye/ Aéroport Charles de Gaulle 2 – TGV (travs.)
+Bus de remplacement."
+  ["TEXT_ONLY"]=>
+  string(235) "Du 11/04 au 14/04, du mardi au vendredi de 22h45 à fin de service Le trafic sera interrompu entre Châtelet – Les Halles et Mitry – Claye/ Aéroport Charles de Gaulle 2 – TGV en raison de travaux
+Bus de remplacement."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonCourte,raisonLongue,dateDebMessage,dateFinMessage) values ("RATP-SIV:InfoMessage::MSG.IVC.5065953313836167829:LOC","Du 11/04 au 14/04, du mardi au vendredi de 22h45 à fin de service Trafic interrompu entre Châtelet – Les Halles et Mitry – Claye/ Aéroport Charles de Gaulle 2 – TGV (travs.)
+Bus de remplacement.","Du 11/04 au 14/04, du mardi au vendredi de 22h45 à fin de service Le trafic sera interrompu entre Châtelet – Les Halles et Mitry – Claye/ Aéroport Charles de Gaulle 2 – TGV en raison de travaux
+Bus de remplacement.","2023-02-24 17:56:25  ","2023-04-11 20:45:00  ");<br>INSERE Perturbation REQUETE Concerner: call insertPtByTp("C01743","RATP-SIV:InfoMessage::MSG.IVC.5065953313836167829:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC</br>Date enregistrement du message: 2023-03-29 11:26:03  </br>Date de fin de validité du message: 2023-03-29 13:19:36  </br>Liste des stations : </br>array(57) {
+  [0]=>
+  string(5) "41365"
+  [1]=>
+  string(5) "41364"
+  [2]=>
+  string(5) "41368"
+  [3]=>
+  string(6) "412815"
+  [4]=>
+  string(5) "41366"
+  [5]=>
+  string(5) "41530"
+  [6]=>
+  string(6) "411426"
+  [7]=>
+  string(5) "41099"
+  [8]=>
+  string(5) "41369"
+  [9]=>
+  string(5) "41367"
+  [10]=>
+  string(5) "41337"
+  [11]=>
+  string(5) "41361"
+  [12]=>
+  string(5) "41362"
+  [13]=>
+  string(5) "41396"
+  [14]=>
+  string(5) "41071"
+  [15]=>
+  string(6) "411416"
+  [16]=>
+  string(5) "41370"
+  [17]=>
+  string(6) "411414"
+  [18]=>
+  string(6) "411370"
+  [19]=>
+  string(5) "41338"
+  [20]=>
+  string(5) "41360"
+  [21]=>
+  string(5) "41359"
+  [22]=>
+  string(5) "41097"
+  [23]=>
+  string(5) "41363"
+  [24]=>
+  string(5) "41336"
+  [25]=>
+  string(5) "41344"
+  [26]=>
+  string(5) "41343"
+  [27]=>
+  string(5) "41309"
+  [28]=>
+  string(5) "41341"
+  [29]=>
+  string(5) "41340"
+  [30]=>
+  string(5) "41350"
+  [31]=>
+  string(5) "41395"
+  [32]=>
+  string(5) "41352"
+  [33]=>
+  string(5) "41354"
+  [34]=>
+  string(5) "41351"
+  [35]=>
+  string(5) "41353"
+  [36]=>
+  string(6) "411484"
+  [37]=>
+  string(5) "41349"
+  [38]=>
+  string(5) "41348"
+  [39]=>
+  string(5) "41386"
+  [40]=>
+  string(5) "41358"
+  [41]=>
+  string(5) "41355"
+  [42]=>
+  string(5) "41357"
+  [43]=>
+  string(5) "41387"
+  [44]=>
+  string(5) "41388"
+  [45]=>
+  string(5) "41356"
+  [46]=>
+  string(5) "41385"
+  [47]=>
+  string(6) "411417"
+  [48]=>
+  string(5) "41346"
+  [49]=>
+  string(5) "41345"
+  [50]=>
+  string(5) "41347"
+  [51]=>
+  string(5) "41098"
+  [52]=>
+  string(5) "41100"
+  [53]=>
+  string(5) "41342"
+  [54]=>
+  string(6) "411420"
+  [55]=>
+  string(5) "41101"
+  [56]=>
+  string(5) "41339"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(126) "Ensemble de la ligne : trafic fortement ralenti, desserte modifiée entre Paris Lyon et Villeneuve St-Georges dans les 2 sens."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC","Ensemble de la ligne : trafic fortement ralenti, desserte modifiée entre Paris Lyon et Villeneuve St-Georges dans les 2 sens.","2023-03-29 11:26:03  ","2023-03-29 13:19:36  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41365","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41364","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41368","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("412815","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41366","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41530","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("411426","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41099","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41369","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41367","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41337","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41361","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41362","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41396","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41071","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("411416","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41370","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("411414","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("411370","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41338","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41360","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41359","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41097","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41363","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41336","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41344","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41343","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41309","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41341","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41340","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41350","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41395","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41352","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41354","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41351","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41353","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("411484","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41349","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41348","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41386","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41358","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41355","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41357","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41387","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41388","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41356","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41385","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("411417","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41346","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41345","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41347","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41098","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41100","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41342","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("411420","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41101","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC"),("41339","SNCF_ACCES_CLOUD:InfoMessage::43c39bb7-15e5-41de-9271-1052921ed310-20230329T112242979Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC</br>Date enregistrement du message: 2023-02-24 13:14:40  </br>Date de fin de validité du message: 2023-04-03 01:00:00  </br>Liste des stations : </br>array(11) {
+  [0]=>
+  string(5) "41138"
+  [1]=>
+  string(5) "41171"
+  [2]=>
+  string(5) "41137"
+  [3]=>
+  string(5) "41195"
+  [4]=>
+  string(5) "41196"
+  [5]=>
+  string(6) "411356"
+  [6]=>
+  string(6) "411351"
+  [7]=>
+  string(5) "41194"
+  [8]=>
+  string(6) "411357"
+  [9]=>
+  string(5) "41527"
+  [10]=>
+  string(6) "411360"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(129) "Travaux ligne L. Samedi 01 et dimanche 02 avril toute la journée, moins de trains entre Paris St Lazare et Nanterre Université."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC","Travaux ligne L. Samedi 01 et dimanche 02 avril toute la journée, moins de trains entre Paris St Lazare et Nanterre Université.","2023-02-24 13:14:40  ","2023-04-03 01:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41138","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("41171","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("41137","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("41195","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("41196","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("411356","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("411351","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("41194","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("411357","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("41527","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC"),("411360","SNCF_ACCES_CLOUD:InfoMessage::a4a9e3b9-72a0-4c55-83da-d96d2d23fd3d-20230325T040000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::cd2cf071-26a7-48b1-9d33-52b6afc490f7-20230329T110404159Z:LOC</br>Date enregistrement du message: 2023-03-29 11:04:06  </br>Date de fin de validité du message: 2023-03-29 12:10:25  </br>Liste des stations : </br>array(7) {
+  [0]=>
+  string(5) "41371"
+  [1]=>
+  string(5) "41372"
+  [2]=>
+  string(5) "41361"
+  [3]=>
+  string(5) "41376"
+  [4]=>
+  string(5) "41374"
+  [5]=>
+  string(5) "41375"
+  [6]=>
+  string(5) "41373"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(115) "De Paris Gare de Lyon vers Montereau via Moret : allongement de temps de trajet de 15' pour le train LARO de 12h46."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::cd2cf071-26a7-48b1-9d33-52b6afc490f7-20230329T110404159Z:LOC","De Paris Gare de Lyon vers Montereau via Moret : allongement de temps de trajet de 15' pour le train LARO de 12h46.","2023-03-29 11:04:06  ","2023-03-29 12:10:25  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41371","SNCF_ACCES_CLOUD:InfoMessage::cd2cf071-26a7-48b1-9d33-52b6afc490f7-20230329T110404159Z:LOC"),("41372","SNCF_ACCES_CLOUD:InfoMessage::cd2cf071-26a7-48b1-9d33-52b6afc490f7-20230329T110404159Z:LOC"),("41361","SNCF_ACCES_CLOUD:InfoMessage::cd2cf071-26a7-48b1-9d33-52b6afc490f7-20230329T110404159Z:LOC"),("41376","SNCF_ACCES_CLOUD:InfoMessage::cd2cf071-26a7-48b1-9d33-52b6afc490f7-20230329T110404159Z:LOC"),("41374","SNCF_ACCES_CLOUD:InfoMessage::cd2cf071-26a7-48b1-9d33-52b6afc490f7-20230329T110404159Z:LOC"),("41375","SNCF_ACCES_CLOUD:InfoMessage::cd2cf071-26a7-48b1-9d33-52b6afc490f7-20230329T110404159Z:LOC"),("41373","SNCF_ACCES_CLOUD:InfoMessage::cd2cf071-26a7-48b1-9d33-52b6afc490f7-20230329T110404159Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::88a6361a-4f6a-44b6-9447-e66c1ed8608e-20230329T030000000Z:LOC</br>Date enregistrement du message: 2023-02-08 11:24:13  </br>Date de fin de validité du message: 2023-04-02 23:00:00  </br>Liste des stations : </br>array(5) {
+  [0]=>
+  string(5) "41039"
+  [1]=>
+  string(5) "41049"
+  [2]=>
+  string(5) "41051"
+  [3]=>
+  string(5) "41052"
+  [4]=>
+  string(5) "41038"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(150) "Ligne P axe Paris Est-Meaux. Travaux le week-end du 1er et 2 avril. Ligne fermée dès 22h50 vers Paris et dès 23h33 vers Meaux. Bus de remplacement."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::88a6361a-4f6a-44b6-9447-e66c1ed8608e-20230329T030000000Z:LOC","Ligne P axe Paris Est-Meaux. Travaux le week-end du 1er et 2 avril. Ligne fermée dès 22h50 vers Paris et dès 23h33 vers Meaux. Bus de remplacement.","2023-02-08 11:24:13  ","2023-04-02 23:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41039","SNCF_ACCES_CLOUD:InfoMessage::88a6361a-4f6a-44b6-9447-e66c1ed8608e-20230329T030000000Z:LOC"),("41049","SNCF_ACCES_CLOUD:InfoMessage::88a6361a-4f6a-44b6-9447-e66c1ed8608e-20230329T030000000Z:LOC"),("41051","SNCF_ACCES_CLOUD:InfoMessage::88a6361a-4f6a-44b6-9447-e66c1ed8608e-20230329T030000000Z:LOC"),("41052","SNCF_ACCES_CLOUD:InfoMessage::88a6361a-4f6a-44b6-9447-e66c1ed8608e-20230329T030000000Z:LOC"),("41038","SNCF_ACCES_CLOUD:InfoMessage::88a6361a-4f6a-44b6-9447-e66c1ed8608e-20230329T030000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC</br>Date enregistrement du message: 2023-03-28 07:49:51  </br>Date de fin de validité du message: 2023-03-29 14:59:00  </br>Liste des stations : </br>array(79) {
+  [0]=>
+  string(5) "41365"
+  [1]=>
+  string(5) "41364"
+  [2]=>
+  string(5) "41368"
+  [3]=>
+  string(6) "412815"
+  [4]=>
+  string(5) "41366"
+  [5]=>
+  string(5) "41530"
+  [6]=>
+  string(6) "411426"
+  [7]=>
+  string(5) "41099"
+  [8]=>
+  string(5) "41369"
+  [9]=>
+  string(5) "41367"
+  [10]=>
+  string(5) "41337"
+  [11]=>
+  string(5) "41361"
+  [12]=>
+  string(5) "41362"
+  [13]=>
+  string(5) "41396"
+  [14]=>
+  string(5) "41071"
+  [15]=>
+  string(6) "411416"
+  [16]=>
+  string(5) "41370"
+  [17]=>
+  string(6) "411414"
+  [18]=>
+  string(6) "411370"
+  [19]=>
+  string(5) "41338"
+  [20]=>
+  string(5) "41360"
+  [21]=>
+  string(5) "41359"
+  [22]=>
+  string(5) "41097"
+  [23]=>
+  string(5) "41363"
+  [24]=>
+  string(5) "41336"
+  [25]=>
+  string(5) "41344"
+  [26]=>
+  string(5) "41343"
+  [27]=>
+  string(5) "41309"
+  [28]=>
+  string(5) "41341"
+  [29]=>
+  string(5) "41340"
+  [30]=>
+  string(5) "41350"
+  [31]=>
+  string(5) "41395"
+  [32]=>
+  string(5) "41352"
+  [33]=>
+  string(5) "41354"
+  [34]=>
+  string(5) "41351"
+  [35]=>
+  string(5) "41353"
+  [36]=>
+  string(6) "411484"
+  [37]=>
+  string(5) "41349"
+  [38]=>
+  string(5) "41348"
+  [39]=>
+  string(5) "41386"
+  [40]=>
+  string(5) "41358"
+  [41]=>
+  string(5) "41355"
+  [42]=>
+  string(5) "41357"
+  [43]=>
+  string(5) "41387"
+  [44]=>
+  string(5) "41388"
+  [45]=>
+  string(5) "41356"
+  [46]=>
+  string(5) "41385"
+  [47]=>
+  string(6) "411417"
+  [48]=>
+  string(5) "41346"
+  [49]=>
+  string(5) "41345"
+  [50]=>
+  string(5) "41347"
+  [51]=>
+  string(5) "41098"
+  [52]=>
+  string(5) "41100"
+  [53]=>
+  string(5) "41342"
+  [54]=>
+  string(6) "411420"
+  [55]=>
+  string(5) "41101"
+  [56]=>
+  string(5) "41339"
+  [57]=>
+  string(5) "41392"
+  [58]=>
+  string(5) "41371"
+  [59]=>
+  string(5) "41390"
+  [60]=>
+  string(5) "41394"
+  [61]=>
+  string(6) "411487"
+  [62]=>
+  string(5) "41372"
+  [63]=>
+  string(6) "411481"
+  [64]=>
+  string(5) "41389"
+  [65]=>
+  string(5) "41374"
+  [66]=>
+  string(5) "41391"
+  [67]=>
+  string(5) "41393"
+  [68]=>
+  string(5) "41373"
+  [69]=>
+  string(5) "41382"
+  [70]=>
+  string(5) "41378"
+  [71]=>
+  string(5) "41379"
+  [72]=>
+  string(5) "41380"
+  [73]=>
+  string(5) "41384"
+  [74]=>
+  string(5) "41377"
+  [75]=>
+  string(5) "41376"
+  [76]=>
+  string(5) "41383"
+  [77]=>
+  string(5) "41381"
+  [78]=>
+  string(5) "41375"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(155) "RDV la veille dès 17h sur l'appli Ile-de-France Mobilités, le site Transilien.com ou l'appli SNCF pour connaitre les horaires des trains qui circuleront."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC","RDV la veille dès 17h sur l'appli Ile-de-France Mobilités, le site Transilien.com ou l'appli SNCF pour connaitre les horaires des trains qui circuleront.","2023-03-28 07:49:51  ","2023-03-29 14:59:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41365","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41364","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41368","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("412815","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41366","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41530","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("411426","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41099","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41369","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41367","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41337","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41361","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41362","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41396","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41071","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("411416","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41370","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("411414","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("411370","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41338","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41360","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41359","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41097","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41363","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41336","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41344","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41343","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41309","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41341","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41340","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41350","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41395","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41352","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41354","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41351","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41353","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("411484","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41349","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41348","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41386","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41358","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41355","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41357","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41387","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41388","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41356","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41385","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("411417","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41346","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41345","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41347","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41098","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41100","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41342","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("411420","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41101","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41339","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41392","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41371","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41390","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41394","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("411487","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41372","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("411481","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41389","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41374","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41391","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41393","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41373","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41382","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41378","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41379","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41380","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41384","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41377","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41376","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41383","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41381","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC"),("41375","SNCF_ACCES_CLOUD:InfoMessage::939df780-d6f1-4644-8429-3f3af26f9dff-20230328T150100000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC</br>Date enregistrement du message: 2023-03-26 04:38:30  </br>Date de fin de validité du message: 2023-04-01 00:00:00  </br>Liste des stations : </br>array(85) {
+  [0]=>
+  string(5) "41290"
+  [1]=>
+  string(5) "41150"
+  [2]=>
+  string(5) "41289"
+  [3]=>
+  string(5) "41287"
+  [4]=>
+  string(5) "41166"
+  [5]=>
+  string(5) "41138"
+  [6]=>
+  string(5) "41134"
+  [7]=>
+  string(5) "41140"
+  [8]=>
+  string(5) "41135"
+  [9]=>
+  string(5) "41170"
+  [10]=>
+  string(5) "41167"
+  [11]=>
+  string(5) "41145"
+  [12]=>
+  string(5) "41169"
+  [13]=>
+  string(5) "41168"
+  [14]=>
+  string(5) "41136"
+  [15]=>
+  string(5) "41139"
+  [16]=>
+  string(5) "41194"
+  [17]=>
+  string(5) "41091"
+  [18]=>
+  string(5) "41146"
+  [19]=>
+  string(5) "41161"
+  [20]=>
+  string(5) "41201"
+  [21]=>
+  string(5) "41157"
+  [22]=>
+  string(5) "41202"
+  [23]=>
+  string(6) "411357"
+  [24]=>
+  string(5) "41199"
+  [25]=>
+  string(5) "41200"
+  [26]=>
+  string(5) "41527"
+  [27]=>
+  string(5) "41155"
+  [28]=>
+  string(6) "411359"
+  [29]=>
+  string(6) "411360"
+  [30]=>
+  string(5) "41198"
+  [31]=>
+  string(5) "41197"
+  [32]=>
+  string(5) "41085"
+  [33]=>
+  string(5) "41096"
+  [34]=>
+  string(5) "41144"
+  [35]=>
+  string(6) "411344"
+  [36]=>
+  string(6) "411340"
+  [37]=>
+  string(6) "411347"
+  [38]=>
+  string(6) "411341"
+  [39]=>
+  string(5) "41141"
+  [40]=>
+  string(5) "41143"
+  [41]=>
+  string(6) "411337"
+  [42]=>
+  string(5) "41142"
+  [43]=>
+  string(5) "41149"
+  [44]=>
+  string(5) "41147"
+  [45]=>
+  string(6) "411350"
+  [46]=>
+  string(5) "41152"
+  [47]=>
+  string(5) "41153"
+  [48]=>
+  string(5) "41151"
+  [49]=>
+  string(5) "41154"
+  [50]=>
+  string(5) "41148"
+  [51]=>
+  string(5) "41165"
+  [52]=>
+  string(5) "41164"
+  [53]=>
+  string(5) "41162"
+  [54]=>
+  string(5) "41163"
+  [55]=>
+  string(5) "41528"
+  [56]=>
+  string(5) "41171"
+  [57]=>
+  string(5) "40918"
+  [58]=>
+  string(6) "411352"
+  [59]=>
+  string(6) "411368"
+  [60]=>
+  string(5) "41137"
+  [61]=>
+  string(5) "41195"
+  [62]=>
+  string(5) "41196"
+  [63]=>
+  string(6) "411356"
+  [64]=>
+  string(6) "411321"
+  [65]=>
+  string(6) "411351"
+  [66]=>
+  string(5) "41183"
+  [67]=>
+  string(5) "41172"
+  [68]=>
+  string(5) "41186"
+  [69]=>
+  string(5) "41174"
+  [70]=>
+  string(5) "41182"
+  [71]=>
+  string(5) "40951"
+  [72]=>
+  string(5) "41179"
+  [73]=>
+  string(5) "41184"
+  [74]=>
+  string(5) "41185"
+  [75]=>
+  string(5) "41181"
+  [76]=>
+  string(5) "41178"
+  [77]=>
+  string(5) "41187"
+  [78]=>
+  string(5) "41180"
+  [79]=>
+  string(5) "41175"
+  [80]=>
+  string(5) "41176"
+  [81]=>
+  string(5) "41191"
+  [82]=>
+  string(5) "41177"
+  [83]=>
+  string(5) "41190"
+  [84]=>
+  string(5) "41192"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(154) "RDV la veille dès 17h sur l'appli Ile-de-France Mobilités, le site Transilien.com ou l'appli SNCF pour connaitre les horaires des trains qui circuleront"
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC","RDV la veille dès 17h sur l'appli Ile-de-France Mobilités, le site Transilien.com ou l'appli SNCF pour connaitre les horaires des trains qui circuleront","2023-03-26 04:38:30  ","2023-04-01 00:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41290","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41150","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41289","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41287","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41166","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41138","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41134","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41140","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41135","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41170","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41167","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41145","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41169","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41168","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41136","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41139","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41194","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41091","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41146","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41161","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41201","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41157","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41202","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411357","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41199","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41200","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41527","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41155","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411359","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411360","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41198","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41197","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41085","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41096","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41144","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411344","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411340","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411347","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411341","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41141","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41143","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411337","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41142","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41149","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41147","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411350","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41152","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41153","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41151","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41154","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41148","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41165","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41164","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41162","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41163","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41528","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41171","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("40918","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411352","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411368","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41137","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41195","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41196","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411356","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411321","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("411351","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41183","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41172","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41186","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41174","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41182","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("40951","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41179","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41184","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41185","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41181","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41178","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41187","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41180","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41175","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41176","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41191","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41177","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41190","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC"),("41192","SNCF_ACCES_CLOUD:InfoMessage::276c9cab-9589-4817-80bd-124759f15d36-20230326T044000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: RATP-SIV:InfoMessage::MSG.IVC.4904377168113871508:LOC</br>Date enregistrement du message: 2023-03-23 08:38:10  </br>Date de fin de validité du message: 2023-03-29 22:00:00  </br>Liste des lignes : </br>array(1) {
+  [0]=>
+  string(6) "C01381"
+}
+</br>Liste des messages: </br>array(2) {
+  ["SHORT_MESSAGE"]=>
+  string(113) "Jusqu'au 28/09, du mardi au jeudi à partir de 22h, Le trafic est interrompu sur l'ensemble de la ligne (travaux)"
+  ["TEXT_ONLY"]=>
+  string(124) "Jusqu'au 28/09, du mardi au jeudi à partir de 22h, Le trafic est interrompu sur l'ensemble de la ligne en raison de travaux"
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonCourte,raisonLongue,dateDebMessage,dateFinMessage) values ("RATP-SIV:InfoMessage::MSG.IVC.4904377168113871508:LOC","Jusqu'au 28/09, du mardi au jeudi à partir de 22h, Le trafic est interrompu sur l'ensemble de la ligne (travaux)","Jusqu'au 28/09, du mardi au jeudi à partir de 22h, Le trafic est interrompu sur l'ensemble de la ligne en raison de travaux","2023-03-23 08:38:10  ","2023-03-29 22:00:00  ");<br>INSERE Perturbation REQUETE Concerner: call insertPtByTp("C01381","RATP-SIV:InfoMessage::MSG.IVC.4904377168113871508:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC</br>Date enregistrement du message: 2023-03-27 07:58:16  </br>Date de fin de validité du message: 2023-04-01 00:30:00  </br>Liste des stations : </br>array(16) {
+  [0]=>
+  string(6) "411398"
+  [1]=>
+  string(6) "411295"
+  [2]=>
+  string(6) "411410"
+  [3]=>
+  string(6) "411400"
+  [4]=>
+  string(6) "411413"
+  [5]=>
+  string(5) "40962"
+  [6]=>
+  string(6) "411402"
+  [7]=>
+  string(6) "411411"
+  [8]=>
+  string(6) "411412"
+  [9]=>
+  string(6) "411403"
+  [10]=>
+  string(6) "411409"
+  [11]=>
+  string(5) "40990"
+  [12]=>
+  string(6) "411401"
+  [13]=>
+  string(6) "411408"
+  [14]=>
+  string(5) "41071"
+  [15]=>
+  string(6) "411369"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(128) "Travaux RER B : le week end du 1 et 2 avril aucun train entre Aulnay sous Bois et Mitry Claye. Bus de remplacement mis en place."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC","Travaux RER B : le week end du 1 et 2 avril aucun train entre Aulnay sous Bois et Mitry Claye. Bus de remplacement mis en place.","2023-03-27 07:58:16  ","2023-04-01 00:30:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("411398","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411295","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411410","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411400","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411413","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("40962","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411402","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411411","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411412","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411403","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411409","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("40990","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411401","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411408","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("41071","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC"),("411369","SNCF_ACCES_CLOUD:InfoMessage::8d6243b9-4e14-4521-a939-273288d959d1-20230327T013000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::c1a47a7a-2102-431b-ae36-e66fa6432ed9-20230327T124200000Z:LOC</br>Date enregistrement du message: 2023-03-27 12:41:21  </br>Date de fin de validité du message: 2023-04-03 00:00:00  </br>Liste des stations : </br>array(2) {
+  [0]=>
+  string(5) "41035"
+  [1]=>
+  string(5) "41036"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(65) "Si vous descendez à Nangis, merci de monter à l'avant du train."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::c1a47a7a-2102-431b-ae36-e66fa6432ed9-20230327T124200000Z:LOC","Si vous descendez à Nangis, merci de monter à l'avant du train.","2023-03-27 12:41:21  ","2023-04-03 00:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41035","SNCF_ACCES_CLOUD:InfoMessage::c1a47a7a-2102-431b-ae36-e66fa6432ed9-20230327T124200000Z:LOC"),("41036","SNCF_ACCES_CLOUD:InfoMessage::c1a47a7a-2102-431b-ae36-e66fa6432ed9-20230327T124200000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC</br>Date enregistrement du message: 2023-03-29 05:26:32  </br>Date de fin de validité du message: 2023-03-29 21:00:00  </br>Liste des stations : </br>array(22) {
+  [0]=>
+  string(5) "41013"
+  [1]=>
+  string(5) "41039"
+  [2]=>
+  string(5) "41016"
+  [3]=>
+  string(5) "41015"
+  [4]=>
+  string(5) "41127"
+  [5]=>
+  string(5) "41014"
+  [6]=>
+  string(5) "41126"
+  [7]=>
+  string(5) "41012"
+  [8]=>
+  string(5) "41011"
+  [9]=>
+  string(6) "420316"
+  [10]=>
+  string(5) "41021"
+  [11]=>
+  string(5) "41020"
+  [12]=>
+  string(5) "41017"
+  [13]=>
+  string(5) "41018"
+  [14]=>
+  string(5) "41019"
+  [15]=>
+  string(5) "41022"
+  [16]=>
+  string(5) "41034"
+  [17]=>
+  string(5) "41031"
+  [18]=>
+  string(5) "41023"
+  [19]=>
+  string(5) "41032"
+  [20]=>
+  string(5) "41033"
+  [21]=>
+  string(5) "41043"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(186) "Mercredi 29/03.Trafic perturbé sur l'axe Haussmann-Chelles, prévoir 4 trains sur 5 et Haussmann-Villiers, prévoir 9 trains sur 10. Motif : Mouvement social national interprofessionnel"
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC","Mercredi 29/03.Trafic perturbé sur l'axe Haussmann-Chelles, prévoir 4 trains sur 5 et Haussmann-Villiers, prévoir 9 trains sur 10. Motif : Mouvement social national interprofessionnel","2023-03-29 05:26:32  ","2023-03-29 21:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41013","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41039","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41016","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41015","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41127","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41014","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41126","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41012","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41011","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("420316","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41021","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41020","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41017","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41018","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41019","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41022","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41034","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41031","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41023","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41032","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41033","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC"),("41043","SNCF_ACCES_CLOUD:InfoMessage::5c7c531d-9ea3-4b4e-acb8-9e5e498a970c-20230328T152000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: TICE:InfoMessage::70000:LOC</br>Date enregistrement du message: 2023-03-28 10:16:47  </br>Date de fin de validité du message: 2023-03-29 14:00:00  </br></br> ID INCONNU </br> </br><hr><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC</br>Date enregistrement du message: 2023-02-08 11:07:01  </br>Date de fin de validité du message: 2023-04-02 23:00:00  </br>Liste des stations : </br>array(8) {
+  [0]=>
+  string(5) "41061"
+  [1]=>
+  string(6) "411377"
+  [2]=>
+  string(6) "411380"
+  [3]=>
+  string(5) "41062"
+  [4]=>
+  string(5) "41038"
+  [5]=>
+  string(5) "41063"
+  [6]=>
+  string(6) "411383"
+  [7]=>
+  string(5) "41060"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(134) "Ligne P axe Château-Thierry. Travaux le week-end du 1er et 2 avril. Ligne fermée à partir de 23h. Bus de substitution mis en place."
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC","Ligne P axe Château-Thierry. Travaux le week-end du 1er et 2 avril. Ligne fermée à partir de 23h. Bus de substitution mis en place.","2023-02-08 11:07:01  ","2023-04-02 23:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41061","SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC"),("411377","SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC"),("411380","SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC"),("41062","SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC"),("41038","SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC"),("41063","SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC"),("411383","SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC"),("41060","SNCF_ACCES_CLOUD:InfoMessage::53c00258-156a-4ba9-bc6a-3cd96dbe38d4-20230329T030000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC</br>Date enregistrement du message: 2023-02-24 13:19:47  </br>Date de fin de validité du message: 2023-04-03 01:00:00  </br>Liste des stations : </br>array(24) {
+  [0]=>
+  string(5) "41138"
+  [1]=>
+  string(5) "41171"
+  [2]=>
+  string(5) "41183"
+  [3]=>
+  string(5) "41137"
+  [4]=>
+  string(5) "41172"
+  [5]=>
+  string(5) "41186"
+  [6]=>
+  string(5) "41174"
+  [7]=>
+  string(5) "41182"
+  [8]=>
+  string(5) "40951"
+  [9]=>
+  string(5) "41179"
+  [10]=>
+  string(5) "41184"
+  [11]=>
+  string(5) "41185"
+  [12]=>
+  string(6) "411351"
+  [13]=>
+  string(5) "41181"
+  [14]=>
+  string(5) "41187"
+  [15]=>
+  string(5) "41178"
+  [16]=>
+  string(5) "41194"
+  [17]=>
+  string(5) "41180"
+  [18]=>
+  string(5) "41175"
+  [19]=>
+  string(5) "41176"
+  [20]=>
+  string(5) "41191"
+  [21]=>
+  string(5) "41177"
+  [22]=>
+  string(5) "41190"
+  [23]=>
+  string(5) "41192"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(161) "Paris - Versailles /St-Nom le 01 et 02/04 toute la journée, modifications d'horaires de certains trains. Plus d'info applis SNCF, IDFM et le site transilien.com"
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC","Paris - Versailles /St-Nom le 01 et 02/04 toute la journée, modifications d'horaires de certains trains. Plus d'info applis SNCF, IDFM et le site transilien.com","2023-02-24 13:19:47  ","2023-04-03 01:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41138","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41171","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41183","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41137","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41172","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41186","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41174","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41182","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("40951","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41179","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41184","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41185","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("411351","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41181","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41187","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41178","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41194","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41180","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41175","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41176","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41191","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41177","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41190","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC"),("41192","SNCF_ACCES_CLOUD:InfoMessage::d579bb27-abae-4242-865f-966fc3fca3bb-20230325T040000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC</br>Date enregistrement du message: 2023-03-28 15:07:50  </br>Date de fin de validité du message: 2023-03-31 15:00:00  </br>Liste des stations : </br>array(37) {
+  [0]=>
+  string(5) "41215"
+  [1]=>
+  string(5) "41220"
+  [2]=>
+  string(5) "41206"
+  [3]=>
+  string(6) "411491"
+  [4]=>
+  string(5) "41232"
+  [5]=>
+  string(5) "41235"
+  [6]=>
+  string(5) "41238"
+  [7]=>
+  string(6) "411494"
+  [8]=>
+  string(5) "41214"
+  [9]=>
+  string(5) "41254"
+  [10]=>
+  string(5) "41236"
+  [11]=>
+  string(5) "41203"
+  [12]=>
+  string(5) "41234"
+  [13]=>
+  string(5) "41246"
+  [14]=>
+  string(5) "41216"
+  [15]=>
+  string(5) "41237"
+  [16]=>
+  string(5) "41205"
+  [17]=>
+  string(5) "41233"
+  [18]=>
+  string(5) "41253"
+  [19]=>
+  string(5) "41231"
+  [20]=>
+  string(5) "41202"
+  [21]=>
+  string(5) "41150"
+  [22]=>
+  string(5) "41158"
+  [23]=>
+  string(5) "41159"
+  [24]=>
+  string(5) "41160"
+  [25]=>
+  string(5) "41224"
+  [26]=>
+  string(5) "41225"
+  [27]=>
+  string(5) "41223"
+  [28]=>
+  string(5) "41226"
+  [29]=>
+  string(5) "41228"
+  [30]=>
+  string(5) "41250"
+  [31]=>
+  string(5) "41176"
+  [32]=>
+  string(5) "40951"
+  [33]=>
+  string(5) "41181"
+  [34]=>
+  string(5) "41177"
+  [35]=>
+  string(5) "41178"
+  [36]=>
+  string(5) "41180"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(162) "Rendez-vous la veille dès 17h sur l'appli Ile-de-France Mobilités, le site transilien.com ou l'appli SNCF pour connaitre les horaires des trains qui circuleront"
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC","Rendez-vous la veille dès 17h sur l'appli Ile-de-France Mobilités, le site transilien.com ou l'appli SNCF pour connaitre les horaires des trains qui circuleront","2023-03-28 15:07:50  ","2023-03-31 15:00:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41215","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41220","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41206","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("411491","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41232","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41235","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41238","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("411494","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41214","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41254","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41236","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41203","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41234","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41246","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41216","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41237","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41205","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41233","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41253","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41231","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41202","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41150","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41158","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41159","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41160","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41224","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41225","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41223","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41226","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41228","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41250","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41176","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("40951","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41181","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41177","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41178","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC"),("41180","SNCF_ACCES_CLOUD:InfoMessage::bfc68fce-7b37-4da4-aee2-af0798bb1f56-20230328T133000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: RATP-SIV:InfoMessage::MSG.IVC.3199864371304079471:LOC</br>Date enregistrement du message: 2023-03-23 08:35:05  </br>Date de fin de validité du message: 2023-03-29 22:15:00  </br>Liste des lignes : </br>array(1) {
+  [0]=>
+  string(6) "C01374"
+}
+</br>Liste des messages: </br>array(2) {
+  ["SHORT_MESSAGE"]=>
+  string(115) "Jusqu'au 13/04, du mardi au jeudi à partir de 22h15, Le trafic est interrompu sur l'ensemble de la ligne (travaux)"
+  ["TEXT_ONLY"]=>
+  string(126) "Jusqu'au 13/04, du mardi au jeudi à partir de 22h15, Le trafic est interrompu sur l'ensemble de la ligne en raison de travaux"
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonCourte,raisonLongue,dateDebMessage,dateFinMessage) values ("RATP-SIV:InfoMessage::MSG.IVC.3199864371304079471:LOC","Jusqu'au 13/04, du mardi au jeudi à partir de 22h15, Le trafic est interrompu sur l'ensemble de la ligne (travaux)","Jusqu'au 13/04, du mardi au jeudi à partir de 22h15, Le trafic est interrompu sur l'ensemble de la ligne en raison de travaux","2023-03-23 08:35:05  ","2023-03-29 22:15:00  ");<br>INSERE Perturbation REQUETE Concerner: call insertPtByTp("C01374","RATP-SIV:InfoMessage::MSG.IVC.3199864371304079471:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC</br>Date enregistrement du message: 2023-03-28 20:44:41  </br>Date de fin de validité du message: 2023-03-29 21:50:00  </br>Liste des stations : </br>array(79) {
+  [0]=>
+  string(5) "41318"
+  [1]=>
+  string(5) "41304"
+  [2]=>
+  string(5) "41320"
+  [3]=>
+  string(5) "41321"
+  [4]=>
+  string(5) "41324"
+  [5]=>
+  string(5) "41292"
+  [6]=>
+  string(5) "41319"
+  [7]=>
+  string(5) "41317"
+  [8]=>
+  string(5) "41323"
+  [9]=>
+  string(5) "41322"
+  [10]=>
+  string(5) "41311"
+  [11]=>
+  string(5) "41310"
+  [12]=>
+  string(5) "41128"
+  [13]=>
+  string(5) "41313"
+  [14]=>
+  string(5) "41307"
+  [15]=>
+  string(5) "41208"
+  [16]=>
+  string(5) "41315"
+  [17]=>
+  string(5) "41309"
+  [18]=>
+  string(5) "41291"
+  [19]=>
+  string(5) "41334"
+  [20]=>
+  string(5) "41333"
+  [21]=>
+  string(5) "41308"
+  [22]=>
+  string(5) "41305"
+  [23]=>
+  string(5) "41306"
+  [24]=>
+  string(5) "41312"
+  [25]=>
+  string(5) "41314"
+  [26]=>
+  string(5) "41302"
+  [27]=>
+  string(5) "41300"
+  [28]=>
+  string(5) "41298"
+  [29]=>
+  string(5) "41299"
+  [30]=>
+  string(5) "41301"
+  [31]=>
+  string(5) "41303"
+  [32]=>
+  string(5) "41316"
+  [33]=>
+  string(5) "41242"
+  [34]=>
+  string(5) "41247"
+  [35]=>
+  string(5) "41248"
+  [36]=>
+  string(5) "41243"
+  [37]=>
+  string(5) "41240"
+  [38]=>
+  string(5) "41245"
+  [39]=>
+  string(6) "412833"
+  [40]=>
+  string(5) "41239"
+  [41]=>
+  string(5) "41249"
+  [42]=>
+  string(5) "41241"
+  [43]=>
+  string(5) "41330"
+  [44]=>
+  string(5) "41328"
+  [45]=>
+  string(5) "41193"
+  [46]=>
+  string(5) "41327"
+  [47]=>
+  string(5) "41326"
+  [48]=>
+  string(5) "41329"
+  [49]=>
+  string(5) "41295"
+  [50]=>
+  string(5) "41132"
+  [51]=>
+  string(5) "41294"
+  [52]=>
+  string(5) "41086"
+  [53]=>
+  string(5) "41210"
+  [54]=>
+  string(5) "41073"
+  [55]=>
+  string(5) "41085"
+  [56]=>
+  string(5) "41087"
+  [57]=>
+  string(5) "41075"
+  [58]=>
+  string(5) "41133"
+  [59]=>
+  string(5) "41082"
+  [60]=>
+  string(5) "41088"
+  [61]=>
+  string(6) "411230"
+  [62]=>
+  string(5) "41209"
+  [63]=>
+  string(5) "41009"
+  [64]=>
+  string(5) "41131"
+  [65]=>
+  string(5) "41095"
+  [66]=>
+  string(5) "41076"
+  [67]=>
+  string(5) "41089"
+  [68]=>
+  string(5) "41091"
+  [69]=>
+  string(5) "41090"
+  [70]=>
+  string(5) "41129"
+  [71]=>
+  string(5) "41219"
+  [72]=>
+  string(5) "41212"
+  [73]=>
+  string(5) "41227"
+  [74]=>
+  string(5) "41211"
+  [75]=>
+  string(5) "41213"
+  [76]=>
+  string(5) "41229"
+  [77]=>
+  string(5) "41218"
+  [78]=>
+  string(5) "41217"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(127) "Le trafic devrait rester perturbé jeudi 30/03. Dans la mesure du possible, nous vous recommandons de limiter vos déplacements"
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC","Le trafic devrait rester perturbé jeudi 30/03. Dans la mesure du possible, nous vous recommandons de limiter vos déplacements","2023-03-28 20:44:41  ","2023-03-29 21:50:00  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41318","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41304","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41320","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41321","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41324","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41292","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41319","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41317","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41323","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41322","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41311","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41310","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41128","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41313","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41307","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41208","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41315","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41309","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41291","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41334","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41333","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41308","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41305","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41306","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41312","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41314","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41302","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41300","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41298","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41299","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41301","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41303","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41316","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41242","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41247","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41248","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41243","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41240","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41245","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("412833","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41239","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41249","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41241","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41330","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41328","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41193","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41327","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41326","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41329","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41295","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41132","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41294","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41086","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41210","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41073","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41085","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41087","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41075","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41133","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41082","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41088","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("411230","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41209","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41009","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41131","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41095","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41076","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41089","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41091","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41090","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41129","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41219","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41212","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41227","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41211","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41213","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41229","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41218","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC"),("41217","SNCF_ACCES_CLOUD:InfoMessage::79a58ef7-4ceb-42f5-9bcf-cd5a1a877f4c-20230328T144000000Z:LOC");<br>INSERE Concerner INSERTION BDD OK <br><hr>ID message: SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC</br>Date enregistrement du message: 2023-03-28 15:04:47  </br>Date de fin de validité du message: 2023-03-29 21:50:01  </br>Liste des stations : </br>array(44) {
+  [0]=>
+  string(5) "41113"
+  [1]=>
+  string(5) "41106"
+  [2]=>
+  string(6) "411425"
+  [3]=>
+  string(5) "41103"
+  [4]=>
+  string(5) "41102"
+  [5]=>
+  string(6) "411415"
+  [6]=>
+  string(6) "411424"
+  [7]=>
+  string(5) "41115"
+  [8]=>
+  string(5) "41107"
+  [9]=>
+  string(6) "411423"
+  [10]=>
+  string(5) "41079"
+  [11]=>
+  string(6) "411414"
+  [12]=>
+  string(5) "41114"
+  [13]=>
+  string(5) "41078"
+  [14]=>
+  string(5) "41121"
+  [15]=>
+  string(5) "41084"
+  [16]=>
+  string(5) "41109"
+  [17]=>
+  string(5) "41083"
+  [18]=>
+  string(5) "41116"
+  [19]=>
+  string(5) "41085"
+  [20]=>
+  string(5) "41122"
+  [21]=>
+  string(5) "41117"
+  [22]=>
+  string(5) "41110"
+  [23]=>
+  string(5) "41074"
+  [24]=>
+  string(5) "41124"
+  [25]=>
+  string(5) "41123"
+  [26]=>
+  string(5) "41105"
+  [27]=>
+  string(5) "41118"
+  [28]=>
+  string(5) "41120"
+  [29]=>
+  string(5) "41111"
+  [30]=>
+  string(5) "41119"
+  [31]=>
+  string(5) "41125"
+  [32]=>
+  string(5) "41108"
+  [33]=>
+  string(5) "41112"
+  [34]=>
+  string(6) "411331"
+  [35]=>
+  string(5) "41104"
+  [36]=>
+  string(5) "41094"
+  [37]=>
+  string(6) "411439"
+  [38]=>
+  string(5) "41092"
+  [39]=>
+  string(5) "41093"
+  [40]=>
+  string(5) "41091"
+  [41]=>
+  string(6) "411325"
+  [42]=>
+  string(6) "411328"
+  [43]=>
+  string(5) "41090"
+}
+</br>Liste des messages: </br>array(1) {
+  ["TEXT_ONLY"]=>
+  string(146) "Mouvement social national interprofessionnel - mercredi 29 mars, la circulation des trains de la Ligne H sera perturbée. Prévoyez 4 trains sur 5"
+}
+</br></br>INSERTION OBJ OK <br><br>REQUETE Perturbation: insert into Perturbation (IdPt,raisonLongue,dateDebMessage,dateFinMessage) values ("SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC","Mouvement social national interprofessionnel - mercredi 29 mars, la circulation des trains de la Ligne H sera perturbée. Prévoyez 4 trains sur 5","2023-03-28 15:04:47  ","2023-03-29 21:50:01  ");<br>INSERE Perturbation REQUETE Concerner: insert into Concerner values ("41113","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41106","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("411425","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41103","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41102","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("411415","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("411424","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41115","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41107","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("411423","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41079","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("411414","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41114","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41078","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41121","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41084","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41109","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41083","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41116","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41085","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41122","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41117","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41110","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41074","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41124","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41123","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41105","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41118","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41120","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41111","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41119","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41125","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41108","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41112","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("411331","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41104","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41094","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("411439","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41092","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41093","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41091","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("411325","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("411328","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC"),("41090","SNCF_ACCES_CLOUD:InfoMessage::c1adc43d-dd3b-47aa-ad41-ccf4c48e4911-20230328T220000000Z:LOC");<br>
