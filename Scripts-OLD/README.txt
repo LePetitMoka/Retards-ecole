@@ -1,1 +1,0 @@
-Placer ce dossier en dehors du var et proteger son acces

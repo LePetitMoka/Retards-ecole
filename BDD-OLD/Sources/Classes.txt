@@ -1,5 +1,0 @@
-1	SLAM A	slama@mediaschool.me	BTS SIO
-2	SLAM B	slamb@mediaschool.me	BTS SIO
-3	Mastere Cybersecurite	mscb@medisachool.me	Mastere Cybersecurite
-4	Bachelor Solution Digitales	bachsoldigi@mediaschool.me	Bachelor Solution Digitales
-5	SLAM JV	slamjv@mediaschool.me	BTS SIO
