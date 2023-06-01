@@ -1,0 +1,72 @@
+.role-choice {
+  /* background-color: black; */
+  color: 	#F9B104;
+  text-align: center;
+}
+
+/* commentaire */
+
+.role-choice .container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.role-choice .container form .roles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  cursor: pointer;
+}
+
+.role-choice .container form .options input {
+  cursor: pointer;
+}
+
+.role-choice .container form .roles input {
+  display: none;
+  cursor: pointer;
+}
+
+.role-admin label {
+  /* background-color: #E7334C; */
+  font-size: 2.6rem;
+  height: 100%;
+  width: 33%;
+  cursor: pointer;
+}
+
+.role-prof {
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.role-prof label {
+  /* background-color: #1F54A2; */
+  font-size: 2.6rem;
+  height: 100%;
+  width: 33%;
+  cursor: pointer;
+}
+
+.role-etudiant label {
+  /* background-color: #01DE77; */
+  font-size: 2.6rem;
+  height: 100%;
+  width: 33%;
+  cursor: pointer;
+}
+
+.role-choice img {
+  width: 80%;
+  height: auto;
+  cursor: pointer;
+}
+
+.inv-buton {
+  display: none;
+}

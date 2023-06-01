@@ -1,0 +1,242 @@
+/* fin contenu */
+
+.content {
+  background-color: #fff;
+  /* position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 133.6px; */
+  min-height: calc(100vh - 297.6px);
+  color: black;
+  padding: 0 100px;
+  align-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.content h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.subnavbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subnavbar .container div {
+  width: 100%;
+  align-items: center;
+}
+
+.subnavbar .submenu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submenu-list li {
+  align-items: center;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.subnavbar .search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome {
+  color: #F9B104;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 900;
+  margin-top: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+.buton {
+  background-color: #F9B104;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+/* .selected {
+  border: 7px solid #ffffff;
+} */
+
+.sub-buton {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+.minibar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.minibar li {
+  margin: 0 15px;
+}
+
+.gest-etudiants .search-bar, .gest-profs .search-bar, .gest-classes .search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+form {
+  font-size: 1.4rem;
+}
+
+form input {
+  margin: 0 15px;
+  margin-bottom: 10px;
+  padding: 3px 5px;
+  font-size: 1rem;
+}
+
+form select {
+  background-color: #fff;
+  border:1px solid gray;
+  border-radius: 2px;
+  margin: 0 15px;
+  margin-bottom: 10px;
+  padding: 3px 5px;
+  font-size: 1rem;
+}
+
+table {
+  margin-bottom: 15px;
+  border-collapse: collapse;
+}
+
+textarea {
+  margin-bottom: 10px;
+  resize: none;
+}
+
+/* .show-content {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+} */
+
+.show-table {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  border-collapse: separate;
+  font-size: 1.3rem;
+  align-items: left;
+  text-align: left;
+  padding: 5px;
+  /* width: 50%; */
+}
+
+.show-table .full {
+  min-width: 120px;
+  text-align: center;
+  color: #008DC3;
+}
+
+.show-table .partial {
+  width: 400px;
+}
+
+.state {
+  width: 400px;
+  color: #F9B104;
+}
+
+.show-div {
+  background-color: white;
+  color: black;
+  max-width: 700px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  align-items: left;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.show-div table {
+  width: 100%;
+  margin: 0;
+  margin: 10px;
+}
+
+.show-div-title {
+  background-color: #1e1e1e;
+  color: #F9B104;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 0;
+  width: 100%;
+}
+
+.edt-btn {
+  background-color: #008DC3;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.del-btn {
+  background-color: #E7334C;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.ticket-btn {
+  background-color: #F9B104;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.profil {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  margin: 20px 300px;
+}
+
+.profil .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* fin contenu */

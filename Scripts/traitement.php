@@ -71,7 +71,7 @@ $parsed_json = json_decode($response);
 //Importation de la blacklist
 
 $blacklist = array();
-$blacklist = explode("\n", file_get_contents('/Scripts/blacklist.txt'));
+$blacklist = explode("\n", file_get_contents('blacklist.txt'));
 var_dump($blacklist);
 echo "</br>" ;
 

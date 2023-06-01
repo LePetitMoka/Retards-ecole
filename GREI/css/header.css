@@ -1,0 +1,22 @@
+/* header */
+
+header {
+  background-color: white;
+  box-shadow: 0 0 5px grey;
+  min-height: 114px;
+  top: 0;
+  position: sticky;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+header .container .buttons {
+  display: flex;
+}
+
+/* fin header */
