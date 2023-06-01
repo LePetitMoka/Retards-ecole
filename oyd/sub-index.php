@@ -6,11 +6,11 @@
     <div class="buttons">
       <div class="user_icon">
         <a href="index.php?<?php 
-          if($_SESSION['role'] == "administrateur"){
+          if($_SESSION['role'] == "Administrateur"){
             echo "page=3";
-          }else if($_SESSION['role'] == "professeur"){
+          }else if($_SESSION['role'] == "Professeur"){
             echo "user=prof&page=2";
-          }else if($_SESSION['role'] == "etudiant"){
+          }else if($_SESSION['role'] == "Etudiant"){
             echo "user=etudiant&page=2";
           }
         ?>">
@@ -49,13 +49,13 @@
     <ul class="menu unstyled-list">
       <?php
         switch ($_SESSION['role']) {
-          case 'administrateur':
+          case 'Administrateur':
             require_once("./vues/navbar/nav-admin.php");
             break;
-          case 'professeur':
+          case 'Professeur':
             require_once("./vues/navbar/nav-prof.php");
             break;
-          case 'etudiant':
+          case 'Etudiant':
             require_once("./vues/navbar/nav-etudiant.php");
             break;
         }
@@ -70,7 +70,7 @@
     $page = $_GET['page'];
     
     switch ($_SESSION['role']) {
-      case 'administrateur':
+      case 'Administrateur':
         switch ($page) {
           case 0:
             require_once("./vues/tableau_de_bord/admin/tdb-admin.php");
@@ -96,7 +96,7 @@
             break;
         }				
         break;
-      case 'professeur':
+      case 'Professeur':
         switch ($page) {
           case 0:
             require_once("./vues/tableau_de_bord/professeur/tdb-professeur.php");
@@ -119,7 +119,7 @@
             break;
         }
       	break;
-      case 'etudiant':
+      case 'Etudiant':
         switch ($page) {
           case 0:
             require_once("./vues/tableau_de_bord/etudiant/tdb-etudiant.php");

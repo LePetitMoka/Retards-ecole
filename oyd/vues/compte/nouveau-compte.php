@@ -4,6 +4,7 @@
 <?php
   if(isset($_POST['role'])){
     $rolef = $_POST['role'];
+    var_dump($rolef);
 
     echo "<h3>Compte ".$_POST['role']."</h3>";
     echo "<form method='post'>";
@@ -44,7 +45,7 @@
       echo "<td><input type='text' name='diplome' id='diplome'></td>";
       echo "</tr>";
     }elseif($rolef == "etudiant"){
-      $unControleur -> setTable("classe");
+      $unControleur -> setTable("Classe");
       $lesClasses = $unControleur -> select_all();
       echo "<tr>";
       echo "<td><label for='classe'>Classe : </label></td>";
@@ -99,7 +100,7 @@
       case 'administrateur':
         $ordre = "IdAd, nom, prenom, telephone, adresse, email, mdp";
         $valeurs = array("nom"=>$nom, "prenom"=>$prenom, "telephone"=>$tel, "adresse"=>$adresse, "email"=>$email, "mdp"=>$mdp);
-        $unControleur -> setTable("administrateur");
+        $unControleur -> setTable("Administrateur");
         $unControleur -> nouveau_compte($ordre, $valeurs);
         echo "role : ".$rolef."<br/>";
         break;
@@ -107,7 +108,7 @@
         $diplome = "'".$_POST['diplome']."'";
         $ordre = "IdPf, nom, prenom, telephone, adresse, email, mdp, diplome";
         $valeurs = array("nom"=>$nom, "prenom"=>$prenom, "telephone"=>$tel, "adresse"=>$adresse, "email"=>$email, "mdp"=>$mdp, "diplome"=>$diplome);
-        $unControleur -> setTable("professeur");
+        $unControleur -> setTable("Professeur");
         $unControleur -> nouveau_compte($ordre, $valeurs);
         echo "diplome : ".$diplome."<br/>";
         echo "role : ".$rolef."<br/>";
@@ -116,7 +117,7 @@
         $IdCl = $_POST['classe'];
         $ordre = "IdE, nom, prenom, telephone, adresse, email, mdp, IdCl";
         $valeurs = array("nom"=>$nom, "prenom"=>$prenom, "telephone"=>$tel, "adresse"=>$adresse, "email"=>$email, "mdp"=>$mdp, "IdCl"=>$IdCl);
-        $unControleur -> setTable("etudiant");
+        $unControleur -> setTable("Etudiant");
         $unControleur -> nouveau_compte($ordre, $valeurs);
         echo "Classe : ".$IdCl."<br/>";
         echo "role : ".$rolef."<br/>";

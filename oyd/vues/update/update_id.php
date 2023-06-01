@@ -38,11 +38,11 @@
       $_POST['confNewId'] = "'".$_POST['confNewId']."'";
       $tableau = array("email" => $_POST['confNewId']);
       $unControleur -> setTable($_SESSION['role']);
-      if($_SESSION['role'] == "administrateur"){
+      if($_SESSION['role'] == "Administrateur"){
         $unControleur -> update_where($tableau, "IdAd", $_SESSION['id']);
-      } elseif ($_SESSION['role'] == "professeur"){
+      } elseif ($_SESSION['role'] == "Professeur"){
         $unControleur -> update_where($tableau, "IdPf", $_SESSION['id']);
-      } elseif ($_SESSION['role'] == "etudiant"){
+      } elseif ($_SESSION['role'] == "Etudiant"){
         $unControleur -> update_where($tableau, "IdE", $_SESSION['id']);
       }
       echo "L identifiant de connexion a bien été modifié.";

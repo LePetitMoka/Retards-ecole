@@ -1,4 +1,5 @@
 <?php
+	// commencer une session pour enregistrer les variables de session
 	session_start();
 	
 	require_once("./controleur/controleur.class.php");
@@ -24,6 +25,7 @@
 </head>
 <body>
 	<?php
+		// On verifie si la personne est connectée (ID de session enregistré)
 		if(!isset($_SESSION['id'])){
 			if(isset($_POST['SConnexion'])){
 				$_SESSION['POS'] = $_POST['SConnexion'];
@@ -37,13 +39,13 @@
 			if(isset($_SESSION['POS']) && $_SESSION['POS'] == "Se connecter"){
 				if(isset($_SESSION['role'])){
 					switch ($_SESSION['role']) {
-						case 'administrateur':
+						case 'Administrateur':
 							require_once("./vues/connexion/connexion_admin.php");
 							break;
-						case 'professeur':
+						case 'Professeur':
 							require_once("./vues/connexion/connexion_prof.php");
 							break;
-						case 'etudiant':
+						case 'Etudiant':
 							require_once("./vues/connexion/connexion_etudiant.php");
 							break;
 						

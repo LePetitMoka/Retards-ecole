@@ -24,7 +24,7 @@
         <p>Les personnes ciblées par GREI sont toutes les personnes en rapport avec l'école comme par exemple les élèves pour pouvoir voir les lignes de train ou de métro qui ont des perturbations pour pouvoir organiser leur trajet.</p>
       </div>
       <div class="front-v-grid-item">
-        <img src="./img/illustration1.png">
+        <img src="./img/classroom-gbe1c59b04_1920.jpg">
       </div>
     </div>
     <h3>Les fonctionnalitées</h3>

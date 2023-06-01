@@ -7,21 +7,21 @@
             <img src="./img/icons_colorees/administrateur.png">
             <p>Administrateur</p>
           </label>
-          <input type="submit" name="role" value="administrateur" id="admin" class="invisible">
+          <input type="submit" name="role" value="Administrateur" id="admin" class="invisible">
         </div>
         <div class="role-prof">
           <label for="prof">
             <img src="./img/icons_colorees/professeur.png">
             <p>Professeur</p>
           </label>
-          <input type="submit" name="role" value="professeur" id="prof" class="invisible">
+          <input type="submit" name="role" value="Professeur" id="prof" class="invisible">
         </div>
         <div class="role-etudiant">
           <label for="etudiant">
             <img src="./img/icons_colorees/etudiant.png">
             <p>Etudiant</p>
           </label>
-          <input type="submit" name="role" value="etudiant" id="etudiant" class="invisible">
+          <input type="submit" name="role" value="Etudiant" id="etudiant" class="invisible">
         </div>
       </div>
       <div class="options">

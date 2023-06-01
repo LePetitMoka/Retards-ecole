@@ -68,7 +68,7 @@
     $_POST['mdp'] = "'".$_POST['mdp']."'";
     $ordre = "IdPf, nom, prenom, diplome, telephone, adresse, email, mdp";
     $valeurs = array("IdPf"=>$_POST['id'], "nom"=>$_POST['nom'], "prenom"=>$_POST['prenom'], "dip"=>$_POST['dip'], "telephone"=>$_POST['tel'], "adresse"=>$_POST['addr'], "email"=>$_POST['email'], "mdp"=>$_POST['mdp']);
-    $unControleur -> setTable("professeur");
+    $unControleur -> setTable("Professeur");
     $unControleur -> insert($ordre, $valeurs);
   }
 ?>

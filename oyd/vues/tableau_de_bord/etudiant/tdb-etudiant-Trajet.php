@@ -18,7 +18,7 @@
     $nbtc = $_POST['nbtc'];
     $limb = $nbtc*2-1;
 
-    $unControleur -> setTable("transport");
+    $unControleur -> setTable("Transport");
     $lesTransports = $unControleur -> select_all();
 
     echo "<br/>";
@@ -65,10 +65,10 @@
         $m = $i;
         $n = $i+1;
 
-        $unControleur -> setTable("transport");
+        $unControleur -> setTable("Transport");
         $leTransport = $unControleur -> select_where("IdTp", $tp[$i]);
 
-        $unControleur -> setTable("vue_arret_transport");
+        $unControleur -> setTable("Vue_Arret_Transport");
         $lesArretsTransport = $unControleur -> select_where_all("IdTp", $tp[$i]);
 
         echo "<tr>";
@@ -106,7 +106,7 @@
       $_POST[$i] = "'".$_POST[$i]."'";
       $ordre = "IdSt, IdE";
       $valeurs = array("IdSt" => $_POST[$i], "IdE" => $_SESSION['id']);
-      $unControleur -> setTable("trajet");
+      $unControleur -> setTable("Trajet");
       $unControleur -> insert($ordre, $valeurs);
     }
   }

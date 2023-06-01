@@ -1,6 +1,6 @@
 <h2>Modification d'un étudiant</h2>
 <?php
-  $unControleur -> setTable("classe");
+  $unControleur -> setTable("Classe");
   $lesClasses = $unControleur -> select_all();
 ?>
 <center>
@@ -26,7 +26,7 @@
       </td>
       <td>
         <select name="classe" id="classe" required>
-          <option>Choisir une classe</option>
+          <option value="<?php echo $lEtudiant['IdCl'] ?>">Choisir une classe</option>
           <?php
             for($i=0; $i<=count($lesClasses)-1; $i++){
               $uneClasse = $lesClasses[$i];

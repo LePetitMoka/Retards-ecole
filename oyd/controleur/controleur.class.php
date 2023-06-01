@@ -39,6 +39,11 @@
       return $laTable;
     }
 
+    public function select_where_mult($tableau){
+      $laTable = $this->unModele -> select_where_mult($tableau);
+      return $laTable;
+    }
+
     public function select_where_all($Attribut, $valeur){
       $laTable = $this->unModele -> select_where_all($Attribut, $valeur);
       return $laTable;
@@ -52,8 +57,16 @@
       $this->unModele -> update_where($tableau, $Attribut, $valeur);
     }
 
+    public function update_where_mult($tableau, $tableau2){
+      $this->unModele -> update_where_mult($tableau, $tableau2);
+    }
+
     public function delete_where($Attribut, $valeur){
       $this->unModele -> delete_where($Attribut, $valeur);
+    }
+
+    public function delete_where_mult($tableau){
+      $this->unModele -> delete_where_mult($tableau);
     }
   }
 ?>

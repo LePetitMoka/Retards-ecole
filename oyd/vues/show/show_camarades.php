@@ -19,7 +19,7 @@
     $_SESSION['nbep'] = 10;
   }
 
-  $unControleur -> setTable("etudiant");
+  $unControleur -> setTable("Etudiant");
   $filtre = ""; 
   $lesEtudiants = $unControleur -> select_where_all("IdCl", $_SESSION['IdCl']);
   $leType = "etudiant-lite";

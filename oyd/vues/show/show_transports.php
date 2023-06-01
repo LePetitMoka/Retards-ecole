@@ -18,7 +18,7 @@
     $_SESSION['nbep'] = 10;
   }
 
-  $unControleur -> setTable("transport");
+  $unControleur -> setTable("Transport");
   $filtre = ""; 
   if(isset($_POST['Filtrer'])){
     $filtre = $_POST['filtre'];

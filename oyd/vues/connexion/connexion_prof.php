@@ -19,6 +19,7 @@
       </td>
     </tr>
   </table>
+  <input type="submit" value="Connexion" name="Connexion" class="inv-buton">
   <input type="submit" value="Annuler" name="Annuler" class="buton">
   <input type="submit" value="Connexion" name="Connexion" class="buton">
 </form>

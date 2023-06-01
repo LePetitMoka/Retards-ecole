@@ -4,7 +4,7 @@
   <div class="container">
     <?php 
       $lesInfos = array();
-      $unControleur -> setTable("vue_totalbilleteleve");
+      $unControleur -> setTable("Vue_TotalBilletEleve");
       $lesInfos = $unControleur -> select_where("IdE", $_SESSION['id']);
       if($lesInfos == false){
         $lesInfos['nbBillets'] = 0;

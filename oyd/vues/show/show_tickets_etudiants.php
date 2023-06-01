@@ -19,7 +19,7 @@
     $_SESSION['nbep'] = 10;
   }
 
-  $unControleur -> setTable("billet");
+  $unControleur -> setTable("Billet");
   $filtre = "";
   $lesTickets = $unControleur -> select_where_all("IdE", $_SESSION['id']);
   $leType = "ticket";

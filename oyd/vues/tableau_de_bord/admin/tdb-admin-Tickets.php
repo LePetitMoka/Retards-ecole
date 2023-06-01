@@ -26,7 +26,7 @@
             require_once("./vues/show/show_tickets.php");
             break;
           case 'insert_tickets':
-            $unControleur -> setTable("Vue_RetardQuiDuree");
+            $unControleur -> setTable("Vue_Etudiant_Retard__SansBillet");
             $lesEtudiants = $unControleur -> select_all();
             require_once("./vues/insert/insert_ticket.php");
             break; 

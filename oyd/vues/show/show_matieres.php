@@ -1,4 +1,3 @@
-<h2>Liste des classes</h2>
 <br/>
 <center>
 <form method="post">
@@ -19,7 +18,7 @@
     $_SESSION['nbep'] = 10;
   }
 
-  $unControleur -> setTable("Classe");
+  //$unControleur -> setTable("Billet");
   $filtre = ""; 
   if(isset($_POST['Filtrer'])){
     $filtre = $_POST['filtre'];
@@ -31,14 +30,15 @@
       $_SESSION['pg'] =1; 
       $_SESSION['filtre'] = $filtre;
     }
-    $lesAttributs = array("IdCl", "nom", "nbEtudiants", "email", "diplomePrepare", "promotion");
-    $lesClasses = $unControleur -> select_filter($filtre, $lesAttributs);
-   
+    $lesAttributs = array("IdM", "intitule");
+    $unControleur -> setTable("Matiere");
+    $lesMatieres = $unControleur -> select_filter($filtre, $lesAttributs);
   } else {
-    $lesClasses = $unControleur -> select_all();
+    $unControleur -> setTable("Matiere");
+    $lesMatieres = $unControleur -> select_all();
   }
-  $leType = "classe";
-  $unShow = new Show($lesClasses, $_SESSION['nbep']);
+  $leType = "matiere";
+  $unShow = new Show($lesMatieres, $_SESSION['nbep']);
   $unShow->setType($leType);
   $unShow->traitement($filtre); 
 ?>

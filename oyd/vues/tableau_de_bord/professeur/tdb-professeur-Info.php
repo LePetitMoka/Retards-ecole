@@ -17,7 +17,7 @@
         }
         switch ($profs) {
           case 0 :
-            require_once("./vues/show/show_Etudiants_lite.php");
+            require_once("./vues/show/show_etudiants_lite.php");
             break;
           case 1 :
             require_once("./vues/show/show_professeurs_lite.php");

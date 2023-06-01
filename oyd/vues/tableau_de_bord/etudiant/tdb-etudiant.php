@@ -6,7 +6,7 @@
     </div>
     <div>
       <?php 
-      $unControleur -> setTable("classe");
+      $unControleur -> setTable("Classe");
       $SaClasse = $unControleur -> select_where("IdCl", $_SESSION['IdCl']);
       $_SESSION['classe'] = $SaClasse['nom'];
       $_SESSION['dippre'] = $SaClasse['diplomePrepare']; 

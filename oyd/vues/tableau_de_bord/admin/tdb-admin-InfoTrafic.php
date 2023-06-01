@@ -36,7 +36,7 @@
               $ID = $_GET['idE'];
               $date = $_GET['date'];
           
-              $unControleur -> setTable("etudiant");
+              $unControleur -> setTable("Etudiant");
               $lEtudiant = $unControleur -> select_where("IdE", $ID);
               // if(isset($_POST['Ajouter'])){
               //   require_once("./vues/show/show_disturbed_etudiants.php");

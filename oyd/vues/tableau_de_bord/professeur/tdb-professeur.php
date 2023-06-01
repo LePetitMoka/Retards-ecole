@@ -1,4 +1,4 @@
-<h1>Tableau de bord étudiant</h1>
+<h1>Tableau de bord Professeur</h1>
 <section class="profil">
   <div class="container">
     <div>

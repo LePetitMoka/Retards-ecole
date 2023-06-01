@@ -1,6 +1,6 @@
 <h2>Modification d'un professeur</h2>
 <?php
-  $unControleur -> setTable("professeur");
+  $unControleur -> setTable("Professeur");
 ?>
 <center>
 <form method="post">

@@ -40,7 +40,7 @@
     $_POST['raison'] = "'".$_POST['raison']."'";
     $ordre = "URLSignature, raison, IdE, IdAd";
     $valeurs = array("sign" => $_POST['sign'], "raison" => $_POST['raison'], "IdE" => $_POST['etud'], "IdAd" => $_POST['admin']);
-    $unControleur -> setTable("billet");
+    $unControleur -> setTable("Billet");
     $unControleur -> insert($ordre, $valeurs);
   }
 ?>

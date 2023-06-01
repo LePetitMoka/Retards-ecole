@@ -13,7 +13,7 @@
           <?php
             for($i=0; $i<=count($lesEtudiants)-1; $i++){
               $unEtudiant = $lesEtudiants[$i];
-              echo "<option value=".$unEtudiant['IdE'].">".$unEtudiant['nom']." ".$unEtudiant['prenom']."</option>";
+              echo "<option value=".$unEtudiant['IdE'].">".$unEtudiant['nomEleve']." ".$unEtudiant['prenom']."</option>";
             }
           ?>
         </select>
@@ -45,7 +45,7 @@
     $_POST['raison'] = "'".$_POST['raison']."'";
     $ordre = "URLSignature, raison, IdE, IdAd";
     $valeurs = array("sign" => $_POST['sign'], "raison" => $_POST['raison'], "IdE" => $_POST['etud'], "IdAd" => $_POST['admin']);
-    $unControleur -> setTable("billet");
+    $unControleur -> setTable("Billet");
     $unControleur -> insert($ordre, $valeurs);
   }
 ?>

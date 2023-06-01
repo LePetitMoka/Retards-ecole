@@ -48,9 +48,9 @@
         
         case 'ticket':
           $unControleur = Connexion::getConnexion();
-          $unControleur -> setTable("etudiant");
+          $unControleur -> setTable("Etudiant");
           $lEtudiant = $unControleur -> select_where("IdE", $unElement['IdE']);
-          $unControleur -> setTable("classe");
+          $unControleur -> setTable("Classe");
           $saClasse = $unControleur -> select_where("IdCl", $lEtudiant['IdCl']);
           $unControleur -> setTable("Administrateur");
           $lAdmin = $unControleur -> select_where("IdAd", $unElement['IdAd']);
@@ -88,7 +88,7 @@
 
         case 'etudiant':
           $unControleur = Connexion::getConnexion();
-          $unControleur -> setTable("classe");
+          $unControleur -> setTable("Classe");
           $saClasse = $unControleur -> select_where("IdCl", $unElement['IdCl']);
           echo "<div class=".$this->sdClass.">";
           echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
@@ -131,7 +131,7 @@
 
         case 'etudiant-lite':
           $unControleur = Connexion::getConnexion();
-          $unControleur -> setTable("classe");
+          $unControleur -> setTable("Classe");
           $saClasse = $unControleur -> select_where("IdCl", $unElement['IdCl']);
           echo "<div class=".$this->sdClass.">";
           echo "<h3 class=".$this->sdtClass.">".$unElement['nom']." ".$unElement['prenom']."</h3>";
@@ -162,9 +162,9 @@
 
         case 'etudiant-perturbation':
           $unControleur = Connexion::getConnexion();
-          $unControleur -> setTable("etudiant");
+          $unControleur -> setTable("Etudiant");
           $lEtudiant = $unControleur -> select_where("IdE", $unElement['IdE']);
-          $unControleur -> setTable("classe");
+          $unControleur -> setTable("Classe");
           $saClasse = $unControleur -> select_where("IdCl", $lEtudiant['IdCl']);
           echo "<div class=".$this->sdClass.">";
           echo "<h3 class=".$this->sdtClass.">".$lEtudiant['nom']." ".$lEtudiant['prenom']."</h3>";
@@ -291,6 +291,70 @@
           echo "<tr>";
           echo "<td>Email : </td>";
           echo "<td>".$unElement['email']."</td>";
+          echo "</tr>";
+          echo "</table>";
+          echo "</div>";
+          break;
+        
+        case 'cours':
+          echo "<div class=".$this->sdClass.">";
+          echo "<h3 class=".$this->sdtClass.">".$unElement['Matiere']." > ".$unElement['nomCl']." avec M/Mm ".$unElement['nomPf']."</h3>";
+          echo "<table>";
+          echo "<tr>";
+          echo "<td>Ajouter le : </td>";
+          echo "<td>".$unElement['dateTS']."</td>";
+          echo "<td rowspan='8'><a href='./index.php?user=admin&page=1&subPage=3&ids=".$unElement['IdPf'].":".$unElement['IdCl'].":".$unElement['IdM']."&act=".$this->Edit."'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></a></td>";
+          echo "<td rowspan='8'><a href='./index.php?user=admin&page=1&subPage=3&ids=".$unElement['IdPf'].":".$unElement['IdCl'].":".$unElement['IdM']."&act=".$this->Del."'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></a></td>";
+          echo "<td><br/></td>";
+          echo "<td><br/></td>";
+          echo "<td><br/></td>";
+          echo "<td><br/></td>";
+          echo "<td><br/></td>";
+          echo "<td><br/></td>";
+          echo "<td><br/></td>";
+          echo "<td><br/></td>";
+          echo "<td><br/></td>";
+          echo "<td><br/></td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>A lieu le : </td>";
+          echo "<td>".$unElement['dateC']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>De ".$unElement['heureDeb']."</td>";
+          echo "<td>À ".$unElement['heureFin']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Durée : </td>";
+          echo "<td>".$unElement['duree']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Salle : </td>";
+          echo "<td>".$unElement['salle']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Classe : </td>";
+          echo "<td>".$unElement['nomCl']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Matière : </td>";
+          echo "<td>".$unElement['Matiere']."</td>";
+          echo "</tr>";
+          echo "<tr>";
+          echo "<td>Professeur : </td>";
+          echo "<td>".$unElement['nomPf']."</td>";
+          echo "</tr>";
+          echo "</table>";
+          echo "</div>";
+          break;
+        
+        case 'matiere':
+          echo "<div class=".$this->sdClass.">";
+          echo "<h3 class=".$this->sdtClass.">".$unElement['intitule']."</h3>";
+          echo "<table>";
+          echo "<tr>";
+          echo "<td><a href='./index.php?user=admin&page=1&subPage=4&idM=".$unElement['IdM']."&act=".$this->Edit."'><img src='./img/icons_colorees/edit.png' whidth='80' height='80' class='edt-btn'></a></td>";
+          echo "<td><a href='./index.php?user=admin&page=1&subPage=4&idM=".$unElement['IdM']."&act=".$this->Del."'><img src='./img/icons_colorees/delete.png' whidth='80' height='80' class='del-btn'></a></td>";
           echo "</tr>";
           echo "</table>";
           echo "</div>";

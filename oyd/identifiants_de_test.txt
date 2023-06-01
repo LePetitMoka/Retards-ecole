@@ -1,0 +1,11 @@
+> admin :
+  - email : abc@gmail.com
+  - mdp : test
+
+> prof :
+  - email : caroyln.groves9@jill.com
+  - mdp : liberty
+
+> etudiant :
+  - email : kori_goebel@yahoo.com
+  - mdp : lasvegas

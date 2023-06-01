@@ -66,3 +66,7 @@
   height: auto;
   cursor: pointer;
 }
+
+.inv-buton {
+  display: none;
+}

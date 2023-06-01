@@ -46,6 +46,7 @@
         $requete = "insert into ".$this->table."(".$ordre.") values(null,".$valeurs.");";
         $insert = $this->unPDO -> prepare($requete);
         $insert -> execute();
+        var_dump($requete);
       }else{
         return null;
       }
@@ -93,6 +94,24 @@
       }
     }
 
+    public function select_where_mult($tableau){
+      $tabwhere = array();
+      foreach($tableau as $cle => $valCle){
+        $tabwhere[] = $cle." = ".$valCle;
+      }
+      $tabwhere = implode(' and ', $tabwhere);
+      if($this->unPDO != null){
+        $requete = "select * from ".$this->table." where ".$tabwhere.";";
+        $select = $this->unPDO -> prepare($requete);
+        $select -> execute();
+        $laTable = $select -> fetch();
+        var_dump($requete);
+        return $laTable;
+      } else {
+        return null;
+      }
+    }
+
     public function select_where_all($Attribut, $valeur){
       if($this->unPDO != null){
         $requete = "select * from ".$this->table." where ".$Attribut." = ".$valeur.";";
@@ -131,9 +150,44 @@
       }
     }
 
+    public function update_where_mult($tableau, $tableau2){
+      $tabSet = array();
+      $tabwhere = array();
+      foreach($tableau as $cle => $valCle){
+        $tabSet[] = $cle." = ".$valCle;
+      } 
+      foreach($tableau2 as $cle2 => $valCle2){
+        $tabwhere[] = $cle2." = ".$valCle2;
+      } 
+      $tabSet = implode(', ', $tabSet);
+      $tabwhere = implode(' and ', $tabwhere);
+      if($this->unPDO != null){
+        $requete = "update ".$this->table." set ".$tabSet." where ".$tabwhere.";";
+        $update = $this->unPDO -> prepare($requete);
+        $update -> execute();
+      } else {
+        return null;
+      }
+    }
+
     public function delete_where($Attribut, $valeur){
       if($this->unPDO != null){
         $requete = "delete from ".$this->table." where ".$Attribut." = ".$valeur.";";
+        $delete = $this->unPDO -> prepare($requete);
+        $delete -> execute();
+      } else {
+        return null;
+      }
+    }
+
+    public function delete_where_mult($tableau){
+      $tabwhere = array();
+      foreach($tableau as $cle => $valCle){
+        $tabwhere[] = $cle." = ".$valCle;
+      } 
+      $tabwhere = implode(' and ', $tabwhere);
+      if($this->unPDO != null){
+        $requete = "delete from ".$this->table." where ".$tabwhere.";";
         $delete = $this->unPDO -> prepare($requete);
         $delete -> execute();
       } else {

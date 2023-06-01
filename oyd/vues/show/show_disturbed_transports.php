@@ -19,7 +19,7 @@
     $_SESSION['nbep'] = 10;
   }
 
-  $unControleur -> setTable("vue_perturbation_ligne");
+  $unControleur -> setTable("Transport");
   $filtre = ""; 
   if(isset($_POST['Filtrer'])){
     $filtre = $_POST['filtre'];
@@ -34,7 +34,7 @@
     $lesAttributs = array("IdTp", "nom", "type", "transporteur");
     $lesTransports = $unControleur -> select_filter($filtre, $lesAttributs);
   } else {
-    $lesTransports = $unControleur -> select_all();
+    $lesTransports = $unControleur -> select_where_all("etat", "'Perturbée'");
   }
   $leType = "transport";
   $unShow = new Show($lesTransports, $_SESSION['nbep']);
